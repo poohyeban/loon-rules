@@ -11,6 +11,18 @@ That license does not relicense third-party datasets.
 - Domain classifications:
   [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)
   ([MIT license](https://github.com/v2fly/domain-list-community/blob/master/LICENSE)).
+- WhatsApp, Instagram and Facebook supplements: Sukka and contributors,
+  [SukkaW/Surge](https://github.com/SukkaW/Surge), specifically
+  `Source/non_ip/global.conf` ([AGPL-3.0 license](https://github.com/SukkaW/Surge/blob/master/LICENSE)).
+  The relevant section is selected, assigned to individual services using the
+  public review mapping, filtered for scope, and compacted with v2fly rules.
+  Initial conversion: 2026-10-03. The derived combined datasets in
+  `rules/WhatsApp/`, `rules/Instagram/` and `rules/Facebook/`, including their
+  Sukka source subsets, are distributed under AGPL-3.0; see
+  `LICENSES/Sukka-AGPL-3.0.txt`. The separately stored v2fly-only source lists
+  retain their MIT license. All transformation code and the review mapping
+  are available in this repository; input revisions and hashes are recorded
+  in the manifest. The independent generator implementation remains MIT.
 - Country and ASN data: GeoLite2 data created by
   [MaxMind](https://www.maxmind.com), distributed through
   [P3TERX/GeoLite.mmdb](https://github.com/P3TERX/GeoLite.mmdb).

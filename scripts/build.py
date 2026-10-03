@@ -5,12 +5,14 @@ import argparse
 import hashlib
 import ipaddress
 import json
+import re
 import shutil
 import subprocess
 from datetime import datetime
 from pathlib import Path
 
 from scripts.rules import Rule, adguard, compact, parse_rule, reviewed_domains, v2fly
+from scripts.social import SERVICES, aggregate, sukka_supplement
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = {
@@ -20,7 +22,11 @@ SOURCES = {
     "ASN.mmdb": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb",
     "voice.json": "https://openai.com/chatgpt-voice.json",
     "adguard.txt": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+    **{f"{service.lower()}.txt": f"https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/{service.lower()}"
+       for service in SERVICES},
+    "sukka-global.txt": "https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/global.conf",
 }
+PINNED_REPOS = {"v2fly/domain-list-community", "SukkaW/Surge"}
 TARGET_ASNS = {401518, 401864}
 
 
@@ -30,16 +36,30 @@ def digest(path: Path) -> str:
 
 def download(inputs: Path) -> dict:
     manifest = {}
+    commits = {}
+    for repo in sorted(PINNED_REPOS):
+        response = subprocess.check_output(
+            ["git", "ls-remote", "https://github.com/" + repo + ".git", "refs/heads/master"],
+            text=True, timeout=60).split()
+        if len(response) != 2 or not re.fullmatch(r"[0-9a-f]{40}", response[0]):
+            raise ValueError("cannot resolve upstream revision: " + repo)
+        commits[repo] = response[0]
     for name, url in SOURCES.items():
+        resolved_url, revision = url, {}
+        for repo, commit in commits.items():
+            prefix = f"https://raw.githubusercontent.com/{repo}/master/"
+            if url.startswith(prefix):
+                resolved_url = url.replace(prefix, f"https://raw.githubusercontent.com/{repo}/{commit}/", 1)
+                revision = {"commit": commit, "resolved_url": resolved_url}
         target = inputs / name
         temp = inputs / (name + ".part")
         subprocess.run(["curl", "--fail", "--silent", "--show-error", "--location",
                         "--retry", "3", "--retry-delay", "3", "--connect-timeout", "20",
-                        "--max-time", "180", "--output", str(temp), url], check=True)
+                        "--max-time", "180", "--output", str(temp), resolved_url], check=True)
         if not temp.stat().st_size:
             raise ValueError(f"empty upstream: {name}")
         temp.replace(target)
-        manifest[name] = {"url": url, "sha256": digest(target), "bytes": target.stat().st_size}
+        manifest[name] = {"url": url, "sha256": digest(target), "bytes": target.stat().st_size, **revision}
         print(f"Downloaded {name}: {target.stat().st_size} bytes")
     return manifest
 
@@ -166,6 +186,23 @@ def build(root: Path = ROOT, offline: bool = False):
     asn_nets, reports["OpenAI-ASN"] = asn_networks(inputs / "ASN.mmdb")
     voice_nets = voice_networks(json.loads((inputs / "voice.json").read_text()))
 
+    social = {}
+    for service in SERVICES:
+        social[service], report = v2fly((inputs / f"{service.lower()}.txt").read_text(encoding="utf-8-sig"))
+        reports[service + "-v2fly"] = report.json()
+    social_review_path = root / "data/Meta/sukka-review.json"
+    supplements, report = sukka_supplement(
+        (inputs / "sukka-global.txt").read_text(encoding="utf-8-sig"), social,
+        json.loads(social_review_path.read_text()))
+    reports["Meta-Sukka-selection"] = report.json()
+    for service in SERVICES:
+        combined, reports[service + "-aggregate"] = aggregate(social[service], supplements[service])
+        write_list(output, f"{service}/Sources/{service}-v2fly.list", social[service])
+        # An upstream may legitimately remove all auxiliary entries for a service.
+        if supplements[service]:
+            write_list(output, f"{service}/Sources/{service}-Sukka.list", supplements[service])
+        write_list(output, f"{service}/{service}.list", combined)
+
     for relative, rules in {
         "China/Sources/China-v2fly-Domain.list": cn,
         "OpenAI/Sources/OpenAI-v2fly.list": ai,
@@ -192,7 +229,7 @@ def build(root: Path = ROOT, offline: bool = False):
 
     # Only stable, public provenance is committed. No clock, machine path or identity.
     provenance = {"upstreams": manifest, "reviewed_files": {
-        str(p.relative_to(root)): digest(p) for p in (official_path, excluded_path)},
+        str(p.relative_to(root)): digest(p) for p in (official_path, excluded_path, social_review_path)},
         "outputs": {str(p.relative_to(output)): {"sha256": digest(p), "rules": len(p.read_text().splitlines())}
                     for p in sorted(output.rglob("*.list"))}}
     json_write(stage / "reports/conversion.json", reports)

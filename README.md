@@ -17,6 +17,9 @@
 | [OpenAI.list](https://raw.githubusercontent.com/poohyeban/loon-rules/main/rules/OpenAI/OpenAI.list) | OpenAI 域名、所选 ASN 网段、官方 Voice 网段 |
 | [OpenAI-NoResolve.list](https://raw.githubusercontent.com/poohyeban/loon-rules/main/rules/OpenAI/OpenAI-NoResolve.list) | 相同匹配集合，IP 规则附加 `no-resolve` |
 | [Ad-Domain.list](https://raw.githubusercontent.com/poohyeban/loon-rules/main/rules/AdGuard/Ad-Domain.list) | AdGuard DNS Filter 的可表达域名子集，已处理例外 |
+| [WhatsApp.list](https://raw.githubusercontent.com/poohyeban/loon-rules/main/rules/WhatsApp/WhatsApp.list) | WhatsApp 独立域名分类 |
+| [Instagram.list](https://raw.githubusercontent.com/poohyeban/loon-rules/main/rules/Instagram/Instagram.list) | Instagram 独立域名分类 |
+| [Facebook.list](https://raw.githubusercontent.com/poohyeban/loon-rules/main/rules/Facebook/Facebook.list) | Facebook 独立域名分类；不额外合入 Messenger、Threads、Oculus |
 
 在 Loon 中添加订阅 URL 并自行选择策略即可。`no-resolve` 不只是性能参数：它不为
 域名主动查询 DNS 来匹配该 IP 规则，因此两种版本的实际命中行为可能不同。
@@ -30,6 +33,8 @@
 | --- | --- |
 | China 域名 | [v2fly release/cn.txt](https://raw.githubusercontent.com/v2fly/domain-list-community/release/cn.txt) |
 | OpenAI 域名 | [v2fly data/openai](https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/openai) |
+| WhatsApp / Instagram / Facebook 主源 | v2fly 的 `data/whatsapp`、`data/instagram`、`data/facebook` |
+| 三个服务的辅助核对与补充 | [SukkaW/Surge 原始 global.conf](https://github.com/SukkaW/Surge/blob/master/Source/non_ip/global.conf)，按服务边界筛选 Facebook 分区 |
 | China IP | [P3TERX GeoLite2 Country](https://github.com/P3TERX/GeoLite.mmdb)，选择国家码 CN |
 | OpenAI ASN IP | 同仓库 GeoLite2 ASN，仅选择 AS401518、AS401864 |
 | ChatGPT Voice IP | [官方 JSON](https://openai.com/chatgpt-voice.json) |
@@ -41,6 +46,28 @@ Help Center 页面，也不宣称这部分已自动跟进官网。共享服务�
 
 ASN 只采用数据库中实际存在的目标网段；个别目标 ASN 缺失会在转换报告中明确记录，
 不会从其他来源补入或沿用旧网段。全部目标 ASN 缺失则阻止发布。
+
+### WhatsApp、Instagram、Facebook 的分类与匹配
+
+三份主源在一次构建中使用同一个 v2fly 提交；Sukka 也固定到本次获取的提交。
+Actions 每次重新取得上游版本，报告保存提交号、实际下载 URL 和 SHA-256。
+这三份文件目前只有域名规则，不需要重复生成内容相同的 `NoResolve` 版本。
+
+- 复用现有 Loon 转换器：精确域名保持 `DOMAIN`，后缀保持 `DOMAIN-SUFFIX`；
+  有限正则和严格子域名按下述转换边界处理，不把精确域名扩大成后缀。
+- Sukka 的 Facebook 分区包含多个产品；根据主源覆盖关系和
+  [审核映射](data/Meta/sukka-review.json) 将适用条目归入三个服务。
+  `instagr.am` 是 Instagram 的辅助补充。未审核的新根域名记入报告待确认，
+  已归类域名下的新子域名可自动处理，不直接吞入整个综合分区。
+- Sukka 的 `facebook`、`whatsapp` 品牌关键词可能匹配无关域名，故记录后排除；
+  Messenger、Threads、Oculus 和 Meta 综合站点不从该辅助分区额外引入。
+  主源分类保持原意，不声称每个被收录域名都是服务正常运行必需的域名。
+- 同一服务内合并两源、去除相同行及被后缀完整覆盖的条目；不为跨文件去重
+  而删除独立订阅需要的匹配条件。Sukka 删除条目后，不会由审核映射重新注入。
+- 不添加整个 Meta ASN、共享 CDN 的总域名或旧版 WhatsApp IP 大段。
+  本次交付为域名分类，不保证覆盖仅有目标 IP 的语音、视频或其他连接。
+- 主源出现未展开的 `include:`、辅助分区消失或分类歧义时阻止发布；
+  不支持的正则与未分类辅助条目在转换报告中列出，不伪造等价转换。
 
 ## Loon 转换边界
 
@@ -66,11 +93,11 @@ Voice 网段规则保持原仓库的 IP 匹配范围，不新增未经验证的�
 ## 自动更新与复现
 
 Actions 每天在台北时间 05:17、06:43 计划运行，也支持手动触发。GitHub 可能延迟执行。
-先测试，再下载、生成、校验、隐私检查，最后仅提交 `rules/` 和 `reports/`。
+先测试，再下载、生成、离线复现校验、隐私检查，最后仅提交 `rules/` 和 `reports/`。
 任何前置失败均不提交生成文件。
 
 - [转换报告](reports/conversion.json)：计数、全部跳过条目及原因。
-- [来源与输出摘要](reports/manifest.json)：来源 URL、输入 SHA-256、输出计数及 SHA-256。
+- [来源与输出摘要](reports/manifest.json)：来源 URL、已固定的 Git 提交、输入 SHA-256、输出计数及 SHA-256。
 - 同一份输入重复生成的规则和报告保持一致，不加入构建时间、本机路径或身份。
 - 动态上游的旧字节不保证永久可下载；保留 `build/inputs/` 可进行哈希校验后的离线重建。
 

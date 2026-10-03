@@ -33,8 +33,13 @@ jobs:
         run: python -m pip install --disable-pip-version-check -r requirements.txt
       - name: Test converters
         run: python -B -m unittest discover -s tests -v
-      - name: Generate from upstreams
+      - name: Generate all rules including separate Meta services
         run: python -B -m scripts.build
+      - name: Verify reproducible outputs from the same inputs
+        run: |
+          find rules reports -type f -print0 | sort -z | xargs -0 sha256sum > build/output-sha256.txt
+          python -B -m scripts.build --offline
+          sha256sum --check build/output-sha256.txt
       - name: Validate rules and audit public content
         run: python -B -m scripts.audit
       - name: Upload conversion report
