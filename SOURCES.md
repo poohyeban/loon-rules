@@ -34,7 +34,7 @@ That license does not relicense third-party datasets.
   available in the original filter headers and linked source repository.
   The derived `rules/AdGuard/` dataset is distributed under GPL-3.0;
   see `LICENSES/AdGuard-GPL-3.0.txt`. Its modifications are the Loon conversion,
-  hostname-only selection, exception subtraction and compaction described in
+  hostname-only selection, removal of exception-conflicting blocks and compaction described in
   the README. Initial conversion: 2026-10-03. The generator and conversion
   report supply the transformation details. The independent generator code
   remains MIT-licensed.

@@ -1,22 +1,32 @@
 import ipaddress
-import random
-import re
+import json
+import tempfile
 import unittest
+from pathlib import Path
 from unittest.mock import patch, MagicMock
 
 from scripts.rules import (Rule, Unsupported, adguard, compact, covers, domain,
                           intersects, logic, matches, parse_rule, regex_rules,
                           reviewed_domains, subdomains, v2fly)
-from scripts.build import asn_networks, validate_pair, voice_networks
+from scripts.build import SOURCES, asn_networks, build, digest, validate_pair, voice_networks, write_list
 from scripts.audit import scan, BOT_EMAIL
 
 
 class RuleTests(unittest.TestCase):
-    def test_policy_free_nested_roundtrip(self):
+    def test_internal_exception_logic_cannot_be_published(self):
         rule = logic("AND", domain("DOMAIN-SUFFIX", "example.com"),
                      logic("NOT", logic("OR", domain("DOMAIN", "a.example.com"),
                                         subdomains("b.example.com"))))
-        self.assertEqual(parse_rule(rule.render()), rule)
+        for candidate in (rule, logic("OR", domain("DOMAIN", "a.example")),
+                          logic("NOT", domain("DOMAIN", "a.example"))):
+            with self.subTest(kind=candidate.kind), self.assertRaises(Unsupported):
+                parse_rule(candidate.render())
+            with tempfile.TemporaryDirectory() as directory:
+                path = Path(directory) / "Existing.list"
+                path.write_text("DOMAIN,keep.example\n")
+                with self.assertRaises(Unsupported):
+                    write_list(Path(directory), path.name, {candidate})
+                self.assertEqual(path.read_text(), "DOMAIN,keep.example\n")
         for host, expected in [("example.com", True), ("a.example.com", False),
                                ("b.example.com", True), ("a.b.example.com", False),
                                ("notexample.com", False)]:
@@ -50,22 +60,14 @@ class RuleTests(unittest.TestCase):
             with self.subTest(pattern=p), self.assertRaises(Unsupported):
                 regex_rules(p)
 
-    def test_aws_regex_equivalence_on_hostname_samples(self):
-        rng = random.Random(2718)
-        cases = [(r".+\.awsdns-cn-[0-9][0-9]\.(biz|com|net|top)$", 400),
-                 (r".+\.awsdns-cn-[0-9][a-e0-9]\.cn$", 150)]
-        for pattern, count in cases:
-            rules = regex_rules(pattern)
-            self.assertEqual(len(rules), count)
-            samples = set()
-            for r in rules:
-                host = r.children[0].value
-                samples.update([host, "a." + host, "a.b." + host, "x" + host, host + ".evil"])
-            for _ in range(600):
-                samples.add(rng.choice(["a.", "", "a.b.", "x"]) + "awsdns-cn-" +
-                            rng.choice("09az") + rng.choice("09afz") + "." + rng.choice(["cn", "com", "org"]))
-            for host in samples:
-                self.assertEqual(any(matches(r, host) for r in rules), bool(re.search(pattern, host)), host)
+    def test_unbounded_subdomains_are_reported_without_suffix_approximation(self):
+        cases = [r".+\.awsdns-cn-[0-9][0-9]\.(biz|com|net|top)$",
+                 r".+\.awsdns-cn-[0-9][a-e0-9]\.cn$", r"^.+\.example\.com$"]
+        text = "full:keep.example\n" + "\n".join("regexp:" + p for p in cases)
+        rules, report = v2fly(text)
+        self.assertEqual(rules, {domain("DOMAIN", "keep.example")})
+        self.assertEqual([x["source_rule"] for x in report.skipped],
+                         ["regexp:" + p for p in cases])
 
     def test_compaction_preserves_membership(self):
         rules = {domain("DOMAIN-SUFFIX", "example.com"), domain("DOMAIN", "a.example.com"),
@@ -97,25 +99,28 @@ class RuleTests(unittest.TestCase):
                 v2fly(line)
 
     def test_reviewed_wildcards_and_exclusions(self):
-        result, _ = reviewed_domains("*.example.com\na.example.com\nshared.example\n", "shared.example\n")
-        self.assertIn(subdomains("example.com"), result)
+        result, report = reviewed_domains("*.example.com\na.example.com\nshared.example\n", "shared.example\n")
+        self.assertEqual(result, {domain("DOMAIN", "a.example.com")})
+        self.assertEqual(report.skipped[0]["source_rule"], "*.example.com")
+        self.assertEqual(report.counts["output"], 1)
         self.assertFalse(any(matches(r, "example.com") for r in result))
         for source, excluded in [("", ""), ("a.example", "b.example"), ("a.example", "a.example")]:
             with self.assertRaises(ValueError):
                 reviewed_domains(source, excluded)
 
-    def test_adguard_exact_exception_keeps_other_subdomains(self):
+    def test_adguard_exact_exception_removes_overlapping_suffix(self):
         rules, report = adguard("||example.com^\n@@|example.com|\n")
         self.assertFalse(any(matches(r, "example.com") for r in rules))
-        self.assertTrue(any(matches(r, "ads.example.com") for r in rules))
-        self.assertEqual(report.counts["blocks_narrowed"], 1)
+        self.assertEqual(rules, set())
+        self.assertEqual(report.counts["blocks_removed"], 1)
+        self.assertIn("preserve exception", report.skipped[0]["reason"])
 
     def test_adguard_exceptions_apply_to_every_overlapping_block(self):
         source = "||example.com^\n||safe.example.com^\n.safe.example.com^\n@@||safe.example.com^\n"
         rules, _ = adguard(source)
         for host in ("safe.example.com", "x.safe.example.com"):
             self.assertFalse(any(matches(r, host) for r in rules))
-        self.assertTrue(any(matches(r, "ads.example.com") for r in rules))
+        self.assertEqual(rules, set())
 
     def test_adguard_two_exceptions(self):
         rules, _ = adguard("||example.com^\n@@|a.example.com|\n@@||b.example.com^\n")
@@ -123,7 +128,13 @@ class RuleTests(unittest.TestCase):
             self.assertEqual(parse_rule(rule.render()), rule)
         self.assertFalse(any(matches(r, "a.example.com") for r in rules))
         self.assertFalse(any(matches(r, "x.b.example.com") for r in rules))
-        self.assertTrue(any(matches(r, "x.a.example.com") for r in rules))
+        self.assertEqual(rules, set())
+
+    def test_adguard_keeps_disjoint_blocks_and_exact_apex(self):
+        rules, _ = adguard("|example.com|\n||example.com^\n||ads.other.com^\n@@.example.com^\n")
+        self.assertEqual(rules, {domain("DOMAIN", "example.com"),
+                                 domain("DOMAIN-SUFFIX", "ads.other.com")})
+        self.assertFalse(any(matches(r, "child.example.com") for r in rules))
 
     def test_adguard_partial_label_envelope_does_not_overblock(self):
         rules, report = adguard("||foobar.com^\n@@||foo*bar.com^\n||example.org^\n")
@@ -132,8 +143,38 @@ class RuleTests(unittest.TestCase):
         self.assertEqual(report.counts["conservative_exceptions"], 1)
 
     def test_adguard_subdomain_patterns(self):
-        rules, _ = adguard(".example.com^\n")
-        self.assertEqual(rules, {subdomains("example.com")})
+        rules, report = adguard(".example.com^\n")
+        self.assertEqual(rules, set())
+        self.assertEqual(report.skipped[0]["source_rule"], ".example.com^")
+
+    def test_finite_adguard_regex_and_exact_exception(self):
+        rules, report = adguard(r"/^(ads|safe)\.example\.com$/" + "\n@@|safe.example.com|\n")
+        self.assertEqual(rules, {domain("DOMAIN", "ads.example.com")})
+        self.assertEqual(report.counts["blocks_removed"], 1)
+
+    def test_failed_build_leaves_previous_publication_unchanged(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for name in ("rules", "reports"):
+                (root / name).mkdir()
+                (root / name / "existing").write_text("last good publication")
+            inputs = root / "build/inputs"
+            inputs.mkdir(parents=True)
+            manifest = {}
+            for name, url in SOURCES.items():
+                path = inputs / name
+                path.write_text("||ads.example^\n@@/foo.*/" if name == "adguard.txt" else "example.com")
+                manifest[name] = {"url": url, "sha256": digest(path)}
+            (inputs / "manifest.json").write_text(json.dumps(manifest))
+            reviewed = root / "data/OpenAI"
+            reviewed.mkdir(parents=True)
+            (reviewed / "official-domains.txt").write_text("keep.example\nshared.example\n")
+            (reviewed / "official-domains-excluded.txt").write_text("shared.example\n")
+            with self.assertRaisesRegex(ValueError, "unrepresentable AdGuard exception"):
+                build(root, offline=True)
+            for name in ("rules", "reports"):
+                self.assertEqual([p.name for p in (root / name).iterdir()], ["existing"])
+                self.assertEqual((root / name / "existing").read_text(), "last good publication")
 
     def test_adguard_partial_suffix_exception_is_conservative(self):
         rules, report = adguard("||metric.gstatic.com^\n@@-ds.metric.gstatic.com^|\n")

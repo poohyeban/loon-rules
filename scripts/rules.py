@@ -80,23 +80,13 @@ def split_outer(value: str) -> list[str]:
 
 
 def parse_rule(line: str, depth: int = 0) -> Rule:
-    """Reject policies, unknown syntax, bad CIDRs and malformed nested rules."""
+    """Validate publishable rules; internal exception logic is never exported."""
     if depth > 12 or line.strip() != line or any(c.isspace() for c in line):
         raise Unsupported("non-canonical rule or excessive nesting")
     parts = split_outer(line)
     kind = parts[0]
     if kind in {"AND", "OR", "NOT"}:
-        if len(parts) != 2 or not parts[1].startswith("(") or not parts[1].endswith(")"):
-            raise Unsupported("invalid logical rule")
-        children = []
-        for item in split_outer(parts[1][1:-1]):
-            if not item.startswith("(") or not item.endswith(")"):
-                raise Unsupported("child must be parenthesized")
-            child = parse_rule(item[1:-1], depth + 1)
-            if child.kind.startswith("IP-"):
-                raise Unsupported("this generator only emits domain logic")
-            children.append(child)
-        result = logic(kind, *children)
+        raise Unsupported("logical rules are disabled for Loon compatibility")
     elif kind in {"DOMAIN", "DOMAIN-SUFFIX", "DOMAIN-KEYWORD"} and len(parts) == 2:
         result = domain(kind, parts[1])
     elif kind in {"IP-CIDR", "IP-CIDR6"} and len(parts) in {2, 3}:
@@ -253,19 +243,13 @@ def regex_rules(pattern: str, limit: int = 1000) -> set[Rule]:
     anchored = bool(tokens and tokens[0] == (rx.AT, rx.AT_BEGINNING))
     if anchored:
         tokens.pop(0)
-    strict = (len(tokens) >= 3 and tokens[0][0] == rx.MAX_REPEAT
-              and tokens[0][1][0] == 1 and tokens[0][1][1] == rx.MAXREPEAT
-              and list(tokens[0][1][2]) == [(rx.ANY, None)]
-              and tokens[1] == (rx.LITERAL, ord(".")))
-    if strict:
-        tokens = tokens[2:]
-    elif not anchored:
+    if not anchored:
         raise Unsupported("finite regex needs a start anchor")
     values = _expand(tokens, limit)
     for value in values:
         if hostname(value) != value:
             raise Unsupported("regex normalization would change its language")
-    return {subdomains(v) if strict else domain("DOMAIN", v) for v in values}
+    return {domain("DOMAIN", v) for v in values}
 
 
 @dataclass
@@ -319,9 +303,20 @@ def reviewed_domains(text: str, excluded_text: str) -> tuple[set[Rule], Report]:
     if not source or not exclusions <= source or not source - exclusions:
         raise ValueError("invalid reviewed domain snapshot or exclusions")
     # Validate excluded entries as well, so a malformed snapshot never hides.
-    converted = {s: subdomains(s[2:]) if s.startswith("*.") else domain("DOMAIN", s) for s in source}
-    report = Report(Counter(input=len(source), excluded=len(exclusions), output=len(source - exclusions)))
-    return {converted[s] for s in source - exclusions}, report
+    for s in source:
+        hostname(s[2:] if s.startswith("*.") else s)
+    report = Report(Counter(input=len(source), excluded=len(exclusions)))
+    output = set()
+    for number, raw in enumerate(text.splitlines(), 1):
+        s = raw.split("#", 1)[0].strip().lower()
+        if not s or s in exclusions:
+            continue
+        if s.startswith("*."):
+            report.skip(number, s, "strict subdomains require disabled logical rules")
+        else:
+            output.add(domain("DOMAIN", s))
+    report.counts["output"] = len(output)
+    return output, report
 
 
 def _ad_parts(line: str) -> tuple[bool, str, list[str]]:
@@ -411,7 +406,7 @@ def adguard(text: str) -> tuple[set[Rule], Report]:
             report.counts["badfilter"] += 1
         else:
             parsed.append((number, line, exception, pattern, modifiers))
-    blocks, exceptions = set(), set()
+    blocks, exceptions, block_sources = set(), set(), {}
     for number, line, exception, pattern, modifiers in parsed:
         if line in disabled:
             report.counts["disabled"] += 1
@@ -435,17 +430,25 @@ def adguard(text: str) -> tuple[set[Rule], Report]:
                 report.skip(number, line, "exception conservatively bounded; may under-block")
             except Unsupported:
                 raise ValueError(f"unrepresentable AdGuard exception at line {number}") from error
-        (exceptions if exception else blocks).update(converted)
+        if exception:
+            # Strict-subdomain conditions can remain in the build-time model.
+            # Removing an intersecting block preserves the exception without
+            # sending AND/NOT expressions to Loon.
+            exceptions.update(converted)
+        else:
+            for rule in converted:
+                if rule.children:
+                    report.skip(number, line, "strict subdomains require disabled logical rules")
+                    continue
+                blocks.add(rule)
+                block_sources.setdefault(rule, []).append((number, line))
     output = set()
-    for block in blocks:
+    for block in sorted(blocks, key=Rule.render):
         conflicts = sorted((e for e in exceptions if intersects(block, e)), key=Rule.render)
-        if any(covers(e, block) for e in conflicts):
-            report.counts["blocks_removed"] += 1
-            continue
         if conflicts:
-            excluded = conflicts[0] if len(conflicts) == 1 else logic("OR", *conflicts)
-            output.add(logic("AND", block, logic("NOT", excluded)))
-            report.counts["blocks_narrowed"] += 1
+            report.counts["blocks_removed"] += 1
+            for number, line in block_sources[block]:
+                report.skip(number, line, "block removed to preserve exception: " + block.render())
         else:
             output.add(block)
     report.counts["exceptions"] = len(exceptions)

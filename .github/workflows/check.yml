@@ -6,6 +6,8 @@ on:
       - 'scripts/**'
       - 'tests/**'
       - 'data/**'
+      - 'rules/**'
+      - 'reports/**'
       - 'requirements.txt'
       - '.github/workflows/**'
   pull_request:

@@ -72,7 +72,7 @@ DOMAIN-SUFFIX,twitter.example
         self.assertFalse(selected["Facebook"])
         self.assertIn("requires service-boundary review", report.skipped[0]["reason"])
 
-    def test_merge_preserves_exact_and_strict_subdomain_semantics(self):
+    def test_merge_preserves_exact_domains_without_restoring_skipped_regex(self):
         primary, _ = v2fly("full:api.example\nregexp:^.+\\.media\\.example$\nroot.example\n")
         supplemental = {domain("DOMAIN", "api.example"), domain("DOMAIN", "cdn.root.example")}
         result, report = aggregate(primary, supplemental)
@@ -81,7 +81,7 @@ DOMAIN-SUFFIX,twitter.example
         self.assertEqual(report["covered_rules_removed"], 1)
         self.assertEqual(report["supplement_added"], [])
         for host, expected in (("api.example", True), ("x.api.example", False),
-                               ("media.example", False), ("x.media.example", True),
+                               ("media.example", False), ("x.media.example", False),
                                ("root.example", True), ("cdn.root.example", True)):
             self.assertEqual(any(matches(r, host) for r in result), expected)
         with self.assertRaises(ValueError):

@@ -71,7 +71,7 @@ def audit():
                 try:
                     parse_rule(line)
                 except ValueError:
-                    errors.append(f"{relative}:{n}: invalid or policy-bearing rule")
+                    errors.append(f"{relative}:{n}: invalid, logical or policy-bearing rule")
                     break
     has_head = subprocess.run(["git", "rev-parse", "--verify", "HEAD"], cwd=ROOT, capture_output=True).returncode == 0
     if has_head:
