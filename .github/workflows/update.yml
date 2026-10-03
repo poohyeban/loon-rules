@@ -1,0 +1,56 @@
+name: Update Loon rules
+
+on:
+  schedule:
+    # 05:17 and 06:43 Asia/Taipei; GitHub schedules use UTC.
+    - cron: '17 21 * * *'
+    - cron: '43 22 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: update-loon-rules
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Install database reader
+        run: python -m pip install --disable-pip-version-check -r requirements.txt
+      - name: Test converters
+        run: python -B -m unittest discover -s tests -v
+      - name: Generate from upstreams
+        run: python -B -m scripts.build
+      - name: Validate rules and audit public content
+        run: python -B -m scripts.audit
+      - name: Upload conversion report
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: conversion-report
+          path: reports/
+          retention-days: 14
+      - name: Commit validated outputs
+        run: |
+          git add -- rules reports
+          if git diff --cached --quiet; then
+            echo 'No generated changes.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -c commit.gpgsign=false commit -m 'Update Loon rules'
+          git push

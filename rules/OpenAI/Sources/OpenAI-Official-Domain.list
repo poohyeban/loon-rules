@@ -1,0 +1,13 @@
+AND,((DOMAIN-SUFFIX,auth.openai.com),(NOT,((DOMAIN,auth.openai.com))))
+AND,((DOMAIN-SUFFIX,chatgpt.com),(NOT,((DOMAIN,chatgpt.com))))
+AND,((DOMAIN-SUFFIX,oaistatic.com),(NOT,((DOMAIN,oaistatic.com))))
+AND,((DOMAIN-SUFFIX,oaistatsig.com),(NOT,((DOMAIN,oaistatsig.com))))
+AND,((DOMAIN-SUFFIX,oaiusercontent.com),(NOT,((DOMAIN,oaiusercontent.com))))
+AND,((DOMAIN-SUFFIX,openai.com),(NOT,((DOMAIN,openai.com))))
+DOMAIN,android.chat.openai.com
+DOMAIN,auth0.openai.com
+DOMAIN,chat.openai.com
+DOMAIN,desktop.chat.openai.com
+DOMAIN,ios.chat.openai.com
+DOMAIN,setup.auth.openai.com
+DOMAIN,tcr9i.chat.openai.com

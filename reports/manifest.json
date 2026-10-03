@@ -1,0 +1,96 @@
+{
+  "outputs": {
+    "AdGuard/Ad-Domain.list": {
+      "rules": 176863,
+      "sha256": "7e78c52d8349b74d479cd4f565410cf42df85ae782cf7e115505843bac42e0a3"
+    },
+    "China/China-NoResolve.list": {
+      "rules": 25903,
+      "sha256": "124406a1d18b6998a9a09ec6eae015c96f3ceaf277c762bc2f74c6c6e51dcb0e"
+    },
+    "China/China.list": {
+      "rules": 25903,
+      "sha256": "138ae5621021018068b3d088b59a14fef7a7599c5bc0a542f854db3572d699f8"
+    },
+    "China/Sources/China-GeoIP-NoResolve.list": {
+      "rules": 19348,
+      "sha256": "90035f6229b82c30883e28d5cc8be146fd30388296aa4222ff3476450e770ef8"
+    },
+    "China/Sources/China-GeoIP.list": {
+      "rules": 19348,
+      "sha256": "99ad816d87251cf811a3e88d4e1faf675a65cbd5869f1c79e9c2a094df1610d8"
+    },
+    "China/Sources/China-v2fly-Domain.list": {
+      "rules": 7171,
+      "sha256": "de94a439fe67cc0dd0f8967d8bcb87ad658720a0199b2c18f278c561a794ca98"
+    },
+    "OpenAI/OpenAI-NoResolve.list": {
+      "rules": 46,
+      "sha256": "87139865bc3edc8b023597ff65e6c83506fe4d166f00b7f7c60ea3f4610611c9"
+    },
+    "OpenAI/OpenAI.list": {
+      "rules": 46,
+      "sha256": "741e35cc04d1ef901d8c87f7089f52f2f8da55321764db4a089ba1ca65f4207d"
+    },
+    "OpenAI/Sources/OpenAI-ASN-IP-NoResolve.list": {
+      "rules": 1,
+      "sha256": "54ddd85d0ae183a728e6ee11bd1b96f8ccfd89baa53d9e45eaf26c01f52b0c6f"
+    },
+    "OpenAI/Sources/OpenAI-ASN-IP.list": {
+      "rules": 1,
+      "sha256": "7faf16119bac5abc6da0a546f1d13e3fc39f37713873c971fd79d0456ec7895b"
+    },
+    "OpenAI/Sources/OpenAI-Official-Domain.list": {
+      "rules": 13,
+      "sha256": "24e258282d9328c269ab9b3fcc263c9ef86b5d30c5c023177f71ec58da725300"
+    },
+    "OpenAI/Sources/OpenAI-Voice-IP-NoResolve.list": {
+      "rules": 23,
+      "sha256": "d3f063ea3c63e5754a074aa256c099cdeb73e2f1b36811378cfa5ad58b138a23"
+    },
+    "OpenAI/Sources/OpenAI-Voice-IP.list": {
+      "rules": 23,
+      "sha256": "fbb3f60c6ac7f6fb8e8a165163432dc8138eb91b3a69f09761513c184ac881dd"
+    },
+    "OpenAI/Sources/OpenAI-v2fly.list": {
+      "rules": 22,
+      "sha256": "0e39b862fa1aee0c378c218af134f1a285b7a9997cc42e00f67fc98e739154c5"
+    }
+  },
+  "reviewed_files": {
+    "data/OpenAI/official-domains-excluded.txt": "c61b4012fec3e1941837a7d02b47cf2f277dfa729f7e5352ea6ee5d072044b6b",
+    "data/OpenAI/official-domains.txt": "3a1d68bed64d5fa57241ae3d37897017951e09a45c92727d3a5f6ab3948272e8"
+  },
+  "upstreams": {
+    "ASN.mmdb": {
+      "bytes": 12069758,
+      "sha256": "e16e2db7ed72adc4443e16d7e33a25120ca58bd8d0f2e902b49ac6c50c3f4815",
+      "url": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb"
+    },
+    "Country.mmdb": {
+      "bytes": 8423789,
+      "sha256": "ff539785596f72ac2a07048f08506b38134bcf3b568182fd65f4534817bf91d7",
+      "url": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb"
+    },
+    "adguard.txt": {
+      "bytes": 4321733,
+      "sha256": "44189eb08a032c5751e321ded1f7e5dc0a475908421dedf7c20f057252f915c3",
+      "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt"
+    },
+    "cn.txt": {
+      "bytes": 136667,
+      "sha256": "16094882e0b0cef10c2dd366288d7a103128c69d91a7168e2abb5cbe486a22a0",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/release/cn.txt"
+    },
+    "openai.txt": {
+      "bytes": 679,
+      "sha256": "19a100966b3c5b0dff2e7038ba66366ef10d6384781b3eda6de4d1e79712dcc6",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/openai"
+    },
+    "voice.json": {
+      "bytes": 895,
+      "sha256": "8f03f3c594165eeff009915c7e2beb4bdfb9d429fb1955c205e3b33ec781899a",
+      "url": "https://openai.com/chatgpt-voice.json"
+    }
+  }
+}
