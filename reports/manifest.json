@@ -1,24 +1,24 @@
 {
   "outputs": {
     "AdGuard/Ad-Domain.list": {
-      "rules": 177044,
-      "sha256": "f8df59e74613d2cd9c22cbd26c76f4b6e63df4d32415a2ca761f31980d4365e0"
+      "rules": 177314,
+      "sha256": "9d485fbe3c86c2f2d2b36bc0a09568b979e6b2a7f0c6196c683d36098bedb333"
     },
     "China/China-NoResolve.list": {
-      "rules": 25503,
-      "sha256": "bfc12257aae56d377a2b786cd9fa406d7e3067f54818db146de796c566ac366d"
+      "rules": 25818,
+      "sha256": "1d3602fb6a9a5e7ea47ca374c167f3bce390baaa7c55e0c92cc502edf337e49f"
     },
     "China/China.list": {
-      "rules": 25503,
-      "sha256": "9fb5e3a7bfbe333d1670d7e5d0f852511c463d218df44a863acaf56e3d4beefe"
+      "rules": 25818,
+      "sha256": "03465bf900139cc60d1f3b9dcb861c843d765391f8d8b5a2271c71a2be0a2942"
     },
     "China/Sources/China-GeoIP-NoResolve.list": {
-      "rules": 19348,
-      "sha256": "90035f6229b82c30883e28d5cc8be146fd30388296aa4222ff3476450e770ef8"
+      "rules": 19663,
+      "sha256": "cfd8d1c55dd2ae5058f31c90e4b09fcea03d087ac17ac628ebc58c1eed4ea120"
     },
     "China/Sources/China-GeoIP.list": {
-      "rules": 19348,
-      "sha256": "99ad816d87251cf811a3e88d4e1faf675a65cbd5869f1c79e9c2a094df1610d8"
+      "rules": 19663,
+      "sha256": "1723bf8369e69b1be3f5f29e75a0682cdc292012b75fcbd69a76094dcee0439f"
     },
     "China/Sources/China-v2fly-Domain.list": {
       "rules": 6621,
@@ -100,18 +100,18 @@
   },
   "upstreams": {
     "ASN.mmdb": {
-      "bytes": 12069758,
-      "sha256": "e16e2db7ed72adc4443e16d7e33a25120ca58bd8d0f2e902b49ac6c50c3f4815",
+      "bytes": 12080772,
+      "sha256": "0b90874f9e3c07731b6467a90541ee8aa0b15ca23031583c1ee6fb580993a062",
       "url": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb"
     },
     "Country.mmdb": {
-      "bytes": 8423789,
-      "sha256": "ff539785596f72ac2a07048f08506b38134bcf3b568182fd65f4534817bf91d7",
+      "bytes": 8463726,
+      "sha256": "025e035d484210f8af1b0f0c578d05f389ad104e79805d474bd7eeeba6b8f0c8",
       "url": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb"
     },
     "adguard.txt": {
-      "bytes": 4327271,
-      "sha256": "72d2d484fe2301ee29cb611e2115241cad75aac8e52f244781f9b834c0a5388b",
+      "bytes": 4333252,
+      "sha256": "043d33f79f08af38715b73b91d36544fb7925e9d73b757d436fee0e1b5b6ba97",
       "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt"
     },
     "cn.txt": {
@@ -121,22 +121,22 @@
     },
     "facebook.txt": {
       "bytes": 6391,
-      "commit": "2c892a618f4e23c549d28edd0f3f75407521b1aa",
-      "resolved_url": "https://raw.githubusercontent.com/v2fly/domain-list-community/2c892a618f4e23c549d28edd0f3f75407521b1aa/data/facebook",
+      "commit": "63777333b7dd1ac57f790e466c0f6a647b9c7281",
+      "resolved_url": "https://raw.githubusercontent.com/v2fly/domain-list-community/63777333b7dd1ac57f790e466c0f6a647b9c7281/data/facebook",
       "sha256": "bd860c04a95c82afa1aa86c166a50eb561a952c6915257f941fa6d58a0431da9",
       "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/facebook"
     },
     "instagram.txt": {
       "bytes": 1326,
-      "commit": "2c892a618f4e23c549d28edd0f3f75407521b1aa",
-      "resolved_url": "https://raw.githubusercontent.com/v2fly/domain-list-community/2c892a618f4e23c549d28edd0f3f75407521b1aa/data/instagram",
+      "commit": "63777333b7dd1ac57f790e466c0f6a647b9c7281",
+      "resolved_url": "https://raw.githubusercontent.com/v2fly/domain-list-community/63777333b7dd1ac57f790e466c0f6a647b9c7281/data/instagram",
       "sha256": "e392526b75e27218f874590d0db99b5e009fb0b7679095f0eac48a4ee3fb6413",
       "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/instagram"
     },
     "openai.txt": {
       "bytes": 679,
-      "commit": "2c892a618f4e23c549d28edd0f3f75407521b1aa",
-      "resolved_url": "https://raw.githubusercontent.com/v2fly/domain-list-community/2c892a618f4e23c549d28edd0f3f75407521b1aa/data/openai",
+      "commit": "63777333b7dd1ac57f790e466c0f6a647b9c7281",
+      "resolved_url": "https://raw.githubusercontent.com/v2fly/domain-list-community/63777333b7dd1ac57f790e466c0f6a647b9c7281/data/openai",
       "sha256": "19a100966b3c5b0dff2e7038ba66366ef10d6384781b3eda6de4d1e79712dcc6",
       "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/openai"
     },
@@ -154,8 +154,8 @@
     },
     "whatsapp.txt": {
       "bytes": 219,
-      "commit": "2c892a618f4e23c549d28edd0f3f75407521b1aa",
-      "resolved_url": "https://raw.githubusercontent.com/v2fly/domain-list-community/2c892a618f4e23c549d28edd0f3f75407521b1aa/data/whatsapp",
+      "commit": "63777333b7dd1ac57f790e466c0f6a647b9c7281",
+      "resolved_url": "https://raw.githubusercontent.com/v2fly/domain-list-community/63777333b7dd1ac57f790e466c0f6a647b9c7281/data/whatsapp",
       "sha256": "d23fbe2f886bfbd52c3ae40e1fed05cbc4a721564e7eda76f226824d0b137dca",
       "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/whatsapp"
     }
