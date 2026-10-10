@@ -11,6 +11,8 @@ That license does not relicense third-party datasets.
 - Domain classifications:
   [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)
   ([MIT license](https://github.com/v2fly/domain-list-community/blob/master/LICENSE)).
+  Claude uses the original `data/anthropic` classification, including its exact
+  dedicated CDN entry; derived Claude domain subsets retain this MIT license.
 - WhatsApp, Instagram and Facebook supplements: Sukka and contributors,
   [SukkaW/Surge](https://github.com/SukkaW/Surge), specifically
   `Source/non_ip/global.conf` ([AGPL-3.0 license](https://github.com/SukkaW/Surge/blob/master/LICENSE)).
@@ -27,6 +29,11 @@ That license does not relicense third-party datasets.
   [MaxMind](https://www.maxmind.com), distributed through
   [P3TERX/GeoLite.mmdb](https://github.com/P3TERX/GeoLite.mmdb).
   [GeoLite2 data and attribution](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/).
+  Claude's AS399358 prefixes are extracted from the same downloaded ASN file
+  used for OpenAI; published MMDB build metadata and ASN organization names
+  support auditing. [Anthropic's IP documentation](https://platform.claude.com/docs/en/api/ip-addresses)
+  is used for human verification of inbound ranges, not as a separately polled
+  or hardcoded source of destination prefixes.
 - AdGuard derived hostname subset:
   [AdguardTeam/AdGuardSDNSFilter](https://github.com/AdguardTeam/AdGuardSDNSFilter)
   ([upstream license](https://github.com/AdguardTeam/AdGuardSDNSFilter/blob/master/LICENSE)).

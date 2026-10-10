@@ -24,6 +24,26 @@
       "rules": 6621,
       "sha256": "8a1d95a9bbbeb3310c122af1b8927c4ca9088ef9d28dfc9c05d11bb28a1b32bb"
     },
+    "Claude/Claude-NoResolve.list": {
+      "rules": 12,
+      "sha256": "e3dbf941d95801625b6f5990f06dbeb552c547c65bba31d4273f9ab1d72bb773"
+    },
+    "Claude/Claude.list": {
+      "rules": 12,
+      "sha256": "2ca13b6e14a275e4e919194e9e141cea4c1fbd20a8f31ada20773324ccfcaa3d"
+    },
+    "Claude/Sources/Claude-ASN-IP-NoResolve.list": {
+      "rules": 3,
+      "sha256": "a73e78d1ecf54d2303283abe22e6a48f5a3fa97000e7f971d9f5b97150fcd923"
+    },
+    "Claude/Sources/Claude-ASN-IP.list": {
+      "rules": 3,
+      "sha256": "4a9ce4f336ca688ac60cdd533495a503178faa21976d76d7a84124ca2bb990cd"
+    },
+    "Claude/Sources/Claude-v2fly.list": {
+      "rules": 9,
+      "sha256": "b2b8e9a3a14980d2bcf8ef4e2ec231894855089533f6f3054af50b8d6636f64f"
+    },
     "Facebook/Facebook.list": {
       "rules": 397,
       "sha256": "0e9274f964a46c101191c25fed9c3c9b1d88153db34f9a1f37046c1f1a3433d7"
@@ -95,27 +115,48 @@
   },
   "reviewed_files": {
     "data/Meta/sukka-review.json": "36dbaced73c24886823f973acf52faeb7d2291ce90763810c4e1dc73de7b39be",
-    "data/OpenAI/official-domains-excluded.txt": "c61b4012fec3e1941837a7d02b47cf2f277dfa729f7e5352ea6ee5d072044b6b",
-    "data/OpenAI/official-domains.txt": "3a1d68bed64d5fa57241ae3d37897017951e09a45c92727d3a5f6ab3948272e8"
+    "data/OpenAI/official-domains-excluded.txt": "217c813503b15318ea308f831032150cb4a2141bd32355bbbbaf667660ae1a90",
+    "data/OpenAI/official-domains.txt": "559d0656c9b89b534ba81831af8e0ce213ec1a849a19b4fc04c4b630dc2a4366"
   },
   "upstreams": {
     "ASN.mmdb": {
       "bytes": 12085041,
+      "database": {
+        "build_epoch": 1791274527,
+        "ip_version": 6,
+        "type": "GeoLite2-ASN"
+      },
       "sha256": "d81af0fdca127edf5e7e1069bab52244b2eb0f0f4e2602f281405e85d22dbcf2",
       "url": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb"
     },
     "Country.mmdb": {
       "bytes": 3405161,
+      "database": {
+        "build_epoch": 1791321693,
+        "ip_version": 6,
+        "type": "GeoLite2-Country"
+      },
       "sha256": "0546112e365380d4315e8058f1c176480d377b4323f66a5a1e20d100c9aab8ba",
       "url": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb"
     },
     "adguard.txt": {
       "bytes": 4409756,
+      "compiler": "@adguard/hostlist-compiler v2.1.0",
+      "last_modified": "2026-10-10T00:43:51.399Z",
       "sha256": "f2dbbbf0926ad055566ea97bd3f87987f8fd51185d7c6fab986ec9e4a1382f4c",
       "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt"
     },
+    "anthropic.txt": {
+      "bytes": 163,
+      "commit": "c6adacf29cc4fb05e04651fcf03e00989ef9f797",
+      "resolved_url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/anthropic",
+      "sha256": "bf48dc1b342bbfd06f2a93ee8ce180fc424d9c041dafd2d182ffb3f4186698b4",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/anthropic"
+    },
     "cn.txt": {
       "bytes": 136667,
+      "commit": "4ea9e1e5f6ebe9bfe2ec92891664d3daafb93340",
+      "resolved_url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4ea9e1e5f6ebe9bfe2ec92891664d3daafb93340/cn.txt",
       "sha256": "16094882e0b0cef10c2dd366288d7a103128c69d91a7168e2abb5cbe486a22a0",
       "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/release/cn.txt"
     },
@@ -149,6 +190,7 @@
     },
     "voice.json": {
       "bytes": 895,
+      "creation_time": "2026-03-26T20:12:45.451356+00:00",
       "sha256": "8f03f3c594165eeff009915c7e2beb4bdfb9d429fb1955c205e3b33ec781899a",
       "url": "https://openai.com/chatgpt-voice.json"
     },

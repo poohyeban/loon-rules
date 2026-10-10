@@ -1,15 +1,12 @@
 """Check policy-free rules, provenance and public files without printing secrets."""
 from __future__ import annotations
 
-import hashlib
-import json
-import os
 import re
 import socket
 import subprocess
 from pathlib import Path
 
-from scripts.rules import parse_rule
+from scripts.validation import audit_publication
 
 ROOT = Path(__file__).resolve().parents[1]
 BOT_NAME = "github-actions[bot]"
@@ -35,7 +32,7 @@ def private_markers():
         if result.returncode == 0:
             markers.add(result.stdout.strip())
     return {s.encode().lower() for s in markers if len(s) >= 5 and s not in
-            {"runner", "poohyeban", BOT_NAME, BOT_EMAIL}}
+            {"agent", "runner", "poohyeban", BOT_NAME, BOT_EMAIL}}
 
 
 def scan(data: bytes, label: str, markers=()) -> list[str]:
@@ -51,6 +48,7 @@ def scan(data: bytes, label: str, markers=()) -> list[str]:
 
 
 def audit():
+    publication = audit_publication(ROOT)
     markers, errors = private_markers(), []
     paths = sorted(set(git("ls-files", "--cached", "--others", "--exclude-standard", "-z").split(b"\0")) - {b""})
     for raw in paths:
@@ -66,13 +64,6 @@ def audit():
             errors.append(f"{relative}: unexpected configuration or credential file")
         data = path.read_bytes()
         errors.extend(scan(data, relative, markers))
-        if relative.startswith("rules/"):
-            for n, line in enumerate(data.decode("utf-8").splitlines(), 1):
-                try:
-                    parse_rule(line)
-                except ValueError:
-                    errors.append(f"{relative}:{n}: invalid, logical or policy-bearing rule")
-                    break
     has_head = subprocess.run(["git", "rev-parse", "--verify", "HEAD"], cwd=ROOT, capture_output=True).returncode == 0
     if has_head:
         log = git("log", "--all", "--format=%an%x00%ae%x00%cn%x00%ce%x00%B%x00")
@@ -86,21 +77,12 @@ def audit():
             oid = line.split(b" ", 1)[0].decode()
             if git("cat-file", "-t", oid).strip() == b"blob":
                 errors.extend(scan(git("cat-file", "blob", oid), "history-blob", markers))
-    manifest_path = ROOT / "reports/manifest.json"
-    if manifest_path.exists():
-        manifest = json.loads(manifest_path.read_text())
-        actual = {str(p.relative_to(ROOT / "rules")) for p in (ROOT / "rules").rglob("*.list")}
-        if actual != set(manifest["outputs"]):
-            errors.append("manifest: output inventory mismatch")
-        for name, info in manifest["outputs"].items():
-            path = ROOT / "rules" / name
-            if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != info["sha256"]:
-                errors.append("manifest: output digest mismatch")
     if errors:
         for error in sorted(set(errors)):
             print(error)
         raise SystemExit("Audit failed; keep repository private.")
-    print(f"Audit passed: {len(paths)} public files; rules, identities, history and provenance checked.")
+    print(f"Audit passed: {len(paths)} public files, {publication['files']} rulesets; "
+          "rules, aggregates, variants, identities, history and provenance checked.")
 
 
 if __name__ == "__main__":

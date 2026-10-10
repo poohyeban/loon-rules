@@ -16,6 +16,8 @@
 | [China-NoResolve.list](https://raw.githubusercontent.com/poohyeban/loon-rules/main/rules/China/China-NoResolve.list) | 相同匹配集合，IP 规则附加 `no-resolve` |
 | [OpenAI.list](https://raw.githubusercontent.com/poohyeban/loon-rules/main/rules/OpenAI/OpenAI.list) | OpenAI 域名、所选 ASN 网段、官方 Voice 网段 |
 | [OpenAI-NoResolve.list](https://raw.githubusercontent.com/poohyeban/loon-rules/main/rules/OpenAI/OpenAI-NoResolve.list) | 相同匹配集合，IP 规则附加 `no-resolve` |
+| [Claude.list](https://raw.githubusercontent.com/poohyeban/loon-rules/main/rules/Claude/Claude.list) | Claude / Anthropic 域名及 AS399358 的 IPv4/IPv6 网段 |
+| [Claude-NoResolve.list](https://raw.githubusercontent.com/poohyeban/loon-rules/main/rules/Claude/Claude-NoResolve.list) | 相同匹配集合，IP 规则附加 `no-resolve` |
 | [Ad-Domain.list](https://raw.githubusercontent.com/poohyeban/loon-rules/main/rules/AdGuard/Ad-Domain.list) | AdGuard DNS Filter 的可表达域名子集，已处理例外 |
 | [WhatsApp.list](https://raw.githubusercontent.com/poohyeban/loon-rules/main/rules/WhatsApp/WhatsApp.list) | WhatsApp 独立域名分类 |
 | [Instagram.list](https://raw.githubusercontent.com/poohyeban/loon-rules/main/rules/Instagram/Instagram.list) | Instagram 独立域名分类 |
@@ -33,10 +35,12 @@
 | --- | --- |
 | China 域名 | [v2fly release/cn.txt](https://raw.githubusercontent.com/v2fly/domain-list-community/release/cn.txt) |
 | OpenAI 域名 | [v2fly data/openai](https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/openai) |
+| Claude 域名 | [v2fly data/anthropic](https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/anthropic) |
 | WhatsApp / Instagram / Facebook 主源 | v2fly 的 `data/whatsapp`、`data/instagram`、`data/facebook` |
 | 三个服务的辅助核对与补充 | [SukkaW/Surge 原始 global.conf](https://github.com/SukkaW/Surge/blob/master/Source/non_ip/global.conf)，按服务边界筛选 Facebook 分区 |
 | China IP | [P3TERX GeoLite2 Country](https://github.com/P3TERX/GeoLite.mmdb)，选择国家码 CN |
 | OpenAI ASN IP | 同仓库 GeoLite2 ASN，仅选择 AS401518、AS401864 |
+| Claude ASN IP | 同一次下载的 GeoLite2 ASN，仅选择 AS399358（Anthropic, PBC） |
 | ChatGPT Voice IP | [官方 JSON](https://openai.com/chatgpt-voice.json) |
 | 广告域名 | [AdGuard DNS Filter](https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt) |
 | OpenAI 人工审核域名 | `data/OpenAI/` 中的来源快照减去明确排除项 |
@@ -46,6 +50,19 @@ Help Center 页面，也不宣称这部分已自动跟进官网。共享服务�
 
 ASN 只采用数据库中实际存在的目标网段；个别目标 ASN 缺失会在转换报告中明确记录，
 不会从其他来源补入或沿用旧网段。全部目标 ASN 缺失则阻止发布。
+
+### Claude
+
+Claude 域名与 OpenAI、三个 Meta 服务使用同一个本次取得的 v2fly `master` 提交。
+IP 从与 OpenAI 完全相同的 ASN 数据库文件生成，不额外下载另一份数据库。
+报告记录实际 ASN 组织名、IPv4/IPv6 数量和数据库版本，目标 ASN 缺失时阻止发布。
+
+2026-10-10 的输出含 9 条域名与 3 条 IP 规则；专用 CDN 保持精确 `DOMAIN`。
+[Anthropic 官方 IP 文档](https://platform.claude.com/docs/en/api/ip-addresses)
+列出的入站 `160.79.104.0/23`、`2607:6bc0::/48` 用于核对数据库结果；
+出站工具调用使用的 `160.79.104.0/21` 不作为访问 Claude 的目标网段扩入。
+不添加整个 AWS、Google Cloud、Cloudflare 或共享 CDN 命名空间；
+专有 ASN 网段也不代表全部 Claude 网站和云合作入口，域名规则仍然是主要覆盖方式。
 
 ### WhatsApp、Instagram、Facebook 的分类与匹配
 
@@ -73,6 +90,8 @@ Actions 每次重新取得上游版本，报告保存提交号、实际下载 UR
 
 发布文件仅使用 `DOMAIN`、`DOMAIN-SUFFIX`、`DOMAIN-KEYWORD`、`IP-CIDR`
 和 `IP-CIDR6`，**不输出 `AND`、`OR`、`NOT`**。原有订阅 URL 保持不变。
+Loon 官方文档分别使用 `IP-CIDR` 表示 IPv4、`IP-CIDR6` 表示 IPv6，
+生成器保留这一区别。
 
 - 无法由普通规则严格表达的子域名条件跳过并记录，不扩大为包含根域名的后缀。
 - 有限、完整锚定的正则可以精确枚举，最多 1,000 个结果。
@@ -84,6 +103,8 @@ Actions 每次重新取得上游版本，报告保存提交号、实际下载 UR
   严格子域名例外可参与内部集合判断，但绝不发布为逻辑规则。
 - 部分通配例外使用较宽的固定后缀保护范围，可能少拦截，但不因猜测例外而多拦截。
 - 无法安全处理的例外、未展开的 `include:`、损坏的上游结构会阻止发布。
+- v2fly 的普通域名、关键词和精确域名条目损坏时阻止发布，不静默删掉这些条目。
+  不支持的正则仍按明确的转换边界跳过并记录。
 - 不能等价转换的普通拦截条目会跳过并完整记录原因。
 
 不输出 `DOMAIN-WILDCARD`、`DOMAIN-REGEX`，不以 URL 正则冒充域名正则。
@@ -101,14 +122,22 @@ Voice 网段规则保持原仓库的 IP 匹配范围，不新增未经验证的�
 
 ## 自动更新与复现
 
-Actions 每天在台北时间 05:17、06:43 计划运行，也支持手动触发。GitHub 可能延迟执行。
+Actions 每天在北京时间／台北时间 **05:17、06:43** 计划运行，
+工作流明确设置 `timezone: Asia/Taipei`，也支持手动触发。GitHub 可能延迟执行。
 先测试，再下载、生成、离线复现校验、隐私检查，最后仅提交 `rules/` 和 `reports/`。
 任何前置失败均不提交生成文件。
+
+发布前和 PR 检查均核对全部文件：UTF-8/LF、无 BOM、无空行与重复行、
+基本规则类型及字段、规范 CIDR、每个聚合文件与来源的覆盖去重结果、
+全部普通／NoResolve 对、输入及输出清单、输出条数和哈希、人工审核文件哈希。
+v2fly 的 China `release` 文件也固定到本次提交；数据库构建版本、AdGuard 编译器版本
+和 Voice 数据时间记录在来源摘要中。报告上传在工作流失败时也尝试执行。
 
 - [转换报告](reports/conversion.json)：计数、全部跳过条目及原因。
 - [来源与输出摘要](reports/manifest.json)：来源 URL、已固定的 Git 提交、输入 SHA-256、输出计数及 SHA-256。
 - 同一份输入重复生成的规则和报告保持一致，不加入构建时间、本机路径或身份。
 - 动态上游的旧字节不保证永久可下载；保留 `build/inputs/` 可进行哈希校验后的离线重建。
+- [2026-10-10 体检报告](docs/audit-2026-10-10.md)：语法依据、来源维护证据、修复和候选源取舍。
 
 ```sh
 python3 -m venv .venv

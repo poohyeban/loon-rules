@@ -95,7 +95,7 @@ DOMAIN-SUFFIX,twitter.example
     def test_shared_upstream_revision_is_resolved_once(self):
         revision = "a" * 40
         sources = {name + ".txt": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/" + name
-                   for name in ("whatsapp", "instagram", "facebook")}
+                   for name in ("whatsapp", "instagram", "facebook", "openai", "anthropic")}
         urls = []
 
         def curl(args, **kwargs):
@@ -111,6 +111,28 @@ DOMAIN-SUFFIX,twitter.example
         self.assertEqual(resolve.call_count, 1)
         self.assertTrue(all("/" + revision + "/data/" in url for url in urls))
         self.assertTrue(all(item["commit"] == revision for item in manifest.values()))
+
+    def test_china_release_uses_its_own_pinned_revision(self):
+        sources = {"cn.txt": "https://raw.githubusercontent.com/v2fly/domain-list-community/release/cn.txt"}
+        urls = []
+
+        def resolve(args, **kwargs):
+            branch = args[-1]
+            revision = ("b" if branch.endswith("/release") else "a") * 40
+            return revision + "\t" + branch + "\n"
+
+        def curl(args, **kwargs):
+            urls.append(args[-1])
+            Path(args[args.index("--output") + 1]).write_text("cn.example\n")
+
+        with tempfile.TemporaryDirectory() as directory, \
+             patch("scripts.build.SOURCES", sources), \
+             patch("scripts.build.PINNED_REPOS", {"v2fly/domain-list-community"}), \
+             patch("scripts.build.subprocess.check_output", side_effect=resolve), \
+             patch("scripts.build.subprocess.run", side_effect=curl):
+            manifest = download(Path(directory))
+        self.assertEqual(manifest["cn.txt"]["commit"], "b" * 40)
+        self.assertEqual(urls, [sources["cn.txt"].replace("/release/", "/" + "b" * 40 + "/")])
 
 
 if __name__ == "__main__":

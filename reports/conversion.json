@@ -4229,6 +4229,32 @@
       }
     ]
   },
+  "Claude-ASN": {
+    "ipv4": 1,
+    "ipv6": 2,
+    "missing_asns": [],
+    "networks_by_asn": {
+      "399358": 3
+    },
+    "organizations_by_asn": {
+      "399358": [
+        "Anthropic, PBC"
+      ]
+    }
+  },
+  "Claude-aggregate": {
+    "domains": 9,
+    "domains_before_compaction": 9,
+    "ip_rules": 3,
+    "total": 12
+  },
+  "Claude-v2fly": {
+    "counts": {
+      "input": 9,
+      "output": 9
+    },
+    "skipped": []
+  },
   "Facebook-aggregate": {
     "covered_rules_removed": 2,
     "exact_duplicates": 9,
@@ -4343,12 +4369,20 @@
     ]
   },
   "OpenAI-ASN": {
+    "ipv4": 1,
+    "ipv6": 0,
     "missing_asns": [
       401864
     ],
     "networks_by_asn": {
       "401518": 1,
       "401864": 0
+    },
+    "organizations_by_asn": {
+      "401518": [
+        "OpenAI OpCo, LLC"
+      ],
+      "401864": []
     }
   },
   "OpenAI-aggregate": {
@@ -4359,8 +4393,8 @@
   },
   "OpenAI-reviewed": {
     "counts": {
-      "excluded": 16,
-      "input": 29,
+      "excluded": 17,
+      "input": 30,
       "output": 7,
       "skipped": 6
     },

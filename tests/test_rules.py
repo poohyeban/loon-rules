@@ -8,7 +8,8 @@ from unittest.mock import patch, MagicMock
 from scripts.rules import (Rule, Unsupported, adguard, compact, covers, domain,
                           intersects, logic, matches, parse_rule, regex_rules,
                           reviewed_domains, subdomains, v2fly)
-from scripts.build import SOURCES, asn_networks, build, digest, validate_pair, voice_networks, write_list
+from scripts.build import (SOURCES, adguard_metadata, asn_networks, build, digest,
+                           validate_pair, voice_networks, write_list)
 from scripts.audit import scan, BOT_EMAIL
 
 
@@ -97,6 +98,16 @@ class RuleTests(unittest.TestCase):
         for line in ["Include:foo", "INCLUDE:foo", "include:foo #bar", "unknown:foo"]:
             with self.assertRaises(ValueError):
                 v2fly(line)
+
+    def test_malformed_v2fly_basic_rules_abort_instead_of_shrinking_publication(self):
+        for line in ("domain:bad_.example", "full:192.0.2.1", "keyword:", "full:foo bar"):
+            with self.subTest(line=line), self.assertRaisesRegex(ValueError, "malformed v2fly"):
+                v2fly("keep.example\n" + line)
+
+    def test_regex_letter_escapes_do_not_become_literal_domains(self):
+        for pattern in (r"^foo\b\.example$", r"^foo\t\.example$", r"^foo\x61\.example$"):
+            with self.subTest(pattern=pattern), self.assertRaises(Unsupported):
+                regex_rules(pattern)
 
     def test_reviewed_wildcards_and_exclusions(self):
         result, report = reviewed_domains("*.example.com\na.example.com\nshared.example\n", "shared.example\n")
@@ -196,6 +207,16 @@ class RuleTests(unittest.TestCase):
         self.assertEqual(rules, {domain("DOMAIN-SUFFIX", "safe.example")})
         self.assertEqual(len(report.skipped), 3)
 
+    def test_optional_hash_and_cosmetic_markers_cannot_hide_regex_exceptions(self):
+        for pattern in (r"/^safe#{0,2}\.example$/", r"/^(safe|##)\.example$/"):
+            with self.subTest(pattern=pattern), self.assertRaisesRegex(ValueError, "unrepresentable"):
+                adguard("||safe.example^\n@@" + pattern)
+        rules, _ = adguard("||safe.example^\n@@/^safe#{0}\\.example$/\n")
+        self.assertEqual(rules, set())
+        rules, report = adguard("||safe.example^\n@@/safe##example/\n")
+        self.assertEqual(rules, {domain("DOMAIN-SUFFIX", "safe.example")})
+        self.assertEqual(report.counts["non_hostname_exception"], 1)
+
     def test_pair_content_and_modifier_checks(self):
         domains = {subdomains("example.com")}
         base = Rule("IP-CIDR", "192.0.2.0/24")
@@ -212,6 +233,13 @@ class RuleTests(unittest.TestCase):
                         [{"ipv4Prefix": "192.0.2.1/24"}]]:
             with self.assertRaises(ValueError):
                 voice_networks(dict(payload, prefixes=records))
+
+    def test_adguard_metadata_does_not_take_embedded_filter_versions(self):
+        text = ("! Title: AdGuard DNS filter\n! Last modified: 2026-10-10T00:00:00Z\n"
+                "! Compiled by compiler v2\n! Source name: nested filter\n"
+                "! Version: nested-version\n! Last modified: old nested timestamp\n||ads.example^\n")
+        self.assertEqual(adguard_metadata(text), {"last_modified": "2026-10-10T00:00:00Z",
+                                                 "compiler": "compiler v2"})
 
     def test_asn_partial_coverage_is_reported_and_empty_aborts(self):
         db = MagicMock()

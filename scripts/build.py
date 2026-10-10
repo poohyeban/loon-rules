@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCES = {
     "cn.txt": "https://raw.githubusercontent.com/v2fly/domain-list-community/release/cn.txt",
     "openai.txt": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/openai",
+    "anthropic.txt": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/anthropic",
     "Country.mmdb": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb",
     "ASN.mmdb": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb",
     "voice.json": "https://openai.com/chatgpt-voice.json",
@@ -28,6 +29,7 @@ SOURCES = {
 }
 PINNED_REPOS = {"v2fly/domain-list-community", "SukkaW/Surge"}
 TARGET_ASNS = {401518, 401864}
+CLAUDE_ASNS = {399358}
 
 
 def digest(path: Path) -> str:
@@ -44,6 +46,14 @@ def download(inputs: Path) -> dict:
         if len(response) != 2 or not re.fullmatch(r"[0-9a-f]{40}", response[0]):
             raise ValueError("cannot resolve upstream revision: " + repo)
         commits[repo] = response[0]
+    release_commit = None
+    if "cn.txt" in SOURCES:
+        response = subprocess.check_output(
+            ["git", "ls-remote", "https://github.com/v2fly/domain-list-community.git", "refs/heads/release"],
+            text=True, timeout=60).split()
+        if len(response) != 2 or not re.fullmatch(r"[0-9a-f]{40}", response[0]):
+            raise ValueError("cannot resolve v2fly release revision")
+        release_commit = response[0]
     for name, url in SOURCES.items():
         resolved_url, revision = url, {}
         for repo, commit in commits.items():
@@ -51,6 +61,9 @@ def download(inputs: Path) -> dict:
             if url.startswith(prefix):
                 resolved_url = url.replace(prefix, f"https://raw.githubusercontent.com/{repo}/{commit}/", 1)
                 revision = {"commit": commit, "resolved_url": resolved_url}
+        if name == "cn.txt":
+            resolved_url = url.replace("/release/", f"/{release_commit}/", 1)
+            revision = {"commit": release_commit, "resolved_url": resolved_url}
         target = inputs / name
         temp = inputs / (name + ".part")
         subprocess.run(["curl", "--fail", "--silent", "--show-error", "--location",
@@ -80,21 +93,59 @@ def country_networks(path: Path):
     return [n for version in (4, 6) for n in ipaddress.collapse_addresses(groups[version])]
 
 
-def asn_networks(path: Path):
+def asn_networks(path: Path, target_asns=None):
     import maxminddb
-    groups = {asn: set() for asn in TARGET_ASNS}
+    targets = TARGET_ASNS if target_asns is None else target_asns
+    if not targets or any(type(asn) is not int or not 1 <= asn <= 4294967295 for asn in targets):
+        raise ValueError("invalid ASN selection")
+    groups = {asn: set() for asn in targets}
+    organizations = {asn: set() for asn in targets}
     with maxminddb.open_database(path) as database:
         for network, record in database:
             if record and type(record.get("autonomous_system_number")) is int:
                 asn = record["autonomous_system_number"]
                 if asn in groups:
                     groups[asn].add(network)
+                    organization = record.get("autonomous_system_organization")
+                    if isinstance(organization, str) and organization:
+                        organizations[asn].add(organization)
     networks = set().union(*groups.values())
     if not networks:
         raise ValueError("ASN database lacks all explicitly tracked ASNs")
     coverage = {"networks_by_asn": {str(asn): len(groups[asn]) for asn in sorted(groups)},
-                "missing_asns": sorted(asn for asn, nets in groups.items() if not nets)}
+                "missing_asns": sorted(asn for asn, nets in groups.items() if not nets),
+                "organizations_by_asn": {str(asn): sorted(organizations[asn]) for asn in sorted(groups)},
+                "ipv4": sum(n.version == 4 for n in networks),
+                "ipv6": sum(n.version == 6 for n in networks)}
     return networks, coverage
+
+
+def database_metadata(path: Path, expected_type: str) -> dict:
+    import maxminddb
+    with maxminddb.open_database(path) as database:
+        metadata = database.metadata()
+        if metadata.database_type != expected_type or metadata.ip_version != 6:
+            raise ValueError("unexpected MMDB type or address-family coverage")
+        return {"type": metadata.database_type, "build_epoch": metadata.build_epoch,
+                "ip_version": metadata.ip_version}
+
+
+def adguard_metadata(text: str) -> dict:
+    header = []
+    for line in text.splitlines():
+        if not line.startswith("!") or line.startswith("! Source name:"):
+            break
+        header.append(line)
+    preamble = "\n".join(header)
+    metadata = {}
+    for label in ("Version", "Last modified"):
+        match = re.search(r"^! " + label + r": (.+)$", preamble, re.MULTILINE)
+        if match:
+            metadata[label.lower().replace(" ", "_")] = match[1]
+    match = re.search(r"^! Compiled by (.+)$", preamble, re.MULTILINE)
+    if match:
+        metadata["compiler"] = match[1]
+    return metadata
 
 
 def voice_networks(payload):
@@ -176,6 +227,8 @@ def build(root: Path = ROOT, offline: bool = False):
     reports["China-v2fly"] = report.json()
     ai, report = v2fly((inputs / "openai.txt").read_text(encoding="utf-8-sig"))
     reports["OpenAI-v2fly"] = report.json()
+    claude, report = v2fly((inputs / "anthropic.txt").read_text(encoding="utf-8-sig"))
+    reports["Claude-v2fly"] = report.json()
     official_path = root / "data/OpenAI/official-domains.txt"
     excluded_path = root / "data/OpenAI/official-domains-excluded.txt"
     official, report = reviewed_domains(official_path.read_text(), excluded_path.read_text())
@@ -184,7 +237,13 @@ def build(root: Path = ROOT, offline: bool = False):
     reports["AdGuard"] = report.json()
     china_nets = country_networks(inputs / "Country.mmdb")
     asn_nets, reports["OpenAI-ASN"] = asn_networks(inputs / "ASN.mmdb")
-    voice_nets = voice_networks(json.loads((inputs / "voice.json").read_text()))
+    claude_nets, reports["Claude-ASN"] = asn_networks(inputs / "ASN.mmdb", CLAUDE_ASNS)
+    for name, database_type in (("Country.mmdb", "GeoLite2-Country"), ("ASN.mmdb", "GeoLite2-ASN")):
+        manifest[name]["database"] = database_metadata(inputs / name, database_type)
+    voice_payload = json.loads((inputs / "voice.json").read_text())
+    voice_nets = voice_networks(voice_payload)
+    manifest["voice.json"]["creation_time"] = voice_payload["creationTime"]
+    manifest["adguard.txt"].update(adguard_metadata((inputs / "adguard.txt").read_text()))
 
     social = {}
     for service in SERVICES:
@@ -206,6 +265,7 @@ def build(root: Path = ROOT, offline: bool = False):
     for relative, rules in {
         "China/Sources/China-v2fly-Domain.list": cn,
         "OpenAI/Sources/OpenAI-v2fly.list": ai,
+        "Claude/Sources/Claude-v2fly.list": claude,
         "OpenAI/Sources/OpenAI-Official-Domain.list": official,
         "AdGuard/Ad-Domain.list": compact(ads),
     }.items():
@@ -213,11 +273,13 @@ def build(root: Path = ROOT, offline: bool = False):
 
     for label, nets in {"China/Sources/China-GeoIP": china_nets,
                         "OpenAI/Sources/OpenAI-ASN-IP": asn_nets,
+                        "Claude/Sources/Claude-ASN-IP": claude_nets,
                         "OpenAI/Sources/OpenAI-Voice-IP": voice_nets}.items():
         for no_resolve in (False, True):
             suffix = "-NoResolve" if no_resolve else ""
             write_list(output, label + suffix + ".list", networks_rules(nets, no_resolve))
-    for name, domains, nets in (("China", cn, china_nets), ("OpenAI", ai | official, asn_nets | voice_nets)):
+    for name, domains, nets in (("China", cn, china_nets), ("OpenAI", ai | official, asn_nets | voice_nets),
+                                ("Claude", claude, claude_nets)):
         reduced = compact(domains)
         regular = reduced | networks_rules(nets)
         nr = reduced | networks_rules(nets, True)
@@ -234,6 +296,8 @@ def build(root: Path = ROOT, offline: bool = False):
                     for p in sorted(output.rglob("*.list"))}}
     json_write(stage / "reports/conversion.json", reports)
     json_write(stage / "reports/manifest.json", provenance)
+    from scripts.validation import audit_publication
+    audit_publication(stage, reviewed_root=root)
     # All source parsing, validation and pair checks completed before publication.
     # CI never commits a failed build. Backup permits restoration on local I/O errors.
     backup = workspace / "previous"

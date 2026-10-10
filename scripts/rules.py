@@ -290,6 +290,8 @@ def v2fly(text: str) -> tuple[set[Rule], Report]:
                 raise ValueError(f"unknown v2fly type at line {number}: {kind}")
             output.update(converted)
         except Unsupported as error:
+            if kind != "regexp":
+                raise ValueError(f"malformed v2fly {kind} at line {number}") from error
             report.skip(number, raw, str(error))
     report.counts["output"] = len(output)
     return output, report
@@ -387,7 +389,9 @@ def adguard(text: str) -> tuple[set[Rule], Report]:
         line = raw.strip()
         if not line or line.startswith(("!", "#")):
             continue
-        if any(marker in line for marker in ("##", "#@#", "#$#", "#%#", "#?#", "#$?#")):
+        body = line[2:] if line.startswith("@@") else line
+        if not body.startswith("/") and any(
+                marker in line for marker in ("##", "#@#", "#$#", "#%#", "#?#", "#$?#")):
             report.counts["cosmetic_ignored"] += 1
             continue
         report.counts["input"] += 1
