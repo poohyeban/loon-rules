@@ -1,24 +1,24 @@
 {
   "outputs": {
     "AdGuard/Ad-Domain.list": {
-      "rules": 180621,
-      "sha256": "d161ba01f2313dd950e3e49778185f1e497a003e33b8399863d14fc03f48de66"
+      "rules": 180870,
+      "sha256": "493d797c79a7635dfb7f57eaa74d20a70fcef71290b9a5cebcb68f0d60ce1ebe"
     },
     "China/China-NoResolve.list": {
-      "rules": 25835,
-      "sha256": "5b86517b8e587e7a3280fd792e3a2dd378f3ee0ece510139f776de04d53dac03"
+      "rules": 25826,
+      "sha256": "6efcdce69b188dd7e495bc09e544a574dbf6665f8d3500ca1f19680358c54f6c"
     },
     "China/China.list": {
-      "rules": 25835,
-      "sha256": "6ae0cc7bfeb2b1813ec13ab48483ab0d4b44d64aebc0fc8ec36eace20f23d48a"
+      "rules": 25826,
+      "sha256": "afa0857d1cd93a9a3ac3a30b24f20af62af09454047a66cb7c26cd4f25d87aae"
     },
     "China/Sources/China-GeoIP-NoResolve.list": {
-      "rules": 19680,
-      "sha256": "3c3e2543d390cf9ab53b593c1478b04b919db6e5399e3c96b583ebf693ac0f40"
+      "rules": 19671,
+      "sha256": "05d7605838e8b7cdd581f9d75e8e44a2c8c3592977fb902a01537c14830b47d3"
     },
     "China/Sources/China-GeoIP.list": {
-      "rules": 19680,
-      "sha256": "353b02d1c973c669425ed2343f969038277923b04429c27416a25767dd7c8485"
+      "rules": 19671,
+      "sha256": "739fb7fec7cd88255a651e2c08ebc4da41c36c80e0b0524994ea835c98b87c21"
     },
     "China/Sources/China-v2fly-Domain.list": {
       "rules": 6621,
@@ -120,30 +120,30 @@
   },
   "upstreams": {
     "ASN.mmdb": {
-      "bytes": 12085041,
+      "bytes": 8983422,
       "database": {
-        "build_epoch": 1791274527,
+        "build_epoch": 1791533726,
         "ip_version": 6,
         "type": "GeoLite2-ASN"
       },
-      "sha256": "d81af0fdca127edf5e7e1069bab52244b2eb0f0f4e2602f281405e85d22dbcf2",
+      "sha256": "c9dea128931a6ed769706775844c42e98838e0790dbd03b58c92e5aa4cefa57a",
       "url": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb"
     },
     "Country.mmdb": {
-      "bytes": 3405161,
+      "bytes": 3410978,
       "database": {
-        "build_epoch": 1791321693,
+        "build_epoch": 1791564728,
         "ip_version": 6,
         "type": "GeoLite2-Country"
       },
-      "sha256": "0546112e365380d4315e8058f1c176480d377b4323f66a5a1e20d100c9aab8ba",
+      "sha256": "635078e412c4443a2950c2e3f775ccdc400e0a1fea5ffd32e5489e5401a9e51d",
       "url": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb"
     },
     "adguard.txt": {
-      "bytes": 4409756,
+      "bytes": 4415306,
       "compiler": "@adguard/hostlist-compiler v2.1.0",
-      "last_modified": "2026-10-10T00:43:51.399Z",
-      "sha256": "f2dbbbf0926ad055566ea97bd3f87987f8fd51185d7c6fab986ec9e4a1382f4c",
+      "last_modified": "2026-10-10T22:13:58.284Z",
+      "sha256": "b183921aea5512c0c5ba048725af2d9565f7deb126d9de642e2676f28a39150a",
       "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt"
     },
     "anthropic.txt": {
@@ -183,8 +183,8 @@
     },
     "sukka-global.txt": {
       "bytes": 34613,
-      "commit": "1c454d540ff76a50e7828a7fe95583701905e306",
-      "resolved_url": "https://raw.githubusercontent.com/SukkaW/Surge/1c454d540ff76a50e7828a7fe95583701905e306/Source/non_ip/global.conf",
+      "commit": "6172daf80ac3f9a1d2dbdb9ad6b559554aa8ac62",
+      "resolved_url": "https://raw.githubusercontent.com/SukkaW/Surge/6172daf80ac3f9a1d2dbdb9ad6b559554aa8ac62/Source/non_ip/global.conf",
       "sha256": "43ab6e136b20f9f28cd54f0c565a6d81198053f62425c4a4beba9e2992b42471",
       "url": "https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/global.conf"
     },
