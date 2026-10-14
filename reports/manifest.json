@@ -1,8 +1,8 @@
 {
   "outputs": {
     "AdGuard/Ad-Domain.list": {
-      "rules": 183276,
-      "sha256": "cadcbee52c18bbbc8f44af0a1380573534690c660bfe48df8fd7681a9f711b14"
+      "rules": 183567,
+      "sha256": "24e08a880de8a2beb90c597ec65102ff26fc7814e6c90ba5a684847627d89a0e"
     },
     "China/China-NoResolve.list": {
       "rules": 25826,
@@ -120,13 +120,13 @@
   },
   "upstreams": {
     "ASN.mmdb": {
-      "bytes": 8983422,
+      "bytes": 8969597,
       "database": {
-        "build_epoch": 1791533726,
+        "build_epoch": 1791792943,
         "ip_version": 6,
         "type": "GeoLite2-ASN"
       },
-      "sha256": "c9dea128931a6ed769706775844c42e98838e0790dbd03b58c92e5aa4cefa57a",
+      "sha256": "7d1cf6cd79a0f35b446570058efb7d05cb6db6dd10bbbc09c3699473f6860cba",
       "url": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb"
     },
     "Country.mmdb": {
@@ -140,10 +140,10 @@
       "url": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb"
     },
     "adguard.txt": {
-      "bytes": 4477100,
+      "bytes": 4483724,
       "compiler": "@adguard/hostlist-compiler v2.1.0",
-      "last_modified": "2026-10-13T02:33:29.595Z",
-      "sha256": "6c9b8af783c033cae509b3a995a5375539a6fb9327c5cafaa96d46cfabc512a8",
+      "last_modified": "2026-10-13T22:12:35.912Z",
+      "sha256": "905bf158d1888508c0adf44d4252b123abe31d91c1213023d41493f60c2a8645",
       "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt"
     },
     "anthropic.txt": {
