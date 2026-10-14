@@ -1,8 +1,8 @@
 {
   "outputs": {
     "AdGuard/Ad-Domain.list": {
-      "rules": 183567,
-      "sha256": "24e08a880de8a2beb90c597ec65102ff26fc7814e6c90ba5a684847627d89a0e"
+      "rules": 183540,
+      "sha256": "aed94a94738eda086b4c9e48f71533c4ada8f44becf90c605210e43e2fd86e7e"
     },
     "China/China-NoResolve.list": {
       "rules": 25826,
@@ -140,10 +140,10 @@
       "url": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb"
     },
     "adguard.txt": {
-      "bytes": 4483724,
+      "bytes": 4485635,
       "compiler": "@adguard/hostlist-compiler v2.1.0",
-      "last_modified": "2026-10-13T22:12:35.912Z",
-      "sha256": "905bf158d1888508c0adf44d4252b123abe31d91c1213023d41493f60c2a8645",
+      "last_modified": "2026-10-14T22:13:12.521Z",
+      "sha256": "95d0ae721950bddd0686006a58eea4a2ce26942b553de7feb071affd2a0f9dfe",
       "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt"
     },
     "anthropic.txt": {
@@ -183,8 +183,8 @@
     },
     "sukka-global.txt": {
       "bytes": 34613,
-      "commit": "7c67f6c8f0eb0e990097f3f94b39992151644d88",
-      "resolved_url": "https://raw.githubusercontent.com/SukkaW/Surge/7c67f6c8f0eb0e990097f3f94b39992151644d88/Source/non_ip/global.conf",
+      "commit": "0f17de068ae4301afbef0a14d819dc6d8d738062",
+      "resolved_url": "https://raw.githubusercontent.com/SukkaW/Surge/0f17de068ae4301afbef0a14d819dc6d8d738062/Source/non_ip/global.conf",
       "sha256": "43ab6e136b20f9f28cd54f0c565a6d81198053f62425c4a4beba9e2992b42471",
       "url": "https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/global.conf"
     },
