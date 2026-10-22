@@ -149,7 +149,7 @@ python3 -m venv .venv
 .venv/bin/python -B -m scripts.build --offline
 ```
 
-CI 使用 Python 3.12。有限正则解析依赖 CPython 的解析器接口，升级 Python 时应重新验证测试。
+CI 每次检查并使用最新稳定版 Python 3（`3.x` + `check-latest`，不含预发布版），同时更新 pip。有限正则解析依赖 CPython 的解析器接口；转换测试通过后才会生成和发布规则。
 
 ## 隐私与许可
 
