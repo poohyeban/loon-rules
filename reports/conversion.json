@@ -6,4219 +6,4219 @@
       "conservative_exceptions": 11,
       "disabled": 1,
       "exceptions": 209,
-      "input": 186149,
+      "input": 186512,
       "non_hostname_exception": 1,
-      "output": 185105,
+      "output": 185468,
       "skipped": 836
     },
     "skipped": [
       {
-        "line": 143,
+        "line": 132,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||194.63.143.96^"
       },
       {
-        "line": 296,
+        "line": 285,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||103.179.189.35^"
       },
       {
-        "line": 449,
+        "line": 438,
         "reason": "invalid hostname label",
         "source_rule": "||direct-specific.com"
       },
       {
-        "line": 513,
+        "line": 502,
         "reason": "invalid hostname label",
         "source_rule": "||ad-host-backup-*.aliyuncs.com^"
       },
       {
-        "line": 542,
+        "line": 531,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||107.148.45.21^"
       },
       {
-        "line": 547,
+        "line": 536,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||198.23.198.110^"
       },
       {
-        "line": 548,
+        "line": 537,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||185.216.143.121^"
       },
       {
-        "line": 631,
+        "line": 620,
         "reason": "invalid hostname label",
         "source_rule": "||st-n.ads*-adnow.com^"
       },
       {
-        "line": 657,
+        "line": 646,
         "reason": "invalid hostname label",
         "source_rule": "||reachableads-av.*.amazonaws.com^"
       },
       {
-        "line": 683,
+        "line": 672,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||185.149.120.173^"
       },
       {
-        "line": 684,
+        "line": 673,
         "reason": "regex must have an absolute end anchor",
         "source_rule": "/^139\\.45\\.197\\.2(4[0-9]|5[0-4]):/"
       },
       {
-        "line": 685,
+        "line": 674,
         "reason": "regex must have an absolute end anchor",
         "source_rule": "/^139\\.45\\.197\\.2(4[0-9]|5[0-4])/"
       },
       {
-        "line": 692,
+        "line": 681,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||157.90.183.248^"
       },
       {
-        "line": 714,
+        "line": 703,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||5.61.55.143^"
       },
       {
-        "line": 715,
+        "line": 704,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||37.1.213.100^"
       },
       {
-        "line": 718,
+        "line": 707,
         "reason": "invalid hostname label",
         "source_rule": "||ads.livetv*.me^"
       },
       {
-        "line": 726,
+        "line": 715,
         "reason": "invalid hostname label",
         "source_rule": "||counter*.stat.ovh^"
       },
       {
-        "line": 779,
+        "line": 768,
         "reason": "invalid hostname label",
         "source_rule": "||fxhpaoxqyajvmdg."
       },
       {
-        "line": 780,
+        "line": 769,
         "reason": "invalid hostname label",
         "source_rule": "||rgfftupf."
       },
       {
-        "line": 846,
+        "line": 835,
         "reason": "invalid hostname label",
         "source_rule": "||clk.rtpdn*.com^"
       },
       {
-        "line": 1032,
+        "line": 1021,
         "reason": "invalid hostname label",
         "source_rule": "||teleriumads-*.netdna-ssl.com^"
       },
       {
-        "line": 1072,
+        "line": 1061,
         "reason": "invalid hostname label",
         "source_rule": "||putrr*.com^"
       },
       {
-        "line": 1075,
+        "line": 1064,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".bbelements.com^"
       },
       {
-        "line": 1076,
+        "line": 1065,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".doublepimp.com^"
       },
       {
-        "line": 1081,
+        "line": 1070,
         "reason": "modifier requires unsupported semantics",
         "source_rule": "||adsrvmedia.adk2.co^$important"
       },
       {
-        "line": 1090,
+        "line": 1079,
         "reason": "invalid hostname label",
         "source_rule": "||block.s*block.com^"
       },
       {
-        "line": 1113,
+        "line": 1102,
         "reason": "invalid hostname label",
         "source_rule": "||mf*.advantage.as^"
       },
       {
-        "line": 1129,
+        "line": 1118,
         "reason": "invalid hostname label",
         "source_rule": "||www.fuze-hill*.xyz^"
       },
       {
-        "line": 1130,
+        "line": 1119,
         "reason": "invalid hostname label",
         "source_rule": "||www.fuze-sea*.xyz^"
       },
       {
-        "line": 1146,
+        "line": 1135,
         "reason": "regex must have an absolute end anchor",
         "source_rule": "/^88\\.208\\.22\\.[1234]:/"
       },
       {
-        "line": 1147,
+        "line": 1136,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "/^88\\.208\\.22\\.[1234]$/"
       },
       {
-        "line": 1154,
+        "line": 1143,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||154.199.255.184^"
       },
       {
-        "line": 1161,
+        "line": 1150,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||88.208.46.222^"
       },
       {
-        "line": 1172,
+        "line": 1161,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||103.224.182.210^"
       },
       {
-        "line": 1174,
+        "line": 1163,
         "reason": "regex must have an absolute end anchor",
         "source_rule": "/^94\\.242\\.247\\.(2[0-9]|3[0-2]):/"
       },
       {
-        "line": 1175,
+        "line": 1164,
         "reason": "regex must have an absolute end anchor",
         "source_rule": "/^94\\.242\\.247\\.(2[0-9]|3[0-2])/"
       },
       {
-        "line": 1176,
+        "line": 1165,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "/^23\\.109\\.170\\.(18[7-9]|19[0-2])$/"
       },
       {
-        "line": 1177,
+        "line": 1166,
         "reason": "regex must have an absolute end anchor",
         "source_rule": "/^23\\.109\\.73\\.\\d{3}/"
       },
       {
-        "line": 1178,
+        "line": 1167,
         "reason": "regex must have an absolute end anchor",
         "source_rule": "/^188\\.42\\.84\\.\\d{1,3}/"
       },
       {
-        "line": 1179,
+        "line": 1168,
         "reason": "regex must have an absolute end anchor",
         "source_rule": "/^139\\.45\\.19[5-7]\\.\\d{1,3}/"
       },
       {
-        "line": 1182,
+        "line": 1171,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||193.200.64.30^"
       },
       {
-        "line": 1183,
+        "line": 1172,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||193.200.64.31^"
       },
       {
-        "line": 1184,
+        "line": 1173,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||193.200.65.61^"
       },
       {
-        "line": 1185,
+        "line": 1174,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||212.117.190.201^"
       },
       {
-        "line": 1186,
+        "line": 1175,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||212.117.190.202^"
       },
       {
-        "line": 1187,
+        "line": 1176,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||212.117.190.210^"
       },
       {
-        "line": 1188,
+        "line": 1177,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||212.117.190.211^"
       },
       {
-        "line": 1189,
+        "line": 1178,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||212.117.190.212^"
       },
       {
-        "line": 1190,
+        "line": 1179,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||212.117.190.213^"
       },
       {
-        "line": 1193,
+        "line": 1182,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||91.204.226.224^"
       },
       {
-        "line": 1196,
+        "line": 1185,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||57.128.71.215^"
       },
       {
-        "line": 1200,
+        "line": 1189,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||172.240.108.68^"
       },
       {
-        "line": 1201,
+        "line": 1190,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||172.240.108.76^"
       },
       {
-        "line": 1202,
+        "line": 1191,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||172.240.108.84^"
       },
       {
-        "line": 1203,
+        "line": 1192,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||172.240.127.234^"
       },
       {
-        "line": 1204,
+        "line": 1193,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||172.240.253.132^"
       },
       {
-        "line": 1205,
+        "line": 1194,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||185.246.188.124^"
       },
       {
-        "line": 1206,
+        "line": 1195,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||185.246.188.125^"
       },
       {
-        "line": 1207,
+        "line": 1196,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||192.243.59.12^"
       },
       {
-        "line": 1208,
+        "line": 1197,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||192.243.59.13^"
       },
       {
-        "line": 1209,
+        "line": 1198,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||192.243.59.20^"
       },
       {
-        "line": 1210,
+        "line": 1199,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||192.243.61.225^"
       },
       {
-        "line": 1211,
+        "line": 1200,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||192.243.61.227^"
       },
       {
-        "line": 1212,
+        "line": 1201,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||194.63.140.103^"
       },
       {
-        "line": 1213,
+        "line": 1202,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||194.63.143.61^"
       },
       {
-        "line": 1216,
+        "line": 1205,
         "reason": "invalid hostname label",
         "source_rule": "/^142\\.91\\.159\\.(1[5-9]\\d|2[0-4]\\d|250):(80|443)$/"
       },
       {
-        "line": 1219,
+        "line": 1208,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||188.72.219.36^"
       },
       {
-        "line": 3852,
+        "line": 3841,
         "reason": "invalid hostname label",
         "source_rule": "||*.exaapi.com^"
       },
       {
-        "line": 7596,
+        "line": 7585,
         "reason": "invalid hostname label",
         "source_rule": "||valentine.xhamster.*^"
       },
       {
-        "line": 7605,
+        "line": 7594,
         "reason": "invalid hostname label",
         "source_rule": "||rtb-*.anysex.com^"
       },
       {
-        "line": 7616,
+        "line": 7605,
         "reason": "invalid hostname label",
         "source_rule": "||advertising.civitai."
       },
       {
-        "line": 7633,
+        "line": 7622,
         "reason": "invalid hostname label",
         "source_rule": "||*two-gun-volley.pages.dev^"
       },
       {
-        "line": 7636,
+        "line": 7625,
         "reason": "invalid hostname label",
         "source_rule": "||id-msp.newsbreak.com"
       },
       {
-        "line": 7662,
+        "line": 7651,
         "reason": "invalid hostname label",
         "source_rule": "||advert*.livesportmedia.eu^"
       },
       {
-        "line": 7714,
+        "line": 7703,
         "reason": "invalid hostname label",
         "source_rule": "||buzzer.xhamster*"
       },
       {
-        "line": 7765,
+        "line": 7754,
         "reason": "invalid hostname label",
         "source_rule": "||prebid-*.rubiconproject.com^"
       },
       {
-        "line": 7939,
+        "line": 7928,
         "reason": "invalid hostname label",
         "source_rule": "||pijama.*.elasticbeanstalk.com^"
       },
       {
-        "line": 8034,
+        "line": 8023,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".n.2.1.js^"
       },
       {
-        "line": 8035,
+        "line": 8024,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".n.2.1.l60.js^"
       },
       {
-        "line": 8036,
+        "line": 8025,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".1.1.1.l80.js^"
       },
       {
-        "line": 8037,
+        "line": 8026,
         "reason": "invalid hostname label",
         "source_rule": ".3.n.2.1.l50.js"
       },
       {
-        "line": 8038,
+        "line": 8027,
         "reason": "invalid hostname label",
         "source_rule": ".3.n.2.2.l30.js"
       },
       {
-        "line": 8039,
+        "line": 8028,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||109.123.233.251^"
       },
       {
-        "line": 8048,
+        "line": 8037,
         "reason": "invalid hostname label",
         "source_rule": "://mine.torrent.pw^"
       },
       {
-        "line": 8049,
+        "line": 8038,
         "reason": "invalid hostname label",
         "source_rule": "||hostingcloud.*.wasm^"
       },
       {
-        "line": 8052,
+        "line": 8041,
         "reason": "invalid hostname label",
         "source_rule": "vkcdnservice.appspot.com^"
       },
       {
-        "line": 8086,
+        "line": 8075,
         "reason": "invalid hostname label",
         "source_rule": "||freecontent.date"
       },
       {
-        "line": 8087,
+        "line": 8076,
         "reason": "invalid hostname label",
         "source_rule": "||freecontent.stream"
       },
       {
-        "line": 8088,
+        "line": 8077,
         "reason": "invalid hostname label",
         "source_rule": "||s*.skencituer.com^"
       },
       {
-        "line": 8168,
+        "line": 8157,
         "reason": "invalid hostname label",
         "source_rule": "||tw-726620180914.*.run.app^"
       },
       {
-        "line": 8205,
+        "line": 8194,
         "reason": "invalid hostname label",
         "source_rule": "||zbb.bbb.*.pics^"
       },
       {
-        "line": 8212,
+        "line": 8201,
         "reason": "invalid hostname label",
         "source_rule": "||fjuga.top"
       },
       {
-        "line": 8323,
+        "line": 8312,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||192.151.218.66^"
       },
       {
-        "line": 8324,
+        "line": 8313,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||23.224.89.2^"
       },
       {
-        "line": 8332,
+        "line": 8321,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||156.233.32.123^"
       },
       {
-        "line": 8344,
+        "line": 8333,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||207.148.44.179^"
       },
       {
-        "line": 8346,
+        "line": 8335,
         "reason": "unsupported regex extension or escape",
         "source_rule": "/^(mon|tue|wed|thu|fri|sat|sun)\\d{1,2}\\.\\w{2}\\d{1,6}\\w{4}\\.com$/"
       },
       {
-        "line": 8365,
+        "line": 8354,
         "reason": "invalid hostname label",
         "source_rule": "||ad*.on.cc^"
       },
       {
-        "line": 8542,
+        "line": 8531,
         "reason": "invalid hostname label",
         "source_rule": "||broredir*s.site^"
       },
       {
-        "line": 8602,
+        "line": 8591,
         "reason": "invalid hostname label",
         "source_rule": "||vst.videolink."
       },
       {
-        "line": 8670,
+        "line": 8659,
         "reason": "invalid hostname label",
         "source_rule": "||banner.kiev.ua"
       },
       {
-        "line": 8680,
+        "line": 8669,
         "reason": "invalid hostname label",
         "source_rule": "||orbit*.lun.ua^"
       },
       {
-        "line": 8696,
+        "line": 8685,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".infox.sg^"
       },
       {
-        "line": 8924,
+        "line": 8913,
         "reason": "invalid hostname label",
         "source_rule": "||yxhstwzjbu.info"
       },
       {
-        "line": 8927,
+        "line": 8916,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".potopy.ru^"
       },
       {
-        "line": 8928,
+        "line": 8917,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".vipko.ru^"
       },
       {
-        "line": 8981,
+        "line": 8970,
         "reason": "invalid hostname label",
         "source_rule": "||q*-publick.club^"
       },
       {
-        "line": 9001,
+        "line": 8990,
         "reason": "invalid hostname label",
         "source_rule": "||v.tzbox*.xyz^"
       },
       {
-        "line": 9104,
+        "line": 9093,
         "reason": "invalid hostname label",
         "source_rule": "||cdn*.swaxis.com^"
       },
       {
-        "line": 9148,
+        "line": 9137,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".adonweb.ru^"
       },
       {
-        "line": 9149,
+        "line": 9138,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".allalla.com^"
       },
       {
-        "line": 9150,
+        "line": 9139,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".cpa1.ru^"
       },
       {
-        "line": 9151,
+        "line": 9140,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".ecommtools.com^"
       },
       {
-        "line": 9152,
+        "line": 9141,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".gameleads.ru^"
       },
       {
-        "line": 9153,
+        "line": 9142,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".is.traff-numerical.info^"
       },
       {
-        "line": 9154,
+        "line": 9143,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".piccash.net^"
       },
       {
-        "line": 9155,
+        "line": 9144,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".sexplaycam.com^"
       },
       {
-        "line": 9156,
+        "line": 9145,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".tovarro.com^"
       },
       {
-        "line": 9157,
+        "line": 9146,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".tpm.pw^"
       },
       {
-        "line": 9158,
+        "line": 9147,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".webhop.net^"
       },
       {
-        "line": 9159,
+        "line": 9148,
         "reason": "invalid hostname label",
         "source_rule": "://*.a-akamaihd.com^"
       },
       {
-        "line": 9160,
+        "line": 9149,
         "reason": "invalid hostname label",
         "source_rule": "://jhf.ru^"
       },
       {
-        "line": 9161,
+        "line": 9150,
         "reason": "invalid hostname label",
         "source_rule": "://kma.biz^"
       },
       {
-        "line": 9171,
+        "line": 9160,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||37.220.26.135^"
       },
       {
-        "line": 9172,
+        "line": 9161,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||37.220.26.136^"
       },
       {
-        "line": 9173,
+        "line": 9162,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||37.220.26.137^"
       },
       {
-        "line": 9178,
+        "line": 9167,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||77.247.178.41^"
       },
       {
-        "line": 9179,
+        "line": 9168,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||78.140.134.198^"
       },
       {
-        "line": 9180,
+        "line": 9169,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||78.140.149.216^"
       },
       {
-        "line": 9184,
+        "line": 9173,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||88.85.75.147^"
       },
       {
-        "line": 9185,
+        "line": 9174,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||88.85.77.92^"
       },
       {
-        "line": 9186,
+        "line": 9175,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||91.207.192.31^"
       },
       {
-        "line": 9187,
+        "line": 9176,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||95.211.125.226^"
       },
       {
-        "line": 9232,
+        "line": 9221,
         "reason": "invalid hostname label",
         "source_rule": "||admulti."
       },
       {
-        "line": 9246,
+        "line": 9235,
         "reason": "invalid hostname label",
         "source_rule": "||adserver1."
       },
       {
-        "line": 9282,
+        "line": 9271,
         "reason": "invalid hostname label",
         "source_rule": "||afdads.com"
       },
       {
-        "line": 9293,
+        "line": 9282,
         "reason": "invalid hostname label",
         "source_rule": "||alishop*.ru^"
       },
       {
-        "line": 9295,
+        "line": 9284,
         "reason": "invalid hostname label",
         "source_rule": "||allmt.com"
       },
       {
-        "line": 9298,
+        "line": 9287,
         "reason": "invalid hostname label",
         "source_rule": "||almosto.com"
       },
       {
-        "line": 9336,
+        "line": 9325,
         "reason": "invalid hostname label",
         "source_rule": "||banner-in.net"
       },
       {
-        "line": 9369,
+        "line": 9358,
         "reason": "invalid hostname label",
         "source_rule": "||bondzgi*."
       },
       {
-        "line": 9406,
+        "line": 9395,
         "reason": "invalid hostname label",
         "source_rule": "||clickvip.ru"
       },
       {
-        "line": 9450,
+        "line": 9439,
         "reason": "invalid hostname label",
         "source_rule": "||dl.qcash.ws"
       },
       {
-        "line": 9460,
+        "line": 9449,
         "reason": "invalid hostname label",
         "source_rule": "||eberalofe.pro"
       },
       {
-        "line": 9474,
+        "line": 9463,
         "reason": "invalid hostname label",
         "source_rule": "||et-code.ru"
       },
       {
-        "line": 9493,
+        "line": 9482,
         "reason": "invalid hostname label",
         "source_rule": "||flipflapflo."
       },
       {
-        "line": 9505,
+        "line": 9494,
         "reason": "invalid hostname label",
         "source_rule": "||gbs.gamingmedia.ru"
       },
       {
-        "line": 9523,
+        "line": 9512,
         "reason": "invalid hostname label",
         "source_rule": "||globalteaser.ru"
       },
       {
-        "line": 9533,
+        "line": 9522,
         "reason": "invalid hostname label",
         "source_rule": "||gonews*.net^"
       },
       {
-        "line": 9534,
+        "line": 9523,
         "reason": "invalid hostname label",
         "source_rule": "||goodadvert."
       },
       {
-        "line": 9564,
+        "line": 9553,
         "reason": "invalid hostname label",
         "source_rule": "||icq-window."
       },
       {
-        "line": 9565,
+        "line": 9554,
         "reason": "invalid hostname label",
         "source_rule": "||icqwindow."
       },
       {
-        "line": 9574,
+        "line": 9563,
         "reason": "invalid hostname label",
         "source_rule": "||imgg.dt00.net"
       },
       {
-        "line": 9591,
+        "line": 9580,
         "reason": "invalid hostname label",
         "source_rule": "||iphone-caviar.ru*entranceId"
       },
       {
-        "line": 9604,
+        "line": 9593,
         "reason": "invalid hostname label",
         "source_rule": "||js.goods.redtram.com"
       },
       {
-        "line": 9648,
+        "line": 9637,
         "reason": "invalid hostname label",
         "source_rule": "||letssex."
       },
       {
-        "line": 9657,
+        "line": 9646,
         "reason": "invalid hostname label",
         "source_rule": "||linkexchange."
       },
       {
-        "line": 9670,
+        "line": 9659,
         "reason": "invalid hostname label",
         "source_rule": "||loneday.com"
       },
       {
-        "line": 9704,
+        "line": 9693,
         "reason": "invalid hostname label",
         "source_rule": "||mediacontext."
       },
       {
-        "line": 9705,
+        "line": 9694,
         "reason": "invalid hostname label",
         "source_rule": "||medialand."
       },
       {
-        "line": 9728,
+        "line": 9717,
         "reason": "invalid hostname label",
         "source_rule": "||minitds-*.info^"
       },
       {
-        "line": 9732,
+        "line": 9721,
         "reason": "invalid hostname label",
         "source_rule": "||mjavagames.ru"
       },
       {
-        "line": 9742,
+        "line": 9731,
         "reason": "invalid hostname label",
         "source_rule": "||moneymaiker.ru"
       },
       {
-        "line": 9743,
+        "line": 9732,
         "reason": "invalid hostname label",
         "source_rule": "||moneysyst.biz"
       },
       {
-        "line": 9752,
+        "line": 9741,
         "reason": "invalid hostname label",
         "source_rule": "||mptri.net"
       },
       {
-        "line": 9792,
+        "line": 9781,
         "reason": "invalid hostname label",
         "source_rule": "||obislame.ru"
       },
       {
-        "line": 9840,
+        "line": 9829,
         "reason": "invalid hostname label",
         "source_rule": "||platinumcode.net"
       },
       {
-        "line": 9844,
+        "line": 9833,
         "reason": "invalid hostname label",
         "source_rule": "||pop-parad."
       },
       {
-        "line": 9845,
+        "line": 9834,
         "reason": "invalid hostname label",
         "source_rule": "||pop-under."
       },
       {
-        "line": 9847,
+        "line": 9836,
         "reason": "invalid hostname label",
         "source_rule": "||poptraf."
       },
       {
-        "line": 9848,
+        "line": 9837,
         "reason": "invalid hostname label",
         "source_rule": "||popunder."
       },
       {
-        "line": 9849,
+        "line": 9838,
         "reason": "invalid hostname label",
         "source_rule": "||popupclick."
       },
       {
-        "line": 9850,
+        "line": 9839,
         "reason": "invalid hostname label",
         "source_rule": "||popuptraf."
       },
       {
-        "line": 9852,
+        "line": 9841,
         "reason": "invalid hostname label",
         "source_rule": "||poshalim."
       },
       {
-        "line": 9861,
+        "line": 9850,
         "reason": "invalid hostname label",
         "source_rule": "||promoblocks.ru"
       },
       {
-        "line": 9864,
+        "line": 9853,
         "reason": "invalid hostname label",
         "source_rule": "||psma01.com"
       },
       {
-        "line": 9865,
+        "line": 9854,
         "reason": "invalid hostname label",
         "source_rule": "||psma02.com"
       },
       {
-        "line": 9866,
+        "line": 9855,
         "reason": "invalid hostname label",
         "source_rule": "||psma03.com"
       },
       {
-        "line": 9885,
+        "line": 9874,
         "reason": "invalid hostname label",
         "source_rule": "||rb*.design.ru^"
       },
       {
-        "line": 9894,
+        "line": 9883,
         "reason": "invalid hostname label",
         "source_rule": "||real*traf.ru^"
       },
       {
-        "line": 9900,
+        "line": 9889,
         "reason": "invalid hostname label",
         "source_rule": "||rebill.me"
       },
       {
-        "line": 9932,
+        "line": 9921,
         "reason": "invalid hostname label",
         "source_rule": "||rotaban."
       },
       {
-        "line": 9933,
+        "line": 9922,
         "reason": "invalid hostname label",
         "source_rule": "||rotabanner."
       },
       {
-        "line": 9934,
+        "line": 9923,
         "reason": "invalid hostname label",
         "source_rule": "||rotator."
       },
       {
-        "line": 9939,
+        "line": 9928,
         "reason": "invalid hostname label",
         "source_rule": "||ruscams.com"
       },
       {
-        "line": 9942,
+        "line": 9931,
         "reason": "invalid hostname label",
         "source_rule": "||rusrestbest."
       },
       {
-        "line": 9981,
+        "line": 9970,
         "reason": "invalid hostname label",
         "source_rule": "||smart.allocine.fr"
       },
       {
-        "line": 9984,
+        "line": 9973,
         "reason": "invalid hostname label",
         "source_rule": "||sn00.net"
       },
       {
-        "line": 10001,
+        "line": 9990,
         "reason": "invalid hostname label",
         "source_rule": "||subnewss*.net^"
       },
       {
-        "line": 10002,
+        "line": 9991,
         "reason": "invalid hostname label",
         "source_rule": "||superpcexpert.ru"
       },
       {
-        "line": 10009,
+        "line": 9998,
         "reason": "invalid hostname label",
         "source_rule": "||talkfusion.com"
       },
       {
-        "line": 10031,
+        "line": 10020,
         "reason": "invalid hostname label",
         "source_rule": "||timedirect.ru"
       },
       {
-        "line": 10033,
+        "line": 10022,
         "reason": "invalid hostname label",
         "source_rule": "||tiz.neosmi.ru"
       },
       {
-        "line": 10050,
+        "line": 10039,
         "reason": "invalid hostname label",
         "source_rule": "||tmserver-2.net"
       },
       {
-        "line": 10090,
+        "line": 10079,
         "reason": "invalid hostname label",
         "source_rule": "||u*.takru.com^"
       },
       {
-        "line": 10098,
+        "line": 10087,
         "reason": "invalid hostname label",
         "source_rule": "||under-click."
       },
       {
-        "line": 10099,
+        "line": 10088,
         "reason": "invalid hostname label",
         "source_rule": "||underclick."
       },
       {
-        "line": 10117,
+        "line": 10106,
         "reason": "invalid hostname label",
         "source_rule": "||v.newsportal*.ru^"
       },
       {
-        "line": 10136,
+        "line": 10125,
         "reason": "invalid hostname label",
         "source_rule": "||videoclick."
       },
       {
-        "line": 10137,
+        "line": 10126,
         "reason": "invalid hostname label",
         "source_rule": "||videoclik."
       },
       {
-        "line": 10171,
+        "line": 10160,
         "reason": "invalid hostname label",
         "source_rule": "||w*statistics.info^"
       },
       {
-        "line": 10173,
+        "line": 10162,
         "reason": "invalid hostname label",
         "source_rule": "||web-rotation.net"
       },
       {
-        "line": 10174,
+        "line": 10163,
         "reason": "invalid hostname label",
         "source_rule": "||web-visor."
       },
       {
-        "line": 10223,
+        "line": 10212,
         "reason": "invalid hostname label",
         "source_rule": "||yottos.com"
       },
       {
-        "line": 10238,
+        "line": 10227,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||193.200.64.20^"
       },
       {
-        "line": 10242,
+        "line": 10231,
         "reason": "regex must have an absolute end anchor",
         "source_rule": "/62.76.25.2(7|8)/"
       },
       {
-        "line": 10244,
+        "line": 10233,
         "reason": "regex must have an absolute end anchor",
         "source_rule": "/193.200.64.24:/"
       },
       {
-        "line": 10245,
+        "line": 10234,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||193.200.64.24^"
       },
       {
-        "line": 10248,
+        "line": 10237,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||206.54.181.250^"
       },
       {
-        "line": 10253,
+        "line": 10242,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||62.76.25.27^"
       },
       {
-        "line": 10254,
+        "line": 10243,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||62.76.25.28^"
       },
       {
-        "line": 10257,
+        "line": 10246,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||45.82.68.79^"
       },
       {
-        "line": 10316,
+        "line": 10305,
         "reason": "invalid hostname label",
         "source_rule": "||h3v9p8x2q1r7-agckaeh6g2ehcaes.*.azurewebsites.net^"
       },
       {
-        "line": 10769,
+        "line": 10758,
         "reason": "invalid hostname label",
         "source_rule": "*ad.durasite.net^"
       },
       {
-        "line": 10791,
+        "line": 10780,
         "reason": "invalid hostname label",
         "source_rule": "||bar*.shinobi.jp^"
       },
       {
-        "line": 10808,
+        "line": 10797,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||94.130.167.163^"
       },
       {
-        "line": 10902,
+        "line": 10891,
         "reason": "invalid hostname label",
         "source_rule": "||adv0*.msa.cdn.mediaset.net^"
       },
       {
-        "line": 10949,
+        "line": 10938,
         "reason": "unsupported regex extension or escape",
         "source_rule": "/^https:\\/\\/(a|c)\\.[0-9a-f]{56}\\.com$/"
       },
       {
-        "line": 10951,
+        "line": 10940,
         "reason": "regex expansion limit",
         "source_rule": "/^(a|c)\\.[0-9a-f]{56}\\.com$/"
       },
       {
-        "line": 10977,
+        "line": 10966,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||54.222.186.106^"
       },
       {
-        "line": 11002,
+        "line": 10991,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".libaishuo.com^"
       },
       {
-        "line": 11022,
+        "line": 11011,
         "reason": "invalid hostname label",
         "source_rule": "||adapi*.boomplaymusic.com^"
       },
       {
-        "line": 11073,
+        "line": 11062,
         "reason": "invalid hostname label",
         "source_rule": "||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi^"
       },
       {
-        "line": 11083,
+        "line": 11072,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||23.224.199.96^"
       },
       {
-        "line": 11084,
+        "line": 11073,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||23.224.199.74^"
       },
       {
-        "line": 11100,
+        "line": 11089,
         "reason": "invalid hostname label",
         "source_rule": "||ads*-normal*.zijieapi.com^"
       },
       {
-        "line": 11108,
+        "line": 11097,
         "reason": "invalid hostname label",
         "source_rule": "||ad*.zonaplus.tv^"
       },
       {
-        "line": 11112,
+        "line": 11101,
         "reason": "invalid hostname label",
         "source_rule": "||api16-access-ttp*.tiktokpangle-b.us^"
       },
       {
-        "line": 11118,
+        "line": 11107,
         "reason": "invalid hostname label",
         "source_rule": "||pavoshare.com"
       },
       {
-        "line": 11119,
+        "line": 11108,
         "reason": "invalid hostname label",
         "source_rule": "||global-staticplat.cdn.bcebos.com"
       },
       {
-        "line": 11138,
+        "line": 11127,
         "reason": "invalid hostname label",
         "source_rule": "||creative*.bidease.com^"
       },
       {
-        "line": 11158,
+        "line": 11147,
         "reason": "invalid hostname label",
         "source_rule": "||ads*-normal-*.zijieapi.com^"
       },
       {
-        "line": 11179,
+        "line": 11168,
         "reason": "invalid hostname label",
         "source_rule": "-adx-*.rayjump.com^"
       },
       {
-        "line": 11189,
+        "line": 11178,
         "reason": "invalid hostname label",
         "source_rule": "||ads*.textra.me^"
       },
       {
-        "line": 11191,
+        "line": 11180,
         "reason": "invalid hostname label",
         "source_rule": "||ads-*-nfl.yinzcam.com^"
       },
       {
-        "line": 11193,
+        "line": 11182,
         "reason": "invalid hostname label",
         "source_rule": "||aan.amazon.*^"
       },
       {
-        "line": 11200,
+        "line": 11189,
         "reason": "invalid hostname label",
         "source_rule": "||ads*.production-public.tubi.io^"
       },
       {
-        "line": 11201,
+        "line": 11190,
         "reason": "invalid hostname label",
         "source_rule": "||mob*.novanewsapp.com^"
       },
       {
-        "line": 11202,
+        "line": 11191,
         "reason": "invalid hostname label",
         "source_rule": "||ad-*.amazonaws.com^"
       },
       {
-        "line": 11206,
+        "line": 11195,
         "reason": "invalid hostname label",
         "source_rule": "||ads*-normal-lq.zijieapi.com^"
       },
       {
-        "line": 11214,
+        "line": 11203,
         "reason": "invalid hostname label",
         "source_rule": "||v*-ad.video.yximgs.com^"
       },
       {
-        "line": 11224,
+        "line": 11213,
         "reason": "invalid hostname label",
         "source_rule": "||ads*.bojijulebu.com^"
       },
       {
-        "line": 11227,
+        "line": 11216,
         "reason": "invalid hostname label",
         "source_rule": "||ir-new-cdn-eu-west-*-hb.rayjump.com^"
       },
       {
-        "line": 11235,
+        "line": 11224,
         "reason": "invalid hostname label",
         "source_rule": "||adcs-*.myappsget.com^"
       },
       {
-        "line": 11254,
+        "line": 11243,
         "reason": "invalid hostname label",
         "source_rule": "||prebid-cache*.ifunny.co^"
       },
       {
-        "line": 11256,
+        "line": 11245,
         "reason": "invalid hostname label",
         "source_rule": "||mobiadvert*.livesportmedia.eu^"
       },
       {
-        "line": 11259,
+        "line": 11248,
         "reason": "invalid hostname label",
         "source_rule": "||jtbo*.nqxvevk.cn^"
       },
       {
-        "line": 11261,
+        "line": 11250,
         "reason": "invalid hostname label",
         "source_rule": "||adx-*.dbankcloud."
       },
       {
-        "line": 11262,
+        "line": 11251,
         "reason": "invalid hostname label",
         "source_rule": "||ad-*.appacc.dbankedge.cn^"
       },
       {
-        "line": 11263,
+        "line": 11252,
         "reason": "invalid hostname label",
         "source_rule": "||adx-*.dbankedge.cn^"
       },
       {
-        "line": 11264,
+        "line": 11253,
         "reason": "invalid hostname label",
         "source_rule": "||adx-*.op.dbankcloud.com.edgekey.net^"
       },
       {
-        "line": 11268,
+        "line": 11257,
         "reason": "invalid hostname label",
         "source_rule": "||api-ad-callback.mobiuspace.net"
       },
       {
-        "line": 11314,
+        "line": 11303,
         "reason": "invalid hostname label",
         "source_rule": "||marketplace-*.hyprmx.com^"
       },
       {
-        "line": 11317,
+        "line": 11306,
         "reason": "invalid hostname label",
         "source_rule": "||events-*.op.hicloud.com^"
       },
       {
-        "line": 11390,
+        "line": 11379,
         "reason": "invalid hostname label",
         "source_rule": "||ms*.applvn.com^"
       },
       {
-        "line": 11395,
+        "line": 11384,
         "reason": "invalid hostname label",
         "source_rule": "||api*.bidmachine.io^"
       },
       {
-        "line": 11400,
+        "line": 11389,
         "reason": "invalid hostname label",
         "source_rule": "||banner.*.tccapis.com^"
       },
       {
-        "line": 11432,
+        "line": 11421,
         "reason": "invalid hostname label",
         "source_rule": "||deliveryengine.adswizz.com"
       },
       {
-        "line": 11464,
+        "line": 11453,
         "reason": "invalid hostname label",
         "source_rule": "||api*.batmobi.net^"
       },
       {
-        "line": 11466,
+        "line": 11455,
         "reason": "invalid hostname label",
         "source_rule": "||api*.batmobil.net^"
       },
       {
-        "line": 11499,
+        "line": 11488,
         "reason": "invalid hostname label",
         "source_rule": "||api.cloudmobi.net"
       },
       {
-        "line": 11513,
+        "line": 11502,
         "reason": "invalid hostname label",
         "source_rule": "||adserver.*.yahoodns.net^"
       },
       {
-        "line": 11519,
+        "line": 11508,
         "reason": "invalid hostname label",
         "source_rule": "||config.appjolt.com"
       },
       {
-        "line": 11523,
+        "line": 11512,
         "reason": "invalid hostname label",
         "source_rule": "://o0e.ru^"
       },
       {
-        "line": 11526,
+        "line": 11515,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||31.14.252.148^"
       },
       {
-        "line": 11529,
+        "line": 11518,
         "reason": "invalid hostname label",
         "source_rule": "||ad*.nexage.com^"
       },
       {
-        "line": 11673,
+        "line": 11662,
         "reason": "invalid hostname label",
         "source_rule": "||iad-*.appboy.com^"
       },
       {
-        "line": 11704,
+        "line": 11693,
         "reason": "invalid hostname label",
         "source_rule": "||mediate-ios-*.hyprmx.com^"
       },
       {
-        "line": 11737,
+        "line": 11726,
         "reason": "invalid hostname label",
         "source_rule": "||production-adserver-*.amazonaws.com^"
       },
       {
-        "line": 11742,
+        "line": 11731,
         "reason": "invalid hostname label",
         "source_rule": "||rtbimp-loadbalancer-*.amazonaws.com^"
       },
       {
-        "line": 11806,
+        "line": 11795,
         "reason": "modifier requires unsupported semantics",
         "source_rule": "||deloton.com$important"
       },
       {
-        "line": 11808,
+        "line": 11797,
         "reason": "modifier requires unsupported semantics",
         "source_rule": "||oclasrv.com$important"
       },
       {
-        "line": 11870,
+        "line": 11859,
         "reason": "invalid hostname label",
         "source_rule": "||dw-informer-*.newsru.com^"
       },
       {
-        "line": 11905,
+        "line": 11894,
         "reason": "invalid hostname label",
         "source_rule": "||banner*.kinogo.by^"
       },
       {
-        "line": 11922,
+        "line": 11911,
         "reason": "invalid hostname label",
         "source_rule": "||an.yandex."
       },
       {
-        "line": 11931,
+        "line": 11920,
         "reason": "modifier requires unsupported semantics",
         "source_rule": "||bet.championat.com^$important"
       },
       {
-        "line": 12026,
+        "line": 12015,
         "reason": "invalid hostname label",
         "source_rule": "||adserver*.euroweeklynews.com^"
       },
       {
-        "line": 12047,
+        "line": 12036,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||184.106.248.76^"
       },
       {
-        "line": 12048,
+        "line": 12037,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||200.72.40.46^"
       },
       {
-        "line": 12158,
+        "line": 12147,
         "reason": "invalid hostname label",
         "source_rule": "||countly."
       },
       {
-        "line": 12159,
+        "line": 12148,
         "reason": "invalid hostname label",
         "source_rule": "||countly-"
       },
       {
-        "line": 12165,
+        "line": 12154,
         "reason": "invalid hostname label",
         "source_rule": "|piwik."
       },
       {
-        "line": 12174,
+        "line": 12163,
         "reason": "invalid hostname label",
         "source_rule": "||analytics.dulo."
       },
       {
-        "line": 12177,
+        "line": 12166,
         "reason": "invalid hostname label",
         "source_rule": "||cnt.iceporn."
       },
       {
-        "line": 13162,
+        "line": 13151,
         "reason": "invalid hostname label",
         "source_rule": "||sw.vidmoly."
       },
       {
-        "line": 13199,
+        "line": 13188,
         "reason": "invalid hostname label",
         "source_rule": "||e.missav."
       },
       {
-        "line": 13258,
+        "line": 13247,
         "reason": "invalid hostname label",
         "source_rule": "||tag-v*.kuzen.io^"
       },
       {
-        "line": 13261,
+        "line": 13250,
         "reason": "invalid hostname label",
         "source_rule": "||faro.civitai."
       },
       {
-        "line": 13276,
+        "line": 13265,
         "reason": "invalid hostname label",
         "source_rule": "||mtag-*.wedevs.com^"
       },
       {
-        "line": 13302,
+        "line": 13291,
         "reason": "invalid hostname label",
         "source_rule": "||stats.mapple.*^"
       },
       {
-        "line": 13318,
+        "line": 13307,
         "reason": "invalid hostname label",
         "source_rule": "||mcs-normal-*.capcutapi.com^"
       },
       {
-        "line": 13370,
+        "line": 13359,
         "reason": "invalid hostname label",
         "source_rule": "||eflbundles.*.com.tr^"
       },
       {
-        "line": 13401,
+        "line": 13390,
         "reason": "invalid hostname label",
         "source_rule": "||log.api-maps.yandex."
       },
       {
-        "line": 13417,
+        "line": 13406,
         "reason": "invalid hostname label",
         "source_rule": "||ja*.apppure.net^"
       },
       {
-        "line": 13427,
+        "line": 13416,
         "reason": "invalid hostname label",
         "source_rule": "||ats.gmarket.co.kr"
       },
       {
-        "line": 13451,
+        "line": 13440,
         "reason": "invalid hostname label",
         "source_rule": "-events-collector.spot.im^"
       },
       {
-        "line": 13467,
+        "line": 13456,
         "reason": "invalid hostname label",
         "source_rule": "-upaas.ucweb.com^"
       },
       {
-        "line": 13475,
+        "line": 13464,
         "reason": "invalid hostname label",
         "source_rule": "||datadog-log.clovergames.io"
       },
       {
-        "line": 13504,
+        "line": 13493,
         "reason": "invalid hostname label",
         "source_rule": "||log-v*-boot.capcutapi.com^"
       },
       {
-        "line": 13529,
+        "line": 13518,
         "reason": "invalid hostname label",
         "source_rule": "||logs.collector.*.cloud.solarwinds.com^"
       },
       {
-        "line": 13531,
+        "line": 13520,
         "reason": "invalid hostname label",
         "source_rule": "||agatha-log-service-*.a.run.app^"
       },
       {
-        "line": 13532,
+        "line": 13521,
         "reason": "invalid hostname label",
         "source_rule": "||me9ddf.moebelix."
       },
       {
-        "line": 13557,
+        "line": 13546,
         "reason": "invalid hostname label",
         "source_rule": "||spa-tracker*.spapi.io^"
       },
       {
-        "line": 13614,
+        "line": 13603,
         "reason": "invalid hostname label",
         "source_rule": "||htm*.hepsiburada.com^"
       },
       {
-        "line": 13656,
+        "line": 13645,
         "reason": "invalid hostname label",
         "source_rule": "||touch.yesim."
       },
       {
-        "line": 13659,
+        "line": 13648,
         "reason": "invalid hostname label",
         "source_rule": "||data-track*.yingxiong.com^"
       },
       {
-        "line": 13688,
+        "line": 13677,
         "reason": "invalid hostname label",
         "source_rule": "||mon*.tiktokv.us^"
       },
       {
-        "line": 13693,
+        "line": 13682,
         "reason": "invalid hostname label",
         "source_rule": "||orderana*.spankbang.com^"
       },
       {
-        "line": 13716,
+        "line": 13705,
         "reason": "invalid hostname label",
         "source_rule": "||logstash-*.radio-canada.ca^"
       },
       {
-        "line": 13721,
+        "line": 13710,
         "reason": "invalid hostname label",
         "source_rule": "||analytics.vgtimes."
       },
       {
-        "line": 13775,
+        "line": 13764,
         "reason": "invalid hostname label",
         "source_rule": "||beehiiv-adnetwork-production.s*.amazonaws.com^"
       },
       {
-        "line": 13784,
+        "line": 13773,
         "reason": "invalid hostname label",
         "source_rule": "||telemetry.*.pvp.net^"
       },
       {
-        "line": 13789,
+        "line": 13778,
         "reason": "invalid hostname label",
         "source_rule": "||analyzer*.fc2.com^"
       },
       {
-        "line": 13803,
+        "line": 13792,
         "reason": "invalid hostname label",
         "source_rule": "||hba*.hepsiburada.com^"
       },
       {
-        "line": 13858,
+        "line": 13847,
         "reason": "invalid hostname label",
         "source_rule": "prd.api.bleacherreport.com^"
       },
       {
-        "line": 13882,
+        "line": 13871,
         "reason": "invalid hostname label",
         "source_rule": "||apiproxy-log-nlb-1f304af4d3ac01a4.elb.us-east-*.amazonaws.com^"
       },
       {
-        "line": 13885,
+        "line": 13874,
         "reason": "invalid hostname label",
         "source_rule": "||customerevents.us-east-*.internal.dradis.netflix.com^"
       },
       {
-        "line": 13909,
+        "line": 13898,
         "reason": "invalid hostname label",
         "source_rule": "||sgtm.wimdu."
       },
       {
-        "line": 13967,
+        "line": 13956,
         "reason": "invalid hostname label",
         "source_rule": "||event.*.shoplive.cloud^"
       },
       {
-        "line": 13997,
+        "line": 13986,
         "reason": "invalid hostname label",
         "source_rule": "||client.rum.*.amazonaws.com^"
       },
       {
-        "line": 14030,
+        "line": 14019,
         "reason": "invalid hostname label",
         "source_rule": "||staging-*.ispot.tv^"
       },
       {
-        "line": 14036,
+        "line": 14025,
         "reason": "invalid hostname label",
         "source_rule": "||stlog*-local.kakao.com^"
       },
       {
-        "line": 14047,
+        "line": 14036,
         "reason": "invalid hostname label",
         "source_rule": "||mssdk*.capcutapi.com^"
       },
       {
-        "line": 14058,
+        "line": 14047,
         "reason": "invalid hostname label",
         "source_rule": "||mon-*.lemon8-app.com^"
       },
       {
-        "line": 14059,
+        "line": 14048,
         "reason": "invalid hostname label",
         "source_rule": "||mon-*.lemon8-app.us^"
       },
       {
-        "line": 14060,
+        "line": 14049,
         "reason": "invalid hostname label",
         "source_rule": "||mcs-*.lemon8-app.com^"
       },
       {
-        "line": 14061,
+        "line": 14050,
         "reason": "invalid hostname label",
         "source_rule": "||mcs-*.lemon8-app.us^"
       },
       {
-        "line": 14083,
+        "line": 14072,
         "reason": "invalid hostname label",
         "source_rule": "||collector-*.px-client.net^"
       },
       {
-        "line": 14084,
+        "line": 14073,
         "reason": "invalid hostname label",
         "source_rule": "||collector-*.px-cdn.net^"
       },
       {
-        "line": 14088,
+        "line": 14077,
         "reason": "invalid hostname label",
         "source_rule": "||clickstream-*.homedepot.com^"
       },
       {
-        "line": 14096,
+        "line": 14085,
         "reason": "invalid hostname label",
         "source_rule": "||acr-*-prd.samsungcloud.tv^"
       },
       {
-        "line": 14113,
+        "line": 14102,
         "reason": "invalid hostname label",
         "source_rule": ".prod.pr.analytics.console.aws.a2z.com"
       },
       {
-        "line": 14116,
+        "line": 14105,
         "reason": "invalid hostname label",
         "source_rule": "||trck.*.prod-na.turntable.sonic.advertising.amazon.dev^"
       },
       {
-        "line": 14162,
+        "line": 14151,
         "reason": "invalid hostname label",
         "source_rule": "||cza*.crazygames.com^"
       },
       {
-        "line": 14166,
+        "line": 14155,
         "reason": "invalid hostname label",
         "source_rule": "||analytics.ahrefs."
       },
       {
-        "line": 14177,
+        "line": 14166,
         "reason": "invalid hostname label",
         "source_rule": "||servo-report.keepstreams.*^"
       },
       {
-        "line": 14262,
+        "line": 14251,
         "reason": "invalid hostname label",
         "source_rule": "||sgtm.fairmont."
       },
       {
-        "line": 14300,
+        "line": 14289,
         "reason": "invalid hostname label",
         "source_rule": "||apple-*.le.com^"
       },
       {
-        "line": 14349,
+        "line": 14338,
         "reason": "invalid hostname label",
         "source_rule": "||tracking-v*.a.run.app^"
       },
       {
-        "line": 14368,
+        "line": 14357,
         "reason": "invalid hostname label",
         "source_rule": "||backstory.ebay."
       },
       {
-        "line": 14369,
+        "line": 14358,
         "reason": "invalid hostname label",
         "source_rule": "||edgetrksvc.ebay."
       },
       {
-        "line": 14416,
+        "line": 14405,
         "reason": "invalid hostname label",
         "source_rule": "||ubt.tracking.shopee."
       },
       {
-        "line": 14444,
+        "line": 14433,
         "reason": "invalid hostname label",
         "source_rule": "||taplytics-umami.grubhub.com"
       },
       {
-        "line": 14469,
+        "line": 14458,
         "reason": "invalid hostname label",
         "source_rule": "|c.blue.*.com^|"
       },
       {
-        "line": 14482,
+        "line": 14471,
         "reason": "invalid hostname label",
         "source_rule": "||faro-collector-prod-*.grafana.net^"
       },
       {
-        "line": 14558,
+        "line": 14547,
         "reason": "invalid hostname label",
         "source_rule": "||*adapt-beacon.awsprodops.movetv.com^"
       },
       {
-        "line": 14580,
+        "line": 14569,
         "reason": "invalid hostname label",
         "source_rule": "||hn-ping*.hashnode.com^"
       },
       {
-        "line": 14591,
+        "line": 14580,
         "reason": "invalid hostname label",
         "source_rule": "||analytics-v*.eip.telegraph.co.uk^"
       },
       {
-        "line": 14632,
+        "line": 14621,
         "reason": "invalid hostname label",
         "source_rule": "||ana*.inews24.com^"
       },
       {
-        "line": 14633,
+        "line": 14622,
         "reason": "invalid hostname label",
         "source_rule": "||analytics.streamfab."
       },
       {
-        "line": 14657,
+        "line": 14646,
         "reason": "invalid hostname label",
         "source_rule": "||mcs-*.tiktok.com^"
       },
       {
-        "line": 14674,
+        "line": 14663,
         "reason": "invalid hostname label",
         "source_rule": "||adservice.google."
       },
       {
-        "line": 14743,
+        "line": 14732,
         "reason": "invalid hostname label",
         "source_rule": "||a*.smlog.co.kr^"
       },
       {
-        "line": 14766,
+        "line": 14755,
         "reason": "invalid hostname label",
         "source_rule": "-tracker.biliapi.net^"
       },
       {
-        "line": 14767,
+        "line": 14756,
         "reason": "invalid hostname label",
         "source_rule": "||pixel*.production-public.tubi.io^"
       },
       {
-        "line": 14796,
+        "line": 14785,
         "reason": "invalid hostname label",
         "source_rule": "||ads-dmp-collect.*.karrotmarket.com^"
       },
       {
-        "line": 14806,
+        "line": 14795,
         "reason": "invalid hostname label",
         "source_rule": "||telemetry*.transcend.io^"
       },
       {
-        "line": 14808,
+        "line": 14797,
         "reason": "invalid hostname label",
         "source_rule": "||stats.debatdirect.tweedekamer.nl"
       },
       {
-        "line": 14825,
+        "line": 14814,
         "reason": "invalid hostname label",
         "source_rule": "-telemetry.officeapps.live.com^"
       },
       {
-        "line": 14826,
+        "line": 14815,
         "reason": "invalid hostname label",
         "source_rule": "-telemetry.officeapps.live.com.mcas.ms^"
       },
       {
-        "line": 14831,
+        "line": 14820,
         "reason": "invalid hostname label",
         "source_rule": "||sgtm.fashionunited."
       },
       {
-        "line": 14843,
+        "line": 14832,
         "reason": "invalid hostname label",
         "source_rule": "||pixel-*.rubiconproject.com^"
       },
       {
-        "line": 14870,
+        "line": 14859,
         "reason": "invalid hostname label",
         "source_rule": "||pixel.archive."
       },
       {
-        "line": 14886,
+        "line": 14875,
         "reason": "invalid hostname label",
         "source_rule": "||analytics-api.dvdfab."
       },
       {
-        "line": 14887,
+        "line": 14876,
         "reason": "invalid hostname label",
         "source_rule": "||servo-report.dvdfab."
       },
       {
-        "line": 14888,
+        "line": 14877,
         "reason": "invalid hostname label",
         "source_rule": "||collector.xhamster*."
       },
       {
-        "line": 14896,
+        "line": 14885,
         "reason": "invalid hostname label",
         "source_rule": "||sensorsdata*.read.duokan.com^"
       },
       {
-        "line": 14905,
+        "line": 14894,
         "reason": "invalid hostname label",
         "source_rule": "||analytics.*.sky.com^"
       },
       {
-        "line": 14917,
+        "line": 14906,
         "reason": "invalid hostname label",
         "source_rule": "||uts.auction.co.kr"
       },
       {
-        "line": 14922,
+        "line": 14911,
         "reason": "invalid hostname label",
         "source_rule": "||ad*.ettoday.net^"
       },
       {
-        "line": 14934,
+        "line": 14923,
         "reason": "invalid hostname label",
         "source_rule": "||stw.zone-telechargement."
       },
       {
-        "line": 14935,
+        "line": 14924,
         "reason": "invalid hostname label",
         "source_rule": "||stats.zone-telechargement."
       },
       {
-        "line": 15041,
+        "line": 15030,
         "reason": "invalid hostname label",
         "source_rule": "||log*.vietnamplus.vn^"
       },
       {
-        "line": 15066,
+        "line": 15055,
         "reason": "invalid hostname label",
         "source_rule": "://r.i.ua^"
       },
       {
-        "line": 15085,
+        "line": 15074,
         "reason": "invalid hostname label",
         "source_rule": "||adcounter*.uptolike.ru^"
       },
       {
-        "line": 15112,
+        "line": 15101,
         "reason": "invalid hostname label",
         "source_rule": "||analytics-rollout-*.amazonaws.com^"
       },
       {
-        "line": 15194,
+        "line": 15183,
         "reason": "invalid hostname label",
         "source_rule": "||analytics*.carambo.la^"
       },
       {
-        "line": 15204,
+        "line": 15193,
         "reason": "invalid hostname label",
         "source_rule": "||app-analytics-*.snapchat.com^"
       },
       {
-        "line": 15252,
+        "line": 15241,
         "reason": "invalid hostname label",
         "source_rule": "||bi-eventtracker-*.amazonaws.com^"
       },
       {
-        "line": 15259,
+        "line": 15248,
         "reason": "invalid hostname label",
         "source_rule": "||button.blogs.yandex."
       },
       {
-        "line": 15262,
+        "line": 15251,
         "reason": "invalid hostname label",
         "source_rule": "||c.bigmir.net"
       },
       {
-        "line": 15270,
+        "line": 15259,
         "reason": "invalid hostname label",
         "source_rule": "||c*hit.zerkalo.io^"
       },
       {
-        "line": 15283,
+        "line": 15272,
         "reason": "invalid hostname label",
         "source_rule": "||ce-global-track-*.amazonaws.com^"
       },
       {
-        "line": 15299,
+        "line": 15288,
         "reason": "invalid hostname label",
         "source_rule": "||clog*.yuanfudao.com^"
       },
       {
-        "line": 15306,
+        "line": 15295,
         "reason": "invalid hostname label",
         "source_rule": "||cnt.hd21."
       },
       {
-        "line": 15310,
+        "line": 15299,
         "reason": "invalid hostname label",
         "source_rule": "||cnt.nuvid."
       },
       {
-        "line": 15311,
+        "line": 15300,
         "reason": "invalid hostname label",
         "source_rule": "||cnt.proporn."
       },
       {
-        "line": 15314,
+        "line": 15303,
         "reason": "invalid hostname label",
         "source_rule": "||cnt.tubeon."
       },
       {
-        "line": 15315,
+        "line": 15304,
         "reason": "invalid hostname label",
         "source_rule": "||cnt.vivatube."
       },
       {
-        "line": 15316,
+        "line": 15305,
         "reason": "invalid hostname label",
         "source_rule": "||cnt.winporn."
       },
       {
-        "line": 15318,
+        "line": 15307,
         "reason": "invalid hostname label",
         "source_rule": "||cnt.yeptube."
       },
       {
-        "line": 15320,
+        "line": 15309,
         "reason": "invalid hostname label",
         "source_rule": "||collect-elb-*.amazonaws.com^"
       },
       {
-        "line": 15331,
+        "line": 15320,
         "reason": "invalid hostname label",
         "source_rule": "||collector.hamsterix."
       },
       {
-        "line": 15375,
+        "line": 15364,
         "reason": "invalid hostname label",
         "source_rule": "||counter*-yadro*-ru.unblocked.lol^"
       },
       {
-        "line": 15381,
+        "line": 15370,
         "reason": "invalid hostname label",
         "source_rule": "||cs*.mp3bars.com^"
       },
       {
-        "line": 15448,
+        "line": 15437,
         "reason": "invalid hostname label",
         "source_rule": "||datacollect*.abtasty.com^"
       },
       {
-        "line": 15456,
+        "line": 15445,
         "reason": "invalid hostname label",
         "source_rule": "||device-metrics-us*.amazon.com^"
       },
       {
-        "line": 15499,
+        "line": 15488,
         "reason": "invalid hostname label",
         "source_rule": "||eum*.instana.io^"
       },
       {
-        "line": 15515,
+        "line": 15504,
         "reason": "invalid hostname label",
         "source_rule": "||events-api*.outfit7.com^"
       },
       {
-        "line": 15532,
+        "line": 15521,
         "reason": "invalid hostname label",
         "source_rule": "||events*.cre.ma^"
       },
       {
-        "line": 15575,
+        "line": 15564,
         "reason": "invalid hostname label",
         "source_rule": "||geoloc*.9cd47096ab1495d8d3b18667f6a52b9c.com^"
       },
       {
-        "line": 15576,
+        "line": 15565,
         "reason": "invalid hostname label",
         "source_rule": "||geoloc*.geo20120530.com^"
       },
       {
-        "line": 15577,
+        "line": 15566,
         "reason": "invalid hostname label",
         "source_rule": "||geoloc*.geostats.ovh^"
       },
       {
-        "line": 15578,
+        "line": 15567,
         "reason": "invalid hostname label",
         "source_rule": "||geoloc*.geovisite.ovh^"
       },
       {
-        "line": 15585,
+        "line": 15574,
         "reason": "invalid hostname label",
         "source_rule": "||gscounters.*.gigya.com^"
       },
       {
-        "line": 15589,
+        "line": 15578,
         "reason": "invalid hostname label",
         "source_rule": "||gtmdev.jabra."
       },
       {
-        "line": 15609,
+        "line": 15598,
         "reason": "invalid hostname label",
         "source_rule": "||host*.carl-ras.dk^"
       },
       {
-        "line": 15610,
+        "line": 15599,
         "reason": "invalid hostname label",
         "source_rule": "||host*.ncoi.nl^"
       },
       {
-        "line": 15611,
+        "line": 15600,
         "reason": "invalid hostname label",
         "source_rule": "||host*.nti.nl^"
       },
       {
-        "line": 15612,
+        "line": 15601,
         "reason": "invalid hostname label",
         "source_rule": "||host*.polaroid.com^"
       },
       {
-        "line": 15613,
+        "line": 15602,
         "reason": "invalid hostname label",
         "source_rule": "||host*.rvshare.com^"
       },
       {
-        "line": 15614,
+        "line": 15603,
         "reason": "invalid hostname label",
         "source_rule": "||host*.rigbyandpeller.com^"
       },
       {
-        "line": 15615,
+        "line": 15604,
         "reason": "invalid hostname label",
         "source_rule": "||hstats*.hepsiburada.com^"
       },
       {
-        "line": 15625,
+        "line": 15614,
         "reason": "invalid hostname label",
         "source_rule": "||img.opentracker.net"
       },
       {
-        "line": 15634,
+        "line": 15623,
         "reason": "invalid hostname label",
         "source_rule": "||iptracker-lb-*.amazonaws.com^"
       },
       {
-        "line": 15677,
+        "line": 15666,
         "reason": "invalid hostname label",
         "source_rule": "||lively-collect-elb-*.amazonaws.com^"
       },
       {
-        "line": 15714,
+        "line": 15703,
         "reason": "invalid hostname label",
         "source_rule": "||log*.aliyuncs.com^"
       },
       {
-        "line": 15740,
+        "line": 15729,
         "reason": "invalid hostname label",
         "source_rule": "||lt*.tritondigital.com^"
       },
       {
-        "line": 15893,
+        "line": 15882,
         "reason": "modifier requires unsupported semantics",
         "source_rule": "||pixel.wp.pl^$important"
       },
       {
-        "line": 15896,
+        "line": 15885,
         "reason": "invalid hostname label",
         "source_rule": "||pixel*.adswizz.com"
       },
       {
-        "line": 15916,
+        "line": 15905,
         "reason": "invalid hostname label",
         "source_rule": "||pxl-*.ozone.ru^"
       },
       {
-        "line": 16083,
+        "line": 16072,
         "reason": "invalid hostname label",
         "source_rule": "||ssp*.rtb.beeline.ru^"
       },
       {
-        "line": 16084,
+        "line": 16073,
         "reason": "invalid hostname label",
         "source_rule": "||st-*.dynamicyield.com^"
       },
       {
-        "line": 16111,
+        "line": 16100,
         "reason": "invalid hostname label",
         "source_rule": "||stat*.1internet.tv^"
       },
       {
-        "line": 16210,
+        "line": 16199,
         "reason": "invalid hostname label",
         "source_rule": "||t*.zcvh.net^"
       },
       {
-        "line": 16279,
+        "line": 16268,
         "reason": "invalid hostname label",
         "source_rule": "||track.datescan.info"
       },
       {
-        "line": 16405,
+        "line": 16394,
         "reason": "invalid hostname label",
         "source_rule": "||trk*.vidible.tv^"
       },
       {
-        "line": 16437,
+        "line": 16426,
         "reason": "invalid hostname label",
         "source_rule": "||wa.gmx."
       },
       {
-        "line": 16465,
+        "line": 16454,
         "reason": "invalid hostname label",
         "source_rule": "charlestownwyllie.oaklawnnonantum.com^"
       },
       {
-        "line": 16821,
+        "line": 16810,
         "reason": "invalid hostname label",
         "source_rule": "|a.klaviyo.com^"
       },
       {
-        "line": 16824,
+        "line": 16813,
         "reason": "invalid hostname label",
         "source_rule": "||api-*.hismarttv.com^"
       },
       {
-        "line": 16825,
+        "line": 16814,
         "reason": "invalid hostname label",
         "source_rule": "||auth-*.hismarttv.com^"
       },
       {
-        "line": 16944,
+        "line": 16933,
         "reason": "invalid hostname label",
         "source_rule": "||tracking.*.miui.com^"
       },
       {
-        "line": 16962,
+        "line": 16951,
         "reason": "invalid hostname label",
         "source_rule": "||datacollector-*.dt.hicloud.com^"
       },
       {
-        "line": 16991,
+        "line": 16980,
         "reason": "invalid hostname label",
         "source_rule": "dynamic-report-api.appsflyersdk.com^"
       },
       {
-        "line": 16993,
+        "line": 16982,
         "reason": "invalid hostname label",
         "source_rule": "-pia.appsflyersdk.com^"
       },
       {
-        "line": 16994,
+        "line": 16983,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".skadsdkless.appsflyersdk.com^"
       },
       {
-        "line": 16995,
+        "line": 16984,
         "reason": "invalid hostname label",
         "source_rule": "-skadsdkless.appsflyersdk.com^"
       },
       {
-        "line": 16996,
+        "line": 16985,
         "reason": "invalid hostname label",
         "source_rule": "-adrevenue.appsflyersdk.com^"
       },
       {
-        "line": 16997,
+        "line": 16986,
         "reason": "invalid hostname label",
         "source_rule": "-attr.appsflyersdk.com^"
       },
       {
-        "line": 16998,
+        "line": 16987,
         "reason": "invalid hostname label",
         "source_rule": "gcdsdk.appsflyersdk.com^"
       },
       {
-        "line": 16999,
+        "line": 16988,
         "reason": "invalid hostname label",
         "source_rule": "dlsdk.appsflyersdk.com^"
       },
       {
-        "line": 17000,
+        "line": 16989,
         "reason": "invalid hostname label",
         "source_rule": "||*cdn-settings.appsflyersdk.com^"
       },
       {
-        "line": 17001,
+        "line": 16990,
         "reason": "invalid hostname label",
         "source_rule": "||*launches.appsflyersdk.com^"
       },
       {
-        "line": 17002,
+        "line": 16991,
         "reason": "invalid hostname label",
         "source_rule": "||*conversions.appsflyersdk.com^"
       },
       {
-        "line": 17003,
+        "line": 16992,
         "reason": "invalid hostname label",
         "source_rule": "||*register.appsflyersdk.com^"
       },
       {
-        "line": 17013,
+        "line": 17002,
         "reason": "invalid hostname label",
         "source_rule": "dlsdk.appsflyer.com^"
       },
       {
-        "line": 17100,
+        "line": 17089,
         "reason": "invalid hostname label",
         "source_rule": "||log*.boomplaymusic.com^"
       },
       {
-        "line": 17120,
+        "line": 17109,
         "reason": "invalid hostname label",
         "source_rule": "||log-*.isnssdk.com^"
       },
       {
-        "line": 17122,
+        "line": 17111,
         "reason": "invalid hostname label",
         "source_rule": "||ping*.bidease.com^"
       },
       {
-        "line": 17133,
+        "line": 17122,
         "reason": "invalid hostname label",
         "source_rule": "-datareceiver.aki-game.net^"
       },
       {
-        "line": 17157,
+        "line": 17146,
         "reason": "invalid hostname label",
         "source_rule": "||trace-*.free-reels.com^"
       },
       {
-        "line": 17191,
+        "line": 17180,
         "reason": "invalid hostname label",
         "source_rule": "||report.*.gbqofs.io^"
       },
       {
-        "line": 17192,
+        "line": 17181,
         "reason": "invalid hostname label",
         "source_rule": "||gbxreport-*.wf.com^"
       },
       {
-        "line": 17202,
+        "line": 17191,
         "reason": "invalid hostname label",
         "source_rule": "||logreport-global-dual.cool*cloud.com^"
       },
       {
-        "line": 17203,
+        "line": 17192,
         "reason": "invalid hostname label",
         "source_rule": "||wslog-global-dual.cool*cloud.com^"
       },
       {
-        "line": 17204,
+        "line": 17193,
         "reason": "invalid hostname label",
         "source_rule": "||weblogger-wss.cool*cloud.com^"
       },
       {
-        "line": 17221,
+        "line": 17210,
         "reason": "invalid hostname label",
         "source_rule": "||track-*.hungrypanda.co^"
       },
       {
-        "line": 17222,
+        "line": 17211,
         "reason": "invalid hostname label",
         "source_rule": "||trace-*.hungrypanda.co^"
       },
       {
-        "line": 17225,
+        "line": 17214,
         "reason": "invalid hostname label",
         "source_rule": "||collector-*.perimeterx.net^"
       },
       {
-        "line": 17234,
+        "line": 17223,
         "reason": "invalid hostname label",
         "source_rule": "||kbox-analytics-prod.s*.amazonaws.com^"
       },
       {
-        "line": 17261,
+        "line": 17250,
         "reason": "invalid hostname label",
         "source_rule": "||stats.*.ronghub.com^"
       },
       {
-        "line": 17278,
+        "line": 17267,
         "reason": "invalid hostname label",
         "source_rule": "||stats.*.rongnav.com^"
       },
       {
-        "line": 17294,
+        "line": 17283,
         "reason": "invalid hostname label",
         "source_rule": "||sdk.fra-*.braze.eu^"
       },
       {
-        "line": 17308,
+        "line": 17297,
         "reason": "invalid hostname label",
         "source_rule": "||mssdk.capcutapi.us"
       },
       {
-        "line": 17354,
+        "line": 17343,
         "reason": "invalid hostname label",
         "source_rule": "||attr-logs.*.amazonaws.com^"
       },
       {
-        "line": 17355,
+        "line": 17344,
         "reason": "invalid hostname label",
         "source_rule": "||event.*.karrotmarket.com^"
       },
       {
-        "line": 17379,
+        "line": 17368,
         "reason": "invalid hostname label",
         "source_rule": "||mon*-misc.fqnovel.com^"
       },
       {
-        "line": 17394,
+        "line": 17383,
         "reason": "invalid hostname label",
         "source_rule": "||logs-*.rebxgame.com^"
       },
       {
-        "line": 17395,
+        "line": 17384,
         "reason": "invalid hostname label",
         "source_rule": "-client-report.honkaiimpact3.com^"
       },
       {
-        "line": 17396,
+        "line": 17385,
         "reason": "invalid hostname label",
         "source_rule": "||*-datareceiver.aki-game.net^"
       },
       {
-        "line": 17398,
+        "line": 17387,
         "reason": "invalid hostname label",
         "source_rule": "||applog*.matrix.easebar.com^"
       },
       {
-        "line": 17403,
+        "line": 17392,
         "reason": "invalid hostname label",
         "source_rule": "||tnc16-*.hypic.com^"
       },
       {
-        "line": 17411,
+        "line": 17400,
         "reason": "invalid hostname label",
         "source_rule": "||discovery-ios-*.ertelecom.ru^"
       },
       {
-        "line": 17433,
+        "line": 17422,
         "reason": "invalid hostname label",
         "source_rule": "||ulog*.gifshow.com^"
       },
       {
-        "line": 17441,
+        "line": 17430,
         "reason": "invalid hostname label",
         "source_rule": "||logservice.dbankcloud.cn"
       },
       {
-        "line": 17454,
+        "line": 17443,
         "reason": "invalid hostname label",
         "source_rule": "||use-trk*.bluevoox.com^"
       },
       {
-        "line": 17457,
+        "line": 17446,
         "reason": "invalid hostname label",
         "source_rule": "||t*.playdigo.live^"
       },
       {
-        "line": 17458,
+        "line": 17447,
         "reason": "invalid hostname label",
         "source_rule": "||tnc*.tiktokv.us^"
       },
       {
-        "line": 17459,
+        "line": 17448,
         "reason": "invalid hostname label",
         "source_rule": "||tnc*.tiktokv.com^"
       },
       {
-        "line": 17460,
+        "line": 17449,
         "reason": "invalid hostname label",
         "source_rule": "||log*-normal-*.tiktokv.com"
       },
       {
-        "line": 17472,
+        "line": 17461,
         "reason": "invalid hostname label",
         "source_rule": "||ulog*.kwai-pro.com^"
       },
       {
-        "line": 17492,
+        "line": 17481,
         "reason": "invalid hostname label",
         "source_rule": "||mon-v*-boot.capcutapi.com^"
       },
       {
-        "line": 17497,
+        "line": 17486,
         "reason": "invalid hostname label",
         "source_rule": "||tnc-va*.capcutapi.com^"
       },
       {
-        "line": 17498,
+        "line": 17487,
         "reason": "invalid hostname label",
         "source_rule": "||mon-va*.capcutapi.com^"
       },
       {
-        "line": 17499,
+        "line": 17488,
         "reason": "invalid hostname label",
         "source_rule": "||log-va*.capcutapi.com^"
       },
       {
-        "line": 17501,
+        "line": 17490,
         "reason": "invalid hostname label",
         "source_rule": "-ulogl*.kwai-pro.com^"
       },
       {
-        "line": 17502,
+        "line": 17491,
         "reason": "invalid hostname label",
         "source_rule": "||ulog*.kwaipros.com^"
       },
       {
-        "line": 17503,
+        "line": 17492,
         "reason": "invalid hostname label",
         "source_rule": "||snowplow-collector."
       },
       {
-        "line": 17510,
+        "line": 17499,
         "reason": "invalid hostname label",
         "source_rule": "||track.*.roku.com^"
       },
       {
-        "line": 17515,
+        "line": 17504,
         "reason": "invalid hostname label",
         "source_rule": "||analysis.polarisoffice.com"
       },
       {
-        "line": 17520,
+        "line": 17509,
         "reason": "invalid hostname label",
         "source_rule": "||log*-normal-useast1a.lemon8-app.com^"
       },
       {
-        "line": 17524,
+        "line": 17513,
         "reason": "invalid hostname label",
         "source_rule": "||hw-sh-pcdn-*.biliapi.net^"
       },
       {
-        "line": 17525,
+        "line": 17514,
         "reason": "invalid hostname label",
         "source_rule": "||ali-bj-pcdn-*.biliapi.net^"
       },
       {
-        "line": 17527,
+        "line": 17516,
         "reason": "invalid hostname label",
         "source_rule": "-rtb.gravite.net^"
       },
       {
-        "line": 17528,
+        "line": 17517,
         "reason": "invalid hostname label",
         "source_rule": "||mon*-misc-lf.fqnovel.com^"
       },
       {
-        "line": 17531,
+        "line": 17520,
         "reason": "invalid hostname label",
         "source_rule": "-applog*.fqnovel.com^"
       },
       {
-        "line": 17535,
+        "line": 17524,
         "reason": "invalid hostname label",
         "source_rule": "||sonar*.xy.fbcdn.net^"
       },
       {
-        "line": 17553,
+        "line": 17542,
         "reason": "invalid hostname label",
         "source_rule": "||admob-app-id-*.firebaseio.com^"
       },
       {
-        "line": 17586,
+        "line": 17575,
         "reason": "invalid hostname label",
         "source_rule": "||analytics-*-nfl.yinzcam.com^"
       },
       {
-        "line": 17670,
+        "line": 17659,
         "reason": "invalid hostname label",
         "source_rule": "||logservice-*.platform.dbankcloud.cn^"
       },
       {
-        "line": 17671,
+        "line": 17660,
         "reason": "invalid hostname label",
         "source_rule": "||ubacollect-*.cloud.dbankcloud.cn^"
       },
       {
-        "line": 17672,
+        "line": 17661,
         "reason": "invalid hostname label",
         "source_rule": "||datacollector-*.dt.dbankcloud.cn^"
       },
       {
-        "line": 17682,
+        "line": 17671,
         "reason": "invalid hostname label",
         "source_rule": "-spiky.clevertap-prod.com^"
       },
       {
-        "line": 17694,
+        "line": 17683,
         "reason": "invalid hostname label",
         "source_rule": "||fp-*it*.fengkongcloud.com^"
       },
       {
-        "line": 17704,
+        "line": 17693,
         "reason": "invalid hostname label",
         "source_rule": "||maas-*.phunware.com^"
       },
       {
-        "line": 17717,
+        "line": 17706,
         "reason": "invalid hostname label",
         "source_rule": "||imp-*.jampp.com^"
       },
       {
-        "line": 17748,
+        "line": 17737,
         "reason": "invalid hostname label",
         "source_rule": "||mapi-log.qoo*.jp^"
       },
       {
-        "line": 17762,
+        "line": 17751,
         "reason": "invalid hostname label",
         "source_rule": "||f-log-*.grammarly.io^"
       },
       {
-        "line": 17763,
+        "line": 17752,
         "reason": "invalid hostname label",
         "source_rule": "||log*-misc-lf.amemv.com^"
       },
       {
-        "line": 17784,
+        "line": 17773,
         "reason": "invalid hostname label",
         "source_rule": "||beacons*.gvt3.com^"
       },
       {
-        "line": 17786,
+        "line": 17775,
         "reason": "invalid hostname label",
         "source_rule": "||appanalysis*.banggood.com^"
       },
       {
-        "line": 17794,
+        "line": 17783,
         "reason": "invalid hostname label",
         "source_rule": "||liveme-sensors-collect2-*.amazonaws.com^"
       },
       {
-        "line": 17802,
+        "line": 17791,
         "reason": "invalid hostname label",
         "source_rule": "||report.*.qq.com^"
       },
       {
-        "line": 17815,
+        "line": 17804,
         "reason": "invalid hostname label",
         "source_rule": "||tnc16-*.byteoversea.com^"
       },
       {
-        "line": 17818,
+        "line": 17807,
         "reason": "invalid hostname label",
         "source_rule": "||log*.byteoversea.com^"
       },
       {
-        "line": 17846,
+        "line": 17835,
         "reason": "invalid hostname label",
         "source_rule": "||log-collector.shopee."
       },
       {
-        "line": 17847,
+        "line": 17836,
         "reason": "invalid hostname label",
         "source_rule": "||seller-log-collector.shopee."
       },
       {
-        "line": 17849,
+        "line": 17838,
         "reason": "invalid hostname label",
         "source_rule": "||api*.amplitude.com^"
       },
       {
-        "line": 17889,
+        "line": 17878,
         "reason": "invalid hostname label",
         "source_rule": "||batchlogging*-eu.truecaller.com^"
       },
       {
-        "line": 17890,
+        "line": 17879,
         "reason": "invalid hostname label",
         "source_rule": "||batchlogging*-noneu.truecaller.com^"
       },
       {
-        "line": 17940,
+        "line": 17929,
         "reason": "invalid hostname label",
         "source_rule": "||tracking-*.trnox.com^"
       },
       {
-        "line": 17949,
+        "line": 17938,
         "reason": "invalid hostname label",
         "source_rule": "||report*.appmetrica.webvisor.com^"
       },
       {
-        "line": 17952,
+        "line": 17941,
         "reason": "invalid hostname label",
         "source_rule": "||api*.moengage.com^"
       },
       {
-        "line": 17953,
+        "line": 17942,
         "reason": "invalid hostname label",
         "source_rule": "||sdk-*.moengage.com^"
       },
       {
-        "line": 17960,
+        "line": 17949,
         "reason": "invalid hostname label",
         "source_rule": "||flurry.agentportal-*.yahoodns.net^"
       },
       {
-        "line": 17969,
+        "line": 17958,
         "reason": "invalid hostname label",
         "source_rule": "||device-metrics-*.amazon.com^"
       },
       {
-        "line": 17970,
+        "line": 17959,
         "reason": "invalid hostname label",
         "source_rule": "||flurry.agentportal.*.yahoodns.net^"
       },
       {
-        "line": 18034,
+        "line": 18023,
         "reason": "unsupported regex extension or escape",
         "source_rule": "/^https:\\/\\/anon1.gt\\d{6}.com/"
       },
       {
-        "line": 18036,
+        "line": 18025,
         "reason": "unsupported regex operation: ANY",
         "source_rule": "/^anon1.gt\\d{6}.com$/"
       },
       {
-        "line": 18039,
+        "line": 18028,
         "reason": "invalid hostname label",
         "source_rule": "-logsdk.kwai-pro.com^"
       },
       {
-        "line": 18040,
+        "line": 18029,
         "reason": "invalid hostname label",
         "source_rule": "-ulog-*.kwai-pro.com^"
       },
       {
-        "line": 18041,
+        "line": 18030,
         "reason": "invalid hostname label",
         "source_rule": "-ulog-*.kwaipros.com^"
       },
       {
-        "line": 18042,
+        "line": 18031,
         "reason": "invalid hostname label",
         "source_rule": "-ulog.*.kwai-pro.com^"
       },
       {
-        "line": 18043,
+        "line": 18032,
         "reason": "invalid hostname label",
         "source_rule": "-ulog.*.kwaipros.com^"
       },
       {
-        "line": 18044,
+        "line": 18033,
         "reason": "invalid hostname label",
         "source_rule": "-ulog.ksapisrv.com^"
       },
       {
-        "line": 18045,
+        "line": 18034,
         "reason": "invalid hostname label",
         "source_rule": "-ulog.kwai-pro.com^"
       },
       {
-        "line": 18046,
+        "line": 18035,
         "reason": "invalid hostname label",
         "source_rule": "-ulog.kwaipros.com^"
       },
       {
-        "line": 18047,
+        "line": 18036,
         "reason": "invalid hostname label",
         "source_rule": "-ulog.region.kwai-pro.com^"
       },
       {
-        "line": 18048,
+        "line": 18037,
         "reason": "invalid hostname label",
         "source_rule": "-ulogl2.kwai-pro.com^"
       },
       {
-        "line": 18049,
+        "line": 18038,
         "reason": "invalid hostname label",
         "source_rule": "-ulogl2.kwaipros.com^"
       },
       {
-        "line": 18052,
+        "line": 18041,
         "reason": "invalid hostname label",
         "source_rule": "||ulog-*.ksapisrv.com^"
       },
       {
-        "line": 18053,
+        "line": 18042,
         "reason": "invalid hostname label",
         "source_rule": "||ulog.*.ksapisrv.com^"
       },
       {
-        "line": 18054,
+        "line": 18043,
         "reason": "invalid hostname label",
         "source_rule": "||ulog.*.kwai-pro.com^"
       },
       {
-        "line": 18066,
+        "line": 18055,
         "reason": "invalid hostname label",
         "source_rule": "||mcs.*.tiktok.com^"
       },
       {
-        "line": 18068,
+        "line": 18057,
         "reason": "invalid hostname label",
         "source_rule": "||mcs.*.tiktokv.com^"
       },
       {
-        "line": 18069,
+        "line": 18058,
         "reason": "invalid hostname label",
         "source_rule": "||log*-normal-*.tiktokv.us^"
       },
       {
-        "line": 18071,
+        "line": 18060,
         "reason": "invalid hostname label",
         "source_rule": "||mon*-*.tiktokv.com^"
       },
       {
-        "line": 18072,
+        "line": 18061,
         "reason": "invalid hostname label",
         "source_rule": "||rtlog*.tiktokv.us^"
       },
       {
-        "line": 18073,
+        "line": 18062,
         "reason": "invalid hostname label",
         "source_rule": "||rtlog*.tiktokv.com^"
       },
       {
-        "line": 18077,
+        "line": 18066,
         "reason": "invalid hostname label",
         "source_rule": "||mon*-*.tiktokv.us^"
       },
       {
-        "line": 18079,
+        "line": 18068,
         "reason": "invalid hostname label",
         "source_rule": "||mon-*.tiktokv.com^"
       },
       {
-        "line": 18083,
+        "line": 18072,
         "reason": "invalid hostname label",
         "source_rule": "||xlog*-*.tiktokv.com^"
       },
       {
-        "line": 18085,
+        "line": 18074,
         "reason": "invalid hostname label",
         "source_rule": "||mcs-va-*.tiktokv.com^"
       },
       {
-        "line": 18310,
+        "line": 18299,
         "reason": "invalid hostname label",
         "source_rule": "||logws*.ati-host.net^"
       },
       {
-        "line": 18322,
+        "line": 18311,
         "reason": "invalid hostname label",
         "source_rule": "||clickhouse-collector.*.prod.plat.agency^"
       },
       {
-        "line": 18383,
+        "line": 18372,
         "reason": "invalid hostname label",
         "source_rule": "||bapi-*.moengage.com^"
       },
       {
-        "line": 18395,
+        "line": 18384,
         "reason": "invalid hostname label",
         "source_rule": "||cdn-*.gravityfield.ai^"
       },
       {
-        "line": 18438,
+        "line": 18427,
         "reason": "invalid hostname label",
         "source_rule": "||powa-ingest-prod-*.video-player.arcpublishing.com^"
       },
       {
-        "line": 18469,
+        "line": 18458,
         "reason": "invalid hostname label",
         "source_rule": "||collector-*.pxchk.net^"
       },
       {
-        "line": 18532,
+        "line": 18521,
         "reason": "invalid hostname label",
         "source_rule": "||matomo-demo-*.amazonaws.com^"
       },
       {
-        "line": 18537,
+        "line": 18526,
         "reason": "invalid hostname label",
         "source_rule": "||*-default-cn.rum.aliyuncs.com^"
       },
       {
-        "line": 18545,
+        "line": 18534,
         "reason": "invalid hostname label",
         "source_rule": "||*-sdk.rum.aliyuncs.com^"
       },
       {
-        "line": 18667,
+        "line": 18656,
         "reason": "invalid hostname label",
         "source_rule": "||ecommerce-events*.adscale.com^"
       },
       {
-        "line": 18770,
+        "line": 18759,
         "reason": "invalid hostname label",
         "source_rule": "||install*.zonastat.com^"
       },
       {
-        "line": 18806,
+        "line": 18795,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".tvp.tv^"
       },
       {
-        "line": 18876,
+        "line": 18865,
         "reason": "invalid hostname label",
         "source_rule": "||log*.zijieapi.com^"
       },
       {
-        "line": 18879,
+        "line": 18868,
         "reason": "invalid hostname label",
         "source_rule": "||mssdk*.zijieapi.com^"
       },
       {
-        "line": 18883,
+        "line": 18872,
         "reason": "invalid hostname label",
         "source_rule": "||polaris*-normal-*.zijieapi.com^"
       },
       {
-        "line": 18887,
+        "line": 18876,
         "reason": "invalid hostname label",
         "source_rule": "||tnc*.zijieapi.com^"
       },
       {
-        "line": 18926,
+        "line": 18915,
         "reason": "invalid hostname label",
         "source_rule": "||pixel-*.convertagain.net^"
       },
       {
-        "line": 18999,
+        "line": 18988,
         "reason": "invalid hostname label",
         "source_rule": "||collector*.ex.co^"
       },
       {
-        "line": 19056,
+        "line": 19045,
         "reason": "invalid hostname label",
         "source_rule": "-s2s.sensic.net^"
       },
       {
-        "line": 19141,
+        "line": 19130,
         "reason": "invalid hostname label",
         "source_rule": "||collect-v*.51.la^"
       },
       {
-        "line": 19146,
+        "line": 19135,
         "reason": "invalid hostname label",
         "source_rule": "||talpa-analytics."
       },
       {
-        "line": 19235,
+        "line": 19224,
         "reason": "invalid hostname label",
         "source_rule": "||px*.mediahills.ru^"
       },
       {
-        "line": 19295,
+        "line": 19284,
         "reason": "invalid hostname label",
         "source_rule": "||srmdata-*.com^"
       },
       {
-        "line": 19449,
+        "line": 19438,
         "reason": "invalid hostname label",
         "source_rule": "||analytics*.prezly.com^"
       },
       {
-        "line": 19482,
+        "line": 19471,
         "reason": "invalid hostname label",
         "source_rule": "||browser-intake-*-datadoghq.com^"
       },
       {
-        "line": 19484,
+        "line": 19473,
         "reason": "invalid hostname label",
         "source_rule": "||cl*.k5a.io^"
       },
       {
-        "line": 19552,
+        "line": 19541,
         "reason": "invalid hostname label",
         "source_rule": "||livetracker.*.pangea-cms.com^"
       },
       {
-        "line": 19650,
+        "line": 19639,
         "reason": "invalid hostname label",
         "source_rule": "||collector-*.tvsquared.com^"
       },
       {
-        "line": 19652,
+        "line": 19641,
         "reason": "invalid hostname label",
         "source_rule": "||pixelapi-*.cs.mysamba.tv^"
       },
       {
-        "line": 19657,
+        "line": 19646,
         "reason": "invalid hostname label",
         "source_rule": "||logs*.smithsonian.museum^"
       },
       {
-        "line": 19671,
+        "line": 19660,
         "reason": "invalid hostname label",
         "source_rule": "||snowplow-collector-*.amazonaws.com^"
       },
       {
-        "line": 19674,
+        "line": 19663,
         "reason": "invalid hostname label",
         "source_rule": "||v*.sitecounter.site^"
       },
       {
-        "line": 19801,
+        "line": 19790,
         "reason": "invalid hostname label",
         "source_rule": "||tag-based.s3.*.amazonaws.com^"
       },
       {
-        "line": 19810,
+        "line": 19799,
         "reason": "invalid hostname label",
         "source_rule": "||suite*.linximpulse.net^"
       },
       {
-        "line": 19866,
+        "line": 19855,
         "reason": "invalid hostname label",
         "source_rule": "||eclog*-*.cafe24.com^"
       },
       {
-        "line": 19873,
+        "line": 19862,
         "reason": "invalid hostname label",
         "source_rule": "||rum*.cdnvideo.ru^"
       },
       {
-        "line": 19874,
+        "line": 19863,
         "reason": "invalid hostname label",
         "source_rule": "||rum*.a.trbcdn.net^"
       },
       {
-        "line": 19881,
+        "line": 19870,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||110.93.143.144^"
       },
       {
-        "line": 19895,
+        "line": 19884,
         "reason": "invalid hostname label",
         "source_rule": "||stat.tiara."
       },
       {
-        "line": 19896,
+        "line": 19885,
         "reason": "invalid hostname label",
         "source_rule": "||track.tiara."
       },
       {
-        "line": 19956,
+        "line": 19945,
         "reason": "invalid hostname label",
         "source_rule": "||stats*.videonow.ru^"
       },
       {
-        "line": 19960,
+        "line": 19949,
         "reason": "invalid hostname label",
         "source_rule": "||logs.juspay.in"
       },
       {
-        "line": 20007,
+        "line": 19996,
         "reason": "invalid hostname label",
         "source_rule": "||parkdomainreal*.site^"
       },
       {
-        "line": 20009,
+        "line": 19998,
         "reason": "invalid hostname label",
         "source_rule": "||i-*.ci360.sas.com^"
       },
       {
-        "line": 20128,
+        "line": 20117,
         "reason": "invalid hostname label",
         "source_rule": "||tms-st.cdn.ngenix.net"
       },
       {
-        "line": 20146,
+        "line": 20135,
         "reason": "invalid hostname label",
         "source_rule": "||zorosrv.com"
       },
       {
-        "line": 20153,
+        "line": 20142,
         "reason": "invalid hostname label",
         "source_rule": "||analytics*.clickdimensions.com^"
       },
       {
-        "line": 20172,
+        "line": 20161,
         "reason": "invalid hostname label",
         "source_rule": "||counter*.freecounter.ovh^"
       },
       {
-        "line": 20289,
+        "line": 20278,
         "reason": "invalid hostname label",
         "source_rule": "://tru.am^"
       },
       {
-        "line": 20296,
+        "line": 20285,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||180.76.2.18^"
       },
       {
-        "line": 20314,
+        "line": 20303,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||66.228.52.30^"
       },
       {
-        "line": 20315,
+        "line": 20304,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||67.228.151.70^"
       },
       {
-        "line": 20317,
+        "line": 20306,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||74.55.82.102^"
       },
       {
-        "line": 20318,
+        "line": 20307,
         "reason": "IP literal is not a hostname rule",
         "source_rule": "||79.125.117.123^"
       },
       {
-        "line": 20826,
+        "line": 20815,
         "reason": "invalid hostname label",
         "source_rule": "||metrics*.fitanalytics.com^"
       },
       {
-        "line": 20959,
+        "line": 20948,
         "reason": "invalid hostname label",
         "source_rule": "||hitcounter.ru"
       },
       {
-        "line": 21393,
+        "line": 21382,
         "reason": "invalid hostname label",
         "source_rule": "||query*.petametrics.com^"
       },
       {
-        "line": 21558,
+        "line": 21547,
         "reason": "invalid hostname label",
         "source_rule": "||script.opentracker.net"
       },
       {
-        "line": 22041,
+        "line": 22030,
         "reason": "strict subdomains require disabled logical rules",
         "source_rule": ".ay.delivery^"
       },
       {
-        "line": 22091,
+        "line": 22080,
         "reason": "invalid hostname label",
         "source_rule": "||sock*-goguardian.pusher.com^"
       },
       {
-        "line": 45214,
+        "line": 45203,
         "reason": "invalid hostname label",
         "source_rule": "||tccd.douglas."
       },
       {
-        "line": 71596,
+        "line": 71585,
         "reason": "invalid hostname label",
         "source_rule": ".stape.net"
       },
       {
-        "line": 71597,
+        "line": 71586,
         "reason": "invalid hostname label",
         "source_rule": "|load.gtm."
       },
       {
-        "line": 71598,
+        "line": 71587,
         "reason": "invalid hostname label",
         "source_rule": "|load.sgtm."
       },
       {
-        "line": 71599,
+        "line": 71588,
         "reason": "invalid hostname label",
         "source_rule": "|load.ss."
       },
       {
-        "line": 71600,
+        "line": 71589,
         "reason": "invalid hostname label",
         "source_rule": "|load.sst."
       },
       {
-        "line": 71601,
+        "line": 71590,
         "reason": "invalid hostname label",
         "source_rule": "||thegreatesthits."
       },
       {
-        "line": 125853,
+        "line": 125842,
         "reason": "invalid hostname label",
         "source_rule": "://sportframe*.co^"
       },
       {
-        "line": 125855,
+        "line": 125844,
         "reason": "invalid hostname label",
         "source_rule": "://sportframe*.org^"
       },
       {
-        "line": 125862,
+        "line": 125851,
         "reason": "invalid hostname label",
         "source_rule": "://r.reklam*.com^"
       },
       {
-        "line": 125863,
+        "line": 125852,
         "reason": "invalid hostname label",
         "source_rule": "://say.ac^"
       },
       {
-        "line": 125865,
+        "line": 125854,
         "reason": "invalid hostname label",
         "source_rule": "||ad*.bilgin.pro^"
       },
       {
-        "line": 125866,
+        "line": 125855,
         "reason": "invalid hostname label",
         "source_rule": "||ad*.tmgrup.com.tr^"
       },
       {
-        "line": 125894,
+        "line": 125883,
         "reason": "invalid hostname label",
         "source_rule": "||basvformu*.xyz^"
       },
       {
-        "line": 125927,
+        "line": 125916,
         "reason": "invalid hostname label",
         "source_rule": "||partner.superbahisaffiliates*.com^"
       },
       {
-        "line": 126162,
+        "line": 126151,
         "reason": "invalid hostname label",
         "source_rule": "-ad123-"
       },
       {
-        "line": 126163,
+        "line": 126152,
         "reason": "invalid hostname label",
         "source_rule": "-ads1."
       },
       {
-        "line": 126164,
+        "line": 126153,
         "reason": "invalid hostname label",
         "source_rule": "-ads2."
       },
       {
-        "line": 126165,
+        "line": 126154,
         "reason": "invalid hostname label",
         "source_rule": "-banner-ads."
       },
       {
-        "line": 126166,
+        "line": 126155,
         "reason": "invalid hostname label",
         "source_rule": "-banner728x90."
       },
       {
-        "line": 126167,
+        "line": 126156,
         "reason": "invalid hostname label",
         "source_rule": "-iklan-gif-"
       },
       {
-        "line": 126168,
+        "line": 126157,
         "reason": "invalid hostname label",
         "source_rule": "-iklan1."
       },
       {
-        "line": 126169,
+        "line": 126158,
         "reason": "invalid hostname label",
         "source_rule": "-iklan2."
       },
       {
-        "line": 126170,
+        "line": 126159,
         "reason": "invalid hostname label",
         "source_rule": "-iklan789-"
       },
       {
-        "line": 126171,
+        "line": 126160,
         "reason": "invalid hostname label",
         "source_rule": "-ikln."
       },
       {
-        "line": 126172,
+        "line": 126161,
         "reason": "invalid hostname label",
         "source_rule": "-1080x140-"
       },
       {
-        "line": 126173,
+        "line": 126162,
         "reason": "invalid hostname label",
         "source_rule": "-1080x140."
       },
       {
-        "line": 126174,
+        "line": 126163,
         "reason": "invalid hostname label",
         "source_rule": "-1080x180-"
       },
       {
-        "line": 126175,
+        "line": 126164,
         "reason": "invalid hostname label",
         "source_rule": "-1300-x-200-"
       },
       {
-        "line": 126176,
+        "line": 126165,
         "reason": "invalid hostname label",
         "source_rule": "-720x90-"
       },
       {
-        "line": 126177,
+        "line": 126166,
         "reason": "invalid hostname label",
         "source_rule": "-728-x-90-"
       },
       {
-        "line": 126178,
+        "line": 126167,
         "reason": "invalid hostname label",
         "source_rule": "-728-x-90."
       },
       {
-        "line": 126179,
+        "line": 126168,
         "reason": "invalid hostname label",
         "source_rule": "-728x90a."
       },
       {
-        "line": 126180,
+        "line": 126169,
         "reason": "invalid hostname label",
         "source_rule": "-970x90-"
       },
       {
-        "line": 126181,
+        "line": 126170,
         "reason": "invalid hostname label",
         "source_rule": ".1080.x.90."
       },
       {
-        "line": 126203,
+        "line": 126192,
         "reason": "invalid hostname label",
         "source_rule": "-bandarkiu."
       },
       {
-        "line": 126204,
+        "line": 126193,
         "reason": "invalid hostname label",
         "source_rule": "-cina777."
       },
       {
-        "line": 126205,
+        "line": 126194,
         "reason": "invalid hostname label",
         "source_rule": "-indo666."
       },
       {
-        "line": 126206,
+        "line": 126195,
         "reason": "invalid hostname label",
         "source_rule": "-pentaslot."
       },
       {
-        "line": 126207,
+        "line": 126196,
         "reason": "invalid hostname label",
         "source_rule": "-tototix.gif"
       },
       {
-        "line": 134226,
+        "line": 134269,
         "reason": "invalid hostname label",
         "source_rule": "||daleelerah.info"
       },
       {
-        "line": 139463,
+        "line": 139555,
         "reason": "invalid hostname label",
         "source_rule": "||get-me-wow."
       },
       {
-        "line": 167514,
+        "line": 167851,
         "reason": "unsupported regex extension or escape",
         "source_rule": "/(https?:\\/\\/)213\\.32\\.115\\..{100,}/"
       },
       {
-        "line": 167515,
+        "line": 167852,
         "reason": "unsupported regex extension or escape",
         "source_rule": "/(https?:\\/\\/)217\\.182\\.11\\..{100,}/"
       },
       {
-        "line": 167516,
+        "line": 167853,
         "reason": "unsupported regex extension or escape",
         "source_rule": "/(https?:\\/\\/)51\\.195\\.31\\..{100,}/"
       },
       {
-        "line": 167587,
+        "line": 167924,
         "reason": "invalid hostname label",
         "source_rule": "||allsportsflix."
       },
       {
-        "line": 169448,
+        "line": 169785,
         "reason": "invalid hostname label",
         "source_rule": "||zhizhizhizhi.oss-*.aliyuncs.com^"
       },
       {
-        "line": 174155,
+        "line": 174503,
         "reason": "invalid hostname label",
         "source_rule": "||1024wanzhai."
       },
       {
-        "line": 174203,
+        "line": 174551,
         "reason": "invalid hostname label",
         "source_rule": "||adi*.cnool.net^"
       },
       {
-        "line": 174234,
+        "line": 174582,
         "reason": "invalid hostname label",
         "source_rule": "||ax.*.ifeng.com^"
       },
       {
-        "line": 174316,
+        "line": 174664,
         "reason": "invalid hostname label",
         "source_rule": "||impservice*.yodao.com^"
       },
       {
-        "line": 174317,
+        "line": 174665,
         "reason": "invalid hostname label",
         "source_rule": "||impservice*.youdao.com^"
       },
       {
-        "line": 174319,
+        "line": 174667,
         "reason": "invalid hostname label",
         "source_rule": "||itv.hexun.com"
       },
       {
-        "line": 174322,
+        "line": 174670,
         "reason": "invalid hostname label",
         "source_rule": "||ja*.gamersky.com^"
       },
       {
-        "line": 174323,
+        "line": 174671,
         "reason": "invalid hostname label",
         "source_rule": "||js*.abolezi.com^"
       },
       {
-        "line": 174358,
+        "line": 174706,
         "reason": "invalid hostname label",
         "source_rule": "||sam*.baby-kingdom.com^"
       },
       {
-        "line": 174359,
+        "line": 174707,
         "reason": "invalid hostname label",
         "source_rule": "||same*.stockstar.com^"
       },
       {
-        "line": 174362,
+        "line": 174710,
         "reason": "invalid hostname label",
         "source_rule": "||sax*.sina."
       },
       {
-        "line": 174396,
+        "line": 174744,
         "reason": "invalid hostname label",
         "source_rule": "||ya*.dwstatic.com^"
       },
       {
-        "line": 174507,
+        "line": 174855,
         "reason": "invalid hostname label",
         "source_rule": "||a*.chajiaotong.com^"
       },
       {
-        "line": 174594,
+        "line": 174942,
         "reason": "invalid hostname label",
         "source_rule": "||ac*.786ip.com^"
       },
       {
-        "line": 174595,
+        "line": 174943,
         "reason": "invalid hostname label",
         "source_rule": "||ac*.faxingchina.com^"
       },
       {
-        "line": 174613,
+        "line": 174961,
         "reason": "invalid hostname label",
         "source_rule": "||at*.doubanio.com^"
       },
       {
-        "line": 174668,
+        "line": 175016,
         "reason": "invalid hostname label",
         "source_rule": "||bdcpro*.techweb.com.cn^"
       },
       {
-        "line": 174678,
+        "line": 175026,
         "reason": "invalid hostname label",
         "source_rule": "||bdlm*.hc360.com^"
       },
       {
-        "line": 174746,
+        "line": 175094,
         "reason": "invalid hostname label",
         "source_rule": "||d*.ruiwen.com^"
       },
       {
-        "line": 174747,
+        "line": 175095,
         "reason": "invalid hostname label",
         "source_rule": "||d*.xinshipu.com^"
       },
       {
-        "line": 174773,
+        "line": 175121,
         "reason": "invalid hostname label",
         "source_rule": "||dm*.yxlady.com^"
       },
       {
-        "line": 174796,
+        "line": 175144,
         "reason": "invalid hostname label",
         "source_rule": "||dn*.ixinwei.com^"
       },
       {
-        "line": 174817,
+        "line": 175165,
         "reason": "invalid hostname label",
         "source_rule": "||fanpingbi*.gaokao.com^"
       },
       {
-        "line": 174827,
+        "line": 175175,
         "reason": "invalid hostname label",
         "source_rule": "||fpb1.chinacar."
       },
       {
-        "line": 174837,
+        "line": 175185,
         "reason": "invalid hostname label",
         "source_rule": "||gcw*.2liang.cn^"
       },
       {
-        "line": 175001,
+        "line": 175349,
         "reason": "invalid hostname label",
         "source_rule": "||qpb*.sohu.com^"
       },
       {
-        "line": 175009,
+        "line": 175357,
         "reason": "invalid hostname label",
         "source_rule": "||res*.pinpai8.cn^"
       },
       {
-        "line": 175037,
+        "line": 175385,
         "reason": "invalid hostname label",
         "source_rule": "||static*.365inews.com^"
       },
       {
-        "line": 175056,
+        "line": 175404,
         "reason": "invalid hostname label",
         "source_rule": "||uc*.atobo.com^"
       },
       {
-        "line": 175063,
+        "line": 175411,
         "reason": "invalid hostname label",
         "source_rule": "||union*.365inews.com^"
       },
       {
-        "line": 175117,
+        "line": 175465,
         "reason": "invalid hostname label",
         "source_rule": "||ysdm*.ys137.com.cn^"
       },
       {
-        "line": 175679,
+        "line": 176027,
         "reason": "invalid hostname label",
         "source_rule": "||util-*.simply-hentai.com^"
       },
       {
-        "line": 178544,
+        "line": 178895,
         "reason": "invalid hostname label",
         "source_rule": "||tracking*.euroads.fi^"
       },
       {
-        "line": 178860,
+        "line": 179211,
         "reason": "invalid hostname label",
         "source_rule": "||aff*.kolektiva.net^"
       },
       {
-        "line": 178863,
+        "line": 179214,
         "reason": "invalid hostname label",
         "source_rule": "-logging.nextmedia.com^"
       },
       {
-        "line": 178993,
+        "line": 179344,
         "reason": "invalid hostname label",
         "source_rule": "||stats2.*.fdnames.com^"
       },
       {
-        "line": 179100,
+        "line": 179451,
         "reason": "invalid hostname label",
         "source_rule": "||stats-*.p2pnow.ru^"
       },
       {
-        "line": 179135,
+        "line": 179486,
         "reason": "invalid hostname label",
         "source_rule": "||mtm.qdqmedia.com"
       },
       {
-        "line": 179329,
+        "line": 179680,
         "reason": "invalid hostname label",
         "source_rule": "||bc.geocities."
       },
       {
-        "line": 179406,
+        "line": 179757,
         "reason": "invalid hostname label",
         "source_rule": "||collector-*.luigisbox.com^"
       },
       {
-        "line": 179528,
+        "line": 179879,
         "reason": "invalid hostname label",
         "source_rule": "||events-proxy.mintlify.com"
       },
       {
-        "line": 179653,
+        "line": 180004,
         "reason": "invalid hostname label",
         "source_rule": "||log-*.previewnetworks.com^"
       },
       {
-        "line": 179669,
+        "line": 180020,
         "reason": "invalid hostname label",
         "source_rule": "||mcdp-*.outbrain.com^"
       },
       {
-        "line": 180016,
+        "line": 180367,
         "reason": "invalid hostname label",
         "source_rule": "||tracker.twenga."
       },
       {
-        "line": 180160,
+        "line": 180511,
         "reason": "invalid hostname label",
         "source_rule": "||d241ujsiy3yht0.cloudfront.net"
       },
       {
-        "line": 180165,
+        "line": 180516,
         "reason": "invalid hostname label",
         "source_rule": "||d2fj3s7h83rb61.cloudfront.net"
       },
       {
-        "line": 180301,
+        "line": 180652,
         "reason": "invalid hostname label",
         "source_rule": "||get*bannerads-6egeg2u34q-du.a.run.app^"
       },
       {
-        "line": 180315,
+        "line": 180666,
         "reason": "invalid hostname label",
         "source_rule": "||pangolin*.sgsnssdk.com^"
       },
       {
-        "line": 180317,
+        "line": 180668,
         "reason": "invalid hostname label",
         "source_rule": "||ad.*.doubleclick.net^"
       },
       {
-        "line": 180318,
+        "line": 180669,
         "reason": "invalid hostname label",
         "source_rule": "||cdn-adn-*.rayjump.com^"
       },
       {
-        "line": 180409,
+        "line": 180760,
         "reason": "invalid hostname label",
         "source_rule": "||iad-*.braze.com^"
       },
       {
-        "line": 180489,
+        "line": 180840,
         "reason": "invalid hostname label",
         "source_rule": "||adimg*.search.naver.net^"
       },
       {
-        "line": 180490,
+        "line": 180841,
         "reason": "invalid hostname label",
         "source_rule": "||ad*.thisisgame.com^"
       },
       {
-        "line": 180520,
+        "line": 180871,
         "reason": "invalid hostname label",
         "source_rule": "||ad*.wisenut.co.kr^"
       },
       {
-        "line": 180526,
+        "line": 180877,
         "reason": "invalid hostname label",
         "source_rule": "||adservice.google.co.*"
       },
       {
-        "line": 180528,
+        "line": 180879,
         "reason": "invalid hostname label",
         "source_rule": "||ads-*.v.ssp.yahoo.com^"
       },
       {
-        "line": 181166,
+        "line": 181518,
         "reason": "invalid hostname label",
         "source_rule": "||admicro*.vcmedia.vn^"
       },
       {
-        "line": 181290,
+        "line": 181642,
         "reason": "invalid hostname label",
         "source_rule": "||log-*.epicdn.me^"
       },
       {
-        "line": 181291,
+        "line": 181643,
         "reason": "invalid hostname label",
         "source_rule": "||log-*.zadn.vn^"
       },
       {
-        "line": 181313,
+        "line": 181665,
         "reason": "invalid hostname label",
         "source_rule": "||matomo.*.vn^"
       },
       {
-        "line": 181314,
+        "line": 181666,
         "reason": "invalid hostname label",
         "source_rule": "||mautic.*.vn^"
       },
       {
-        "line": 181354,
+        "line": 181706,
         "reason": "invalid hostname label",
         "source_rule": "||piwik.*.vn^"
       },
       {
-        "line": 181372,
+        "line": 181724,
         "reason": "invalid hostname label",
         "source_rule": "||quangcao-*.epicdn.me^"
       },
       {
-        "line": 186712,
+        "line": 187064,
         "reason": "invalid hostname label",
         "source_rule": "||ad*.gyaloglo.hu^"
       },
       {
-        "line": 186713,
+        "line": 187065,
         "reason": "invalid hostname label",
         "source_rule": "||ad*.mellesleg.hu^"
       },
       {
-        "line": 186730,
+        "line": 187082,
         "reason": "invalid hostname label",
         "source_rule": "||advert*.ultraweb.hu^"
       },
       {
-        "line": 186731,
+        "line": 187083,
         "reason": "invalid hostname label",
         "source_rule": "||adverticum.*.hu^"
       },
       {
-        "line": 186733,
+        "line": 187085,
         "reason": "invalid hostname label",
         "source_rule": "||as*.prog.hu^"
       },
       {
-        "line": 186740,
+        "line": 187092,
         "reason": "invalid hostname label",
         "source_rule": "||etargetnet.*.hu^"
       },
       {
-        "line": 186751,
+        "line": 187103,
         "reason": "invalid hostname label",
         "source_rule": "||rehs.*.hu^"
       },
       {
-        "line": 186753,
+        "line": 187105,
         "reason": "invalid hostname label",
         "source_rule": "||sher.*.hu^"
       },
       {
-        "line": 186800,
+        "line": 187152,
         "reason": "invalid hostname label",
         "source_rule": "analytics-*.aasaam.com"
       },
       {
-        "line": 187192,
+        "line": 187544,
         "reason": "invalid hostname label",
         "source_rule": "||mobileanalytics.*.amazonaws.com^"
       },
       {
-        "line": 187253,
+        "line": 187605,
         "reason": "invalid hostname label",
         "source_rule": "||logger-*.dailymotion.com^"
       },
       {
-        "line": 187257,
+        "line": 187609,
         "reason": "invalid hostname label",
         "source_rule": "||metric*.rediff.com^"
       },
       {
-        "line": 187310,
+        "line": 187662,
         "reason": "invalid hostname label",
         "source_rule": "||t.delfi."
       },
       {
-        "line": 187318,
+        "line": 187670,
         "reason": "invalid hostname label",
         "source_rule": "||track.zalando."
       },
       {
-        "line": 187330,
+        "line": 187682,
         "reason": "invalid hostname label",
         "source_rule": "||tracking.olx."
       },
       {
-        "line": 187342,
+        "line": 187694,
         "reason": "invalid hostname label",
         "source_rule": "||dualstack.adbert-web-lbs-*.elb.amazonaws.com^"
       },
       {
-        "line": 187355,
+        "line": 187707,
         "reason": "invalid hostname label",
         "source_rule": "||s*.adduplex.com^"
       },
       {
-        "line": 187532,
+        "line": 187884,
         "reason": "exception conservatively bounded; may under-block",
         "source_rule": "@@||cdn.us*.exponea.com^|"
       },
       {
-        "line": 187567,
+        "line": 187919,
         "reason": "exception conservatively bounded; may under-block",
         "source_rule": "@@||data-*.herz-fuer-tiere.de^|"
       },
       {
-        "line": 187614,
+        "line": 187966,
         "reason": "exception conservatively bounded; may under-block",
         "source_rule": "@@||bcicl.*.evergage.com^|"
       },
       {
-        "line": 187625,
+        "line": 187977,
         "reason": "exception conservatively bounded; may under-block",
         "source_rule": "@@||static-v*.trbo.com^|"
       },
       {
-        "line": 187626,
+        "line": 187978,
         "reason": "exception conservatively bounded; may under-block",
         "source_rule": "@@||api-v*.trbo.com^|"
       },
       {
-        "line": 187628,
+        "line": 187980,
         "reason": "exception conservatively bounded; may under-block",
         "source_rule": "@@||brm-core-*.brsrvr.com^|"
       },
       {
-        "line": 187640,
+        "line": 187992,
         "reason": "exception conservatively bounded; may under-block",
         "source_rule": "@@-ds.metric.gstatic.com^|"
       },
       {
-        "line": 187718,
+        "line": 188070,
         "reason": "exception conservatively bounded; may under-block",
         "source_rule": "@@||email.*.skyeng.ru^|"
       },
       {
-        "line": 187741,
+        "line": 188093,
         "reason": "exception conservatively bounded; may under-block",
         "source_rule": "@@||click.virt.s*.exacttarget.com^|"
       },
       {
-        "line": 187745,
+        "line": 188097,
         "reason": "exception conservatively bounded; may under-block",
         "source_rule": "@@||mc.*.exacttarget.com^|"
       },
       {
-        "line": 187807,
+        "line": 188159,
         "reason": "exception conservatively bounded; may under-block",
         "source_rule": "@@||clk*.tradedoubler.com^|"
       },
       {
-        "line": 29094,
+        "line": 29083,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,2o7.net",
         "source_rule": "||2o7.net^"
       },
       {
-        "line": 10744,
+        "line": 10733,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,a8.net",
         "source_rule": "||a8.net^"
       },
       {
-        "line": 10829,
+        "line": 10818,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,ads.nicovideo.jp",
         "source_rule": "||ads.nicovideo.jp^"
       },
       {
-        "line": 8374,
+        "line": 8363,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,ads.tvb.com",
         "source_rule": "||ads.tvb.com^"
       },
       {
-        "line": 166630,
+        "line": 166967,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,adsterra.com",
         "source_rule": "||adsterra.com^"
       },
       {
-        "line": 11591,
+        "line": 11580,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,advertising.com",
         "source_rule": "||advertising.com^"
       },
       {
-        "line": 9279,
+        "line": 9268,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,adwolf.ru",
         "source_rule": "||adwolf.ru^"
       },
       {
-        "line": 10683,
+        "line": 10672,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,afi-b.com",
         "source_rule": "||afi-b.com^"
       },
       {
-        "line": 15137,
+        "line": 15126,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,analytics.edgekey.net",
         "source_rule": "||analytics.edgekey.net^"
       },
       {
-        "line": 11370,
+        "line": 11359,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,aniview.com",
         "source_rule": "||aniview.com^"
       },
       {
-        "line": 179311,
+        "line": 179662,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,app.adjust.com",
         "source_rule": "||app.adjust.com^"
       },
       {
-        "line": 17008,
+        "line": 16997,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,app.appsflyer.com",
         "source_rule": "||app.appsflyer.com^"
       },
       {
-        "line": 20020,
+        "line": 20009,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,appcast.io",
         "source_rule": "||appcast.io^"
       },
       {
-        "line": 17988,
+        "line": 17977,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,appmetrica.yandex.com",
         "source_rule": "||appmetrica.yandex.com^"
       },
       {
-        "line": 10945,
+        "line": 10934,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,appodeal.com",
         "source_rule": "||appodeal.com^"
       },
       {
-        "line": 20441,
+        "line": 20430,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,awin1.com",
         "source_rule": "||awin1.com^"
       },
       {
-        "line": 67677,
+        "line": 67666,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,belgium.wolterskluwer.com",
         "source_rule": "||belgium.wolterskluwer.com^"
       },
       {
-        "line": 20282,
+        "line": 20271,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,bizrate.com",
         "source_rule": "||bizrate.com^"
       },
       {
-        "line": 20079,
+        "line": 20068,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,bluecore.com",
         "source_rule": "||bluecore.com^"
       },
       {
-        "line": 20521,
+        "line": 20510,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,brsrvr.com",
         "source_rule": "||brsrvr.com^"
       },
       {
-        "line": 20601,
+        "line": 20590,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,commander1.com",
         "source_rule": "||commander1.com^"
       },
       {
-        "line": 571,
+        "line": 560,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,conde.digital",
         "source_rule": "||conde.digital^"
       },
       {
-        "line": 19682,
+        "line": 19671,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,cptrack.de",
         "source_rule": "||cptrack.de^"
       },
       {
-        "line": 20667,
+        "line": 20656,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,crazyegg.com",
         "source_rule": "||crazyegg.com^"
       },
       {
-        "line": 20674,
+        "line": 20663,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,crwdcntrl.net",
         "source_rule": "||crwdcntrl.net^"
       },
       {
-        "line": 20123,
+        "line": 20112,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,dable.io",
         "source_rule": "||dable.io^"
       },
       {
-        "line": 60106,
+        "line": 60095,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,daraz.com",
         "source_rule": "||daraz.com^"
       },
       {
-        "line": 62483,
+        "line": 62472,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,data-e0448d0e4a.herz-fuer-tiere.de",
         "source_rule": "||data-e0448d0e4a.herz-fuer-tiere.de^"
       },
       {
-        "line": 32921,
+        "line": 32910,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,data.digital.costco.ca",
         "source_rule": "||data.digital.costco.ca^"
       },
       {
-        "line": 32922,
+        "line": 32911,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,data.digital.costco.com",
         "source_rule": "||data.digital.costco.com^"
       },
       {
-        "line": 33761,
+        "line": 33750,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,data.notify.macys.com",
         "source_rule": "||data.notify.macys.com^"
       },
       {
-        "line": 33782,
+        "line": 33771,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,data.orders.costco.ca",
         "source_rule": "||data.orders.costco.ca^"
       },
       {
-        "line": 33783,
+        "line": 33772,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,data.orders.costco.com",
         "source_rule": "||data.orders.costco.com^"
       },
       {
-        "line": 33826,
+        "line": 33815,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,data.promo.timhortons.ca",
         "source_rule": "||data.promo.timhortons.ca^"
       },
       {
-        "line": 20698,
+        "line": 20687,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,demdex.net",
         "source_rule": "||demdex.net^"
       },
       {
-        "line": 11367,
+        "line": 11356,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,dotomi.com",
         "source_rule": "||dotomi.com^"
       },
       {
-        "line": 187341,
+        "line": 187693,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,doubleclick.net",
         "source_rule": "||doubleclick.net^"
       },
       {
-        "line": 178594,
+        "line": 178945,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,ebis.ne.jp",
         "source_rule": "||ebis.ne.jp^"
       },
       {
-        "line": 178595,
+        "line": 178946,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,ec-optimizer.com",
         "source_rule": "||ec-optimizer.com^"
       },
       {
-        "line": 20794,
+        "line": 20783,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,evergage.com",
         "source_rule": "||evergage.com^"
       },
       {
-        "line": 19783,
+        "line": 19772,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,ezodn.com",
         "source_rule": "||ezodn.com^"
       },
       {
-        "line": 19048,
+        "line": 19037,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,first-id.fr",
         "source_rule": "||first-id.fr^"
       },
       {
-        "line": 20888,
+        "line": 20877,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,gemius.pl",
         "source_rule": "||gemius.pl^"
       },
       {
-        "line": 11662,
+        "line": 11651,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,googleadservices.com",
         "source_rule": "||googleadservices.com^"
       },
       {
-        "line": 10792,
+        "line": 10781,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,hb.afl.rakuten.co.jp",
         "source_rule": "||hb.afl.rakuten.co.jp^"
       },
       {
-        "line": 20187,
+        "line": 20176,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,hit.interia.pl",
         "source_rule": "||hit.interia.pl^"
       },
       {
-        "line": 10761,
+        "line": 10750,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,i2i.jp",
         "source_rule": "||i2i.jp^"
       },
       {
-        "line": 179615,
+        "line": 179966,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,in.treasuredata.com",
         "source_rule": "||in.treasuredata.com^"
       },
       {
-        "line": 21076,
+        "line": 21065,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,jdoqocy.com",
         "source_rule": "||jdoqocy.com^"
       },
       {
-        "line": 20233,
+        "line": 20222,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,lhinsights.com",
         "source_rule": "||lhinsights.com^"
       },
       {
-        "line": 10583,
+        "line": 10572,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,link-ag.net",
         "source_rule": "||link-ag.net^"
       },
       {
-        "line": 21139,
+        "line": 21128,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,logentries.com",
         "source_rule": "||logentries.com^"
       },
       {
-        "line": 60335,
+        "line": 60324,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,marketing.net.idealo-partner.com",
         "source_rule": "||marketing.net.idealo-partner.com^"
       },
       {
-        "line": 9722,
+        "line": 9711,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,metaffiliation.com",
         "source_rule": "||metaffiliation.com^"
       },
       {
-        "line": 21215,
+        "line": 21204,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,mmstat.com",
         "source_rule": "||mmstat.com^"
       },
       {
-        "line": 10713,
+        "line": 10702,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,nakanohito.jp",
         "source_rule": "||nakanohito.jp^"
       },
       {
-        "line": 167135,
+        "line": 167472,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,nitropay.com",
         "source_rule": "||nitropay.com^"
       },
       {
-        "line": 40414,
+        "line": 40403,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,om-ssl.consorsbank.de",
         "source_rule": "||om-ssl.consorsbank.de^"
       },
       {
-        "line": 40514,
+        "line": 40503,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,omniture.walmart.com",
         "source_rule": "||omniture.walmart.com^"
       },
       {
-        "line": 30520,
+        "line": 30509,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,omsc.kpn.com",
         "source_rule": "||omsc.kpn.com^"
       },
       {
-        "line": 150364,
+        "line": 150552,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,openx.net",
         "source_rule": "||openx.net^"
       },
       {
-        "line": 20236,
+        "line": 20225,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,ownpage.fr",
         "source_rule": "||ownpage.fr^"
       },
       {
-        "line": 21381,
+        "line": 21370,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,peerius.com",
         "source_rule": "||peerius.com^"
       },
       {
-        "line": 21383,
+        "line": 21372,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,perfdrive.com",
         "source_rule": "||perfdrive.com^"
       },
       {
-        "line": 167709,
+        "line": 168046,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,proto2ad.durasite.net",
         "source_rule": "||proto2ad.durasite.net^"
       },
       {
-        "line": 178893,
+        "line": 179244,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,r.sax.sina.com.cn",
         "source_rule": "||r.sax.sina.com.cn^"
       },
       {
-        "line": 9944,
+        "line": 9933,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,rutarget.ru",
         "source_rule": "||rutarget.ru^"
       },
       {
-        "line": 30643,
+        "line": 30632,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,sc2metrics.exacttarget.com",
         "source_rule": "||sc2metrics.exacttarget.com^"
       },
       {
-        "line": 21555,
+        "line": 21544,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,scarabresearch.com",
         "source_rule": "||scarabresearch.com^"
       },
       {
-        "line": 30646,
+        "line": 30635,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,scmetrics.exacttarget.com",
         "source_rule": "||scmetrics.exacttarget.com^"
       },
       {
-        "line": 35340,
+        "line": 35329,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,sedge.nfl.com",
         "source_rule": "||sedge.nfl.com^"
       },
       {
-        "line": 21601,
+        "line": 21590,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,silverpop.com",
         "source_rule": "||silverpop.com^"
       },
       {
-        "line": 44189,
+        "line": 44178,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,swasc.homedepot.com",
         "source_rule": "||swasc.homedepot.com^"
       },
       {
-        "line": 22023,
+        "line": 22012,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,taboola.com",
         "source_rule": "||taboola.com^"
       },
       {
-        "line": 11769,
+        "line": 11758,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,targetspot.com",
         "source_rule": "||targetspot.com^"
       },
       {
-        "line": 21742,
+        "line": 21731,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,tealiumiq.com",
         "source_rule": "||tealiumiq.com^"
       },
       {
-        "line": 58678,
+        "line": 58667,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,tms.capitalone.com",
         "source_rule": "||tms.capitalone.com^"
       },
       {
-        "line": 17775,
+        "line": 17764,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,tr.line.me",
         "source_rule": "||tr.line.me^"
       },
       {
-        "line": 10063,
+        "line": 10052,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,tradedoubler.com",
         "source_rule": "||tradedoubler.com^"
       },
       {
-        "line": 10407,
+        "line": 10396,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,trbo.com",
         "source_rule": "||trbo.com^"
       },
       {
-        "line": 10836,
+        "line": 10825,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,valuecommerce.ne.jp",
         "source_rule": "||valuecommerce.ne.jp^"
       },
       {
-        "line": 21921,
+        "line": 21910,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,webgains.com",
         "source_rule": "||webgains.com^"
       },
       {
-        "line": 181143,
+        "line": 181495,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,www.datadoghq-browser-agent.com",
         "source_rule": "||www.datadoghq-browser-agent.com^"
       },
       {
-        "line": 181142,
+        "line": 181494,
         "reason": "block removed to preserve exception: DOMAIN-SUFFIX,www.statcounter.com",
         "source_rule": "||www.statcounter.com^"
       }
     ]
   },
   "China-aggregate": {
-    "domains": 6173,
-    "domains_before_compaction": 6639,
+    "domains": 6193,
+    "domains_before_compaction": 6659,
     "ip_rules": 19558,
-    "total": 25731
+    "total": 25751
   },
   "China-v2fly": {
     "counts": {
-      "input": 6642,
-      "output": 6639,
+      "input": 6662,
+      "output": 6659,
       "skipped": 3
     },
     "skipped": [
       {
-        "line": 6640,
+        "line": 6660,
         "reason": "finite regex needs a start anchor",
         "source_rule": "regexp:.+\\.awsdns-cn-[0-9][0-9]\\.(biz|com|net|top)$:@cn"
       },
       {
-        "line": 6641,
+        "line": 6661,
         "reason": "finite regex needs a start anchor",
         "source_rule": "regexp:.+\\.awsdns-cn-[0-9][a-e0-9]\\.cn$:@cn"
       },
       {
-        "line": 6642,
+        "line": 6662,
         "reason": "unbounded or excessive regex repetition",
         "source_rule": "regexp:^.+-mihayo\\.akamaized\\.net$:@cn"
       }
