@@ -1,8 +1,8 @@
 {
   "outputs": {
     "AdGuard/Ad-Domain.list": {
-      "rules": 187286,
-      "sha256": "b963b4f1a2c91f243671223b341bf8bed7963b535a0d9e46968cb2195050202a"
+      "rules": 187298,
+      "sha256": "5dd4a19f2071a0798b7c520b40364a5dec6d472576b82c1e5ea99c90bbbae440"
     },
     "China/China-NoResolve.list": {
       "rules": 25751,
@@ -140,10 +140,10 @@
       "url": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb"
     },
     "adguard.txt": {
-      "bytes": 4604029,
+      "bytes": 4604305,
       "compiler": "@adguard/hostlist-compiler v2.1.0",
-      "last_modified": "2026-11-04T00:24:18.444Z",
-      "sha256": "f2d5791cb81a2736058091aae60ed4a8d2197a6c8eac3cc607bd662e2f1f2d7f",
+      "last_modified": "2026-11-04T02:12:23.506Z",
+      "sha256": "b948c12b7bd42ae0e44476d6a65048955b4c79d707ff59937c8ada5eaa16952a",
       "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt"
     },
     "anthropic.txt": {
