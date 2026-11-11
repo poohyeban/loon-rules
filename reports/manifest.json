@@ -1,8 +1,8 @@
 {
   "outputs": {
     "AdGuard/Ad-Domain.list": {
-      "rules": 187315,
-      "sha256": "643174b540e8f339a69ee062cf9d999342f2c50bfdfd9eb5417157ea42c4b949"
+      "rules": 187682,
+      "sha256": "457db79d22edef30a73a60c6ff3b40d28b6c7c4d9ee0406afd4b6a3d2c770d75"
     },
     "China/China-NoResolve.list": {
       "rules": 25692,
@@ -120,13 +120,13 @@
   },
   "upstreams": {
     "ASN.mmdb": {
-      "bytes": 9057738,
+      "bytes": 9061334,
       "database": {
-        "build_epoch": 1793952929,
+        "build_epoch": 1794212130,
         "ip_version": 6,
         "type": "GeoLite2-ASN"
       },
-      "sha256": "21a6903ecc285ce3d187cb7f688b4f7ac52fee425c479c8e377d5b1c0127537a",
+      "sha256": "d5ee74c863271bed7066e731c880f38020bbe68f4cdd21d60a33f57195c30785",
       "url": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb"
     },
     "Country.mmdb": {
@@ -140,10 +140,10 @@
       "url": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb"
     },
     "adguard.txt": {
-      "bytes": 4605046,
+      "bytes": 4613440,
       "compiler": "@adguard/hostlist-compiler v2.1.0",
-      "last_modified": "2026-11-10T04:10:39.799Z",
-      "sha256": "eafe6cd6775697fd05c59ab03cff162b054f62ec4cb82ad7140c3334c42956c4",
+      "last_modified": "2026-11-11T00:24:20.206Z",
+      "sha256": "35fed328a38b891eef8d05c4d4eeadda4045a7f76d4ed08531530d80e2bd6bdf",
       "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt"
     },
     "anthropic.txt": {
@@ -183,8 +183,8 @@
     },
     "sukka-global.txt": {
       "bytes": 34661,
-      "commit": "6cc5fac87a6e653c0d542210ef5f3590ba09e6c4",
-      "resolved_url": "https://raw.githubusercontent.com/SukkaW/Surge/6cc5fac87a6e653c0d542210ef5f3590ba09e6c4/Source/non_ip/global.conf",
+      "commit": "d3b5d42081ae134e9ebf3efa74be58c14fc3ec9c",
+      "resolved_url": "https://raw.githubusercontent.com/SukkaW/Surge/d3b5d42081ae134e9ebf3efa74be58c14fc3ec9c/Source/non_ip/global.conf",
       "sha256": "e25c537e65d9ceb738677f44a3546c7cf90089028682f1cd807d06051ff6720e",
       "url": "https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/global.conf"
     },
