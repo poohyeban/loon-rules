@@ -1,8 +1,8 @@
 {
   "outputs": {
     "AdGuard/Ad-Domain.list": {
-      "rules": 187682,
-      "sha256": "457db79d22edef30a73a60c6ff3b40d28b6c7c4d9ee0406afd4b6a3d2c770d75"
+      "rules": 187715,
+      "sha256": "d6179a83fc8d6d63e8a8b59136862727a9070009f267658edce65a2e9ca1c59f"
     },
     "China/China-NoResolve.list": {
       "rules": 25692,
@@ -69,12 +69,12 @@
       "sha256": "ffe88edb443f2be5b3a9195dcd432994c01b5a8f1cf370a865e453f0134a8ed7"
     },
     "OpenAI/OpenAI-NoResolve.list": {
-      "rules": 427,
-      "sha256": "71b09cbc506dfcf5b6bb1de898d92caba0e9e73bcb47d94100ceee4c6a5bc4e5"
+      "rules": 448,
+      "sha256": "c97a0b434874106315f9e11cf5bee8ce3be7f93a06028c994870d1b85090f687"
     },
     "OpenAI/OpenAI.list": {
-      "rules": 427,
-      "sha256": "bf3c41653777e4405d9b6ba21e62cdc8150a995542331af5a6094c07f0756d55"
+      "rules": 448,
+      "sha256": "1a1e69b832404c4619404f231d665262d3a86af4551661d55e82422c89027b4b"
     },
     "OpenAI/Sources/OpenAI-ASN-IP-NoResolve.list": {
       "rules": 1,
@@ -89,12 +89,12 @@
       "sha256": "857c4ad55c1a04362d3a70ce6f4dcfb358d06a5be403f989bf4344edcfb05664"
     },
     "OpenAI/Sources/OpenAI-Voice-IP-NoResolve.list": {
-      "rules": 402,
-      "sha256": "363b08cf6f69b130ca366702b132156d23cc990fe5b101a6de05ff3ddd809307"
+      "rules": 423,
+      "sha256": "19d99968ee6a205f50914ab63e1737b579d17a21d95762c0ac46fd6bde8917c2"
     },
     "OpenAI/Sources/OpenAI-Voice-IP.list": {
-      "rules": 402,
-      "sha256": "d42bae08007cb0f0031ea6bb2363f712197d5785a42bfa00ace5435700ab1f27"
+      "rules": 423,
+      "sha256": "43944d9d6b9c82ea429927f5c639cbd3e1a1affceaa526440ccde01cfa6a8e4b"
     },
     "OpenAI/Sources/OpenAI-v2fly.list": {
       "rules": 24,
@@ -140,10 +140,10 @@
       "url": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb"
     },
     "adguard.txt": {
-      "bytes": 4613440,
+      "bytes": 4614192,
       "compiler": "@adguard/hostlist-compiler v2.1.0",
-      "last_modified": "2026-11-11T00:24:20.206Z",
-      "sha256": "35fed328a38b891eef8d05c4d4eeadda4045a7f76d4ed08531530d80e2bd6bdf",
+      "last_modified": "2026-11-11T02:12:11.011Z",
+      "sha256": "7fe892928d126c08ca3b3b6c3605b537eea6e46065eb3f1af7a8b79b40c7c59d",
       "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt"
     },
     "anthropic.txt": {
@@ -189,9 +189,9 @@
       "url": "https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/global.conf"
     },
     "voice.json": {
-      "bytes": 14530,
-      "creation_time": "2026-10-27T22:28:21.782457+00:00",
-      "sha256": "d2923918cc4cd6bf382f379b1601af871fbff66d8fefb81d4457f2ccba1ec959",
+      "bytes": 15288,
+      "creation_time": "2026-11-11T01:31:25.041436+00:00",
+      "sha256": "976aafdf60891ddf24379d447dc98832c42ea88d46561024f42b0b8294b94da7",
       "url": "https://openai.com/chatgpt-voice.json"
     },
     "whatsapp.txt": {
