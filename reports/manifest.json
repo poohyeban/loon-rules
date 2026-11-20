@@ -1,24 +1,24 @@
 {
   "outputs": {
     "AdGuard/Ad-Domain.list": {
-      "rules": 190366,
-      "sha256": "d70ed40922f72a4eea3bb304405c44b013e5b3ed44c6ca58e22e32039fad297f"
+      "rules": 190733,
+      "sha256": "9d26c6f9fee936534cbacb318cdc416eaed168bf99677e84b80474604f3d5368"
     },
     "China/China-NoResolve.list": {
-      "rules": 25691,
-      "sha256": "517b9c425042ac07bbfd118ce4d5863ab9168293c5b8240a5a17084d9ff9afbf"
+      "rules": 25694,
+      "sha256": "26c92d7a9ed88776aa80ebcfca1806ab5488b95c4a984a1ce82fb7b9bcfb9e2a"
     },
     "China/China.list": {
-      "rules": 25691,
-      "sha256": "fd47dc3fdd747c4ef0a1308b0e45972fddeb95699578ea825af7880f096db673"
+      "rules": 25694,
+      "sha256": "2be0d12154b52529767fb54c8c530bd9f9a3177ff728e321bb0b2a0ee758a6ed"
     },
     "China/Sources/China-GeoIP-NoResolve.list": {
-      "rules": 19413,
-      "sha256": "c1b338d88d9f931db7e8705857a327bb900f77e18f26f7da8a5e662d25f1d32a"
+      "rules": 19416,
+      "sha256": "a3b6a2ae51c302975c811e2e4b996be3764f903553869656bcbb37ca4ba324fd"
     },
     "China/Sources/China-GeoIP.list": {
-      "rules": 19413,
-      "sha256": "14a3c24f67678ecfde880ca20b83430a1b544a0aa5d60432510bff8bdf0e9a2f"
+      "rules": 19416,
+      "sha256": "6bf9a5aa2e2373e50db6b0a4f3c77e487d6f186bb36f9d68b0896c52586d307d"
     },
     "China/Sources/China-v2fly-Domain.list": {
       "rules": 6757,
@@ -69,20 +69,20 @@
       "sha256": "ffe88edb443f2be5b3a9195dcd432994c01b5a8f1cf370a865e453f0134a8ed7"
     },
     "OpenAI/OpenAI-NoResolve.list": {
-      "rules": 436,
-      "sha256": "61d40813f2a541ffe15da04195754b8bc6dd01db3ec1a5b78dbb2e70a2028d72"
+      "rules": 437,
+      "sha256": "165dec5d1a25710529e61aa32cd502af5e0140d0ad9e5b05808c3a3330fafc21"
     },
     "OpenAI/OpenAI.list": {
-      "rules": 436,
-      "sha256": "f9aa2a01f4ebc024b828a00f010c9c15d9b3ac2ac17e2b8cc3c47fa555aadd6c"
+      "rules": 437,
+      "sha256": "7f356680ce65d670156371cffd9047e7d6ad2c8a03fb28b82496710cb9fa6633"
     },
     "OpenAI/Sources/OpenAI-ASN-IP-NoResolve.list": {
-      "rules": 1,
-      "sha256": "54ddd85d0ae183a728e6ee11bd1b96f8ccfd89baa53d9e45eaf26c01f52b0c6f"
+      "rules": 2,
+      "sha256": "2a37f0fc60dbb1405a4605cef8e2e7003dbe9045419785b8a5362da27f7bdf01"
     },
     "OpenAI/Sources/OpenAI-ASN-IP.list": {
-      "rules": 1,
-      "sha256": "7faf16119bac5abc6da0a546f1d13e3fc39f37713873c971fd79d0456ec7895b"
+      "rules": 2,
+      "sha256": "156663f5cc1cb50e06bae669e0794e571fece4ba17ccb0dc6453f05d8008eda3"
     },
     "OpenAI/Sources/OpenAI-Official-Domain.list": {
       "rules": 7,
@@ -120,30 +120,30 @@
   },
   "upstreams": {
     "ASN.mmdb": {
-      "bytes": 9066508,
+      "bytes": 9072814,
       "database": {
-        "build_epoch": 1794730532,
+        "build_epoch": 1794989716,
         "ip_version": 6,
         "type": "GeoLite2-ASN"
       },
-      "sha256": "6ab0dcb6017b0e5f356d4ac1607427fc5d4da7a8465cb1233e8a9c04df1b4885",
+      "sha256": "ba7c4964c71b51d28dc23eefd5e4376801bf90472d26f766648aae003af9388e",
       "url": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb"
     },
     "Country.mmdb": {
-      "bytes": 3396552,
+      "bytes": 3402189,
       "database": {
-        "build_epoch": 1794589888,
+        "build_epoch": 1794932458,
         "ip_version": 6,
         "type": "GeoLite2-Country"
       },
-      "sha256": "c3ea0f8763a72c081d4abaf3366270d46414c55f6e36321621c6b59d53f9b17c",
+      "sha256": "33c6af7a3362c35876ed6192a958734402ab8cdd9d71f97dfbda333eb71e1c00",
       "url": "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb"
     },
     "adguard.txt": {
-      "bytes": 4678367,
+      "bytes": 4686747,
       "compiler": "@adguard/hostlist-compiler v2.1.0",
-      "last_modified": "2026-11-19T02:13:16.899Z",
-      "sha256": "c8764819a7c871dd3e3d16f07a0e5555b554c0032e217442066e27f803744a9b",
+      "last_modified": "2026-11-20T02:13:38.824Z",
+      "sha256": "14f89e079568f7f4cfc715b61c8a112325e7e027b3fa9a613b5c9bc21014481e",
       "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt"
     },
     "anthropic.txt": {
@@ -183,8 +183,8 @@
     },
     "sukka-global.txt": {
       "bytes": 34661,
-      "commit": "a8727444cd47a35464a7f4b74ac669c51e68c2d3",
-      "resolved_url": "https://raw.githubusercontent.com/SukkaW/Surge/a8727444cd47a35464a7f4b74ac669c51e68c2d3/Source/non_ip/global.conf",
+      "commit": "32f900e8759db8276cf6c9dcd0cc81f19c61c58f",
+      "resolved_url": "https://raw.githubusercontent.com/SukkaW/Surge/32f900e8759db8276cf6c9dcd0cc81f19c61c58f/Source/non_ip/global.conf",
       "sha256": "e25c537e65d9ceb738677f44a3546c7cf90089028682f1cd807d06051ff6720e",
       "url": "https://raw.githubusercontent.com/SukkaW/Surge/master/Source/non_ip/global.conf"
     },
